@@ -1,0 +1,11 @@
+//
+//  Debug.xcconfig
+//  App
+//
+//  Created by MacBook on 24/05/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+BASE_URL = http:/$()/3.84.177.160:8000
