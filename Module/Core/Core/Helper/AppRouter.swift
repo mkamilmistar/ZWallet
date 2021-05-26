@@ -18,6 +18,12 @@ public class AppRouter {
         self.loginScene?()
     }
     
+    public var registerScene: ((_ viewController: UIViewController) -> ())? = nil
+    
+    public func navigateToRegister(_ viewController: UIViewController) {
+        self.registerScene?(viewController)
+    }
+    
     public var homeScene: (() -> ())? = nil
     
     public func navigateToHome() {

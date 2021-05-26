@@ -9,7 +9,6 @@ import Foundation
 import Core
 
 class HistoryInteractorImpl: HistoryInteractor {
-    
     var interactorOutput: HistoryInteractorOutput?
     
     let invoiceNetworkManager: InvoiceNetworkManager
@@ -18,14 +17,26 @@ class HistoryInteractorImpl: HistoryInteractor {
         self.invoiceNetworkManager = invoiceNetworkManager
     }
     
-    func getHistoryTransaction() {
-        self.invoiceNetworkManager.getAllInvoice { (data, error) in
-            var historyTransactions: [TransactionEntity] = []
+    func getHistoryThisWeek() {
+        self.invoiceNetworkManager.getThisWeekInvoice { (data, error) in
+            var historyThisWeek: [TransactionEntity] = []
             
             data?.forEach({ (invoiceData) in
-                historyTransactions.append(TransactionEntity(name: invoiceData.name, type: invoiceData.type, imageUrl: "\(AppConstant.baseUrl)\(invoiceData.image)", amount: invoiceData.amount, notes: invoiceData.notes))
+                historyThisWeek.append(TransactionEntity(name: invoiceData.name, type: invoiceData.type, imageUrl: "\(AppConstant.baseUrl)\(invoiceData.image)", amount: invoiceData.amount, notes: invoiceData.notes))
                 
-                self.interactorOutput?.loadedHistoryTransaction(histories: historyTransactions)
+                self.interactorOutput?.loadedHistoryThisWeek(historiesThisWeek: historyThisWeek)
+            })
+        }
+    }
+    
+    func getHistoryThisMonth() {
+        self.invoiceNetworkManager.getAllInvoice { (data, error) in
+            var historyThisMonth: [TransactionEntity] = []
+            
+            data?.forEach({ (invoiceData) in
+                historyThisMonth.append(TransactionEntity(name: invoiceData.name, type: invoiceData.type, imageUrl: "\(AppConstant.baseUrl)\(invoiceData.image)", amount: invoiceData.amount, notes: invoiceData.notes))
+                
+                self.interactorOutput?.loadedHistoryThisMonth(historiesThisMonth: historyThisMonth)
             })
         }
     }

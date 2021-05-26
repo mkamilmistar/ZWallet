@@ -10,6 +10,7 @@ import Core
 import History
 import Login
 import Home
+import Register
 
 @available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -36,6 +37,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             AppRouter.shared.navigateToHome()
         } else {
             AppRouter.shared.navigateToLogin()
+            AppRouter.shared.registerScene = { viewController in
+                RegisterRouterImpl.navigateToModule(viewController: viewController)
+            }
+            
         }
     }
 
@@ -76,8 +81,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             LoginRouterImpl.navigateToModule()
         }
         
+        AppRouter.shared.registerScene = {viewController in
+            RegisterRouterImpl.navigateToModule(viewController: viewController)
+        }
+        
         AppRouter.shared.homeScene = {
             HomeRouterImpl.navigateToModule()
+        }
+        
+        AppRouter.shared.historyScene = { viewController in
+            HistoryRouterImpl.navigateToModule(viewController: viewController)
         }
     }
  }

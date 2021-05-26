@@ -19,4 +19,10 @@ public extension UIView {
             layer.cornerRadius = newValue
         }
     }
+    
+    func setShadow(color: CGColor, opacity: Float) {
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.1
+        layer.shadowOffset = CGSize(width: 0, height: 1)
+    }
 }

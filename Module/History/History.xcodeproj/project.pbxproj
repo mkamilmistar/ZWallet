@@ -21,6 +21,7 @@
 		FA73C410265C9C5E004AFAF4 /* HistoryInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73C40F265C9C5E004AFAF4 /* HistoryInteractorImpl.swift */; };
 		FA73C412265C9D57004AFAF4 /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73C411265C9D57004AFAF4 /* HistoryPresenter.swift */; };
 		FA73C414265C9D94004AFAF4 /* HistoryPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73C413265C9D94004AFAF4 /* HistoryPresenterImpl.swift */; };
+		FA73C505265CEF3C004AFAF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA73C504265CEF3C004AFAF4 /* Assets.xcassets */; };
 		FAD0A8A0265B4CA900793EC2 /* History.h in Headers */ = {isa = PBXBuildFile; fileRef = FAD0A89E265B4CA900793EC2 /* History.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		FA73C40F265C9C5E004AFAF4 /* HistoryInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryInteractorImpl.swift; sourceTree = "<group>"; };
 		FA73C411265C9D57004AFAF4 /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
 		FA73C413265C9D94004AFAF4 /* HistoryPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenterImpl.swift; sourceTree = "<group>"; };
+		FA73C504265CEF3C004AFAF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAD0A89B265B4CA900793EC2 /* History.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = History.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD0A89E265B4CA900793EC2 /* History.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = History.h; sourceTree = "<group>"; };
 		FAD0A89F265B4CA900793EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				FA73C3F7265C9585004AFAF4 /* Presenter */,
 				FA73C3F8265C958C004AFAF4 /* Router */,
 				FA73C3F5265C957C004AFAF4 /* View */,
+				FA73C504265CEF3C004AFAF4 /* Assets.xcassets */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA73C505265CEF3C004AFAF4 /* Assets.xcassets in Resources */,
 				FA73C400265C960A004AFAF4 /* HistoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

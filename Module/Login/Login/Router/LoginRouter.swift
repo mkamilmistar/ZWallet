@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
 protocol LoginRouter {
     func navigateToHome()
+    func navigateToRegister(viewController: UIViewController)
 }

@@ -1,4 +1,4 @@
-platform :ios, '12.0'
+platform :ios, '11.0'
 
 use_frameworks!
 
@@ -21,10 +21,12 @@ target 'Core' do
 	common_dependency
 end
 
-target 'History' do
-	project '../Module/History/History'
+target 'Login' do
+	project '../Module/Login/Login'
+end
 
-	common_dependency
+target 'Register' do
+	project '../Module/Register/Register'
 end
 
 target 'Home' do
@@ -33,6 +35,38 @@ target 'Home' do
 	common_dependency
 end
 
-target 'Login' do
-	project '../Module/Login/Login'
+target 'History' do
+	project '../Module/History/History'
+
+	common_dependency
+end
+
+target 'Receiver' do
+	project '../Module/Receiver/Receiver'
+
+	common_dependency
+end
+
+target 'Transaction' do
+	project '../Module/Transaction/Transaction'
+
+	common_dependency
+end
+
+target 'ConfirmTransaction' do
+	project '../Module/ConfirmTransaction/ConfirmTransaction'
+
+	common_dependency
+end
+
+target 'TransactionDetail' do
+	project '../Module/TransactionDetail/TransactionDetail'
+
+	common_dependency
+end
+
+target 'PINConfirmation' do
+	project '../Module/PINConfirmation/PINConfirmation'
+
+	common_dependency
 end

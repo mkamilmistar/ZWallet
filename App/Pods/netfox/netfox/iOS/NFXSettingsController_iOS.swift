@@ -73,7 +73,11 @@ class NFXSettingsController_iOS: NFXSettingsController, UITableViewDelegate, UIT
     
     @objc func nfxURLButtonPressed()
     {
-        UIApplication.shared.open(URL(string: nfxURL)!)
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(URL(string: nfxURL)!)
+        } else {
+            // Fallback on earlier versions
+        }
         // UIApplication.shared.openURL(URL(string: nfxURL)!)
     }
     

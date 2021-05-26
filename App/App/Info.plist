@@ -45,6 +45,14 @@
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NunitoSans-Regular.ttf</string>
+		<string>NunitoSans-Bold.ttf</string>
+		<string>NunitoSans-Light.ttf</string>
+		<string>NunitoSans-SemiBold.ttf</string>
+		<string>NunitoSans-ExtraBoldttf</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

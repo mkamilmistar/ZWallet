@@ -21,25 +21,32 @@ class HistoryViewController: UIViewController {
 
         self.setupTabView()
         
-        self.presenter?.loadHistoryTransaction()
+        self.presenter?.loadHistoryThisWeek()
+        self.presenter?.loadHistoryThisMonth()
     }
     
     func setupTabView() {
         self.dataSource.viewController = self
         
         self.tableView.register(UINib(nibName: "TransactionCell", bundle: Bundle(identifier: "com.casestudy.Core")), forCellReuseIdentifier: "TransactionCell")
+        self.tableView.register(UINib(nibName: "TransactionCell", bundle: Bundle(identifier: "com.casestudy.Core")), forCellReuseIdentifier: "TransactionCell")
         
         self.tableView.dataSource = self.dataSource
+        self.tableView.sectionIndexBackgroundColor = .none
     }
     
-    @IBAction func logoutAction(_ sender: UITapGestureRecognizer) {
-        self.presenter?.backToHome()
+    @IBAction func backToHomeAction(_ sender: UITapGestureRecognizer) {
+        self.presenter?.backToHome(viewController: self)
     }
 }
 
 extension HistoryViewController: HistoryView {
-    func showHistoryData(transactions: [TransactionEntity]) {
-        self.dataSource.historyTransactions = transactions
+    func showHistoryThisWeek(historiesThisWeek: [TransactionEntity]) {
+        self.dataSource.historyThisWeek = historiesThisWeek
+        self.tableView.reloadData()
+    }
+    func showHistoryThisMonth(historiesThisMonth: [TransactionEntity]) {
+        self.dataSource.historyThisMonth = historiesThisMonth
         self.tableView.reloadData()
     }
 }

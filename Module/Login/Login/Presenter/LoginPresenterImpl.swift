@@ -6,9 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
 public class LoginPresenterImpl: LoginPresenter {
-    
     let view: LoginView
     let interactor: LoginInteractor
     let router: LoginRouter
@@ -21,6 +21,10 @@ public class LoginPresenterImpl: LoginPresenter {
     
     func login(email: String, password: String) {
         self.interactor.postLoginData(email: email, password: password)
+    }
+    
+    func showRegister(viewController: UIViewController) {
+        self.router.navigateToRegister(viewController: viewController)
     }
 }
 

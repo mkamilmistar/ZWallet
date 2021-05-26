@@ -9,5 +9,7 @@ import Foundation
 import Core
 
 protocol HistoryInteractorOutput {
-    func loadedHistoryTransaction(histories: [TransactionEntity])
+    func loadedHistoryThisWeek(historiesThisWeek: [TransactionEntity])
+    func loadedHistoryThisMonth(historiesThisMonth: [TransactionEntity])
+
 }

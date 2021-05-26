@@ -10,7 +10,7 @@ import UIKit
 import Core
 
 public class HistoryRouterImpl {
-    public static func navigateToModule() {
+    public static func navigateToModule(viewController: UIViewController) {
         let bundle = Bundle(identifier: "com.casestudy.History")
         let vc = HistoryViewController(nibName: "HistoryViewController", bundle: bundle)
         
@@ -24,13 +24,15 @@ public class HistoryRouterImpl {
         
         vc.presenter = presenter
         
-        UIApplication.shared.windows.first?.rootViewController = vc
-        UIApplication.shared.windows.first?.makeKeyAndVisible()
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .coverVertical
+
+        viewController.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
 extension HistoryRouterImpl: HistoryRouter {
-    func navigateToHome() {
-        AppRouter.shared.navigateToHome()
+    func navigateToHome(viewController: UIViewController) {
+        viewController.navigationController?.popToRootViewController(animated: true)
     }
 }

@@ -51,7 +51,11 @@ class NFXListController_iOS: NFXListController, UITableViewDelegate, UITableView
         self.searchController.delegate = self
         self.searchController.hidesNavigationBarDuringPresentation = false
 //        self.searchController.dimsBackgroundDuringPresentation = false
-        self.searchController.obscuresBackgroundDuringPresentation = false
+        if #available(iOS 9.1, *) {
+            self.searchController.obscuresBackgroundDuringPresentation = false
+        } else {
+            // Fallback on earlier versions
+        }
         self.searchController.searchBar.autoresizingMask = [.flexibleWidth]
         self.searchController.searchBar.backgroundColor = UIColor.clear
         self.searchController.searchBar.barTintColor = UIColor.NFXOrangeColor()

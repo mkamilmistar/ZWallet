@@ -9,5 +9,5 @@ import Foundation
 import UIKit
 
 protocol HistoryRouter {
-    func navigateToHome()
+    func navigateToHome(viewController: UIViewController)
 }

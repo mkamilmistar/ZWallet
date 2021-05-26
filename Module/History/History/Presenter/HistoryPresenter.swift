@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 protocol HistoryPresenter {
-    func loadHistoryTransaction()
-    func backToHome()
+    func loadHistoryThisWeek()
+    func loadHistoryThisMonth()
+    func backToHome(viewController: UIViewController)
 }

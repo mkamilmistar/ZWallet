@@ -32,10 +32,10 @@ public class TransactionCell: UITableViewCell {
         
         if transaction.type == "in" {
             self.amountLabel.text = "+\(transaction.amount.formatToIdr())"
-            self.amountLabel.textColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+            self.amountLabel.textColor = #colorLiteral(red: 0.1176470588, green: 0.7568627451, blue: 0.3725490196, alpha: 1)
         } else {
             self.amountLabel.text = "-\(transaction.amount.formatToIdr())"
-            self.amountLabel.textColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+            self.amountLabel.textColor = #colorLiteral(red: 1, green: 0.3568627451, blue: 0.2156862745, alpha: 1)
         }
         
         let url = URL(string: transaction.imageUrl)

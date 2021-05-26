@@ -9,5 +9,6 @@ import Foundation
 import Core
 
 protocol HistoryView {
-    func showHistoryData(transactions: [TransactionEntity])
+    func showHistoryThisWeek(historiesThisWeek: [TransactionEntity])
+    func showHistoryThisMonth(historiesThisMonth: [TransactionEntity])
 }

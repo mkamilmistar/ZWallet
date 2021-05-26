@@ -30,4 +30,20 @@ public class AuthNetworkManagerImpl: AuthNetworkManager {
             }
         }
     }
+    
+    public func register(username: String, email: String, password: String, completion: @escaping (RegisterResponse?, Error?) -> ()) {
+        let provider = MoyaProvider<AuthApi>()
+        provider.request(.register(username: username, email: email, password: password)) { (response) in
+            switch response {
+            case .success(let result):
+//                let decoder = JSONDecoder()
+                do {
+                    print(result)
+                }
+            case .failure(let error):
+                completion(nil, error)
+            }
+        }
+    }
+    
 }

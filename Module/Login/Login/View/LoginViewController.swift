@@ -6,18 +6,22 @@
 //
 
 import UIKit
+import Core
 
 class LoginViewController: UIViewController {
 
     @IBOutlet var emailText: UITextField!
     @IBOutlet var passwordText: UITextField!
+    @IBOutlet var backgroundLogin: UIView!
+    @IBOutlet var emailField: UIStackView!
+    @IBOutlet var passwordField: UIStackView!
     
     var presenter: LoginPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        backgroundLogin.setShadow(color: UIColor.black.cgColor, opacity: 0.1)
     }
     
     @IBAction func loginAction(_ sender: Any) {
@@ -25,6 +29,10 @@ class LoginViewController: UIViewController {
         let password: String = passwordText.text ?? ""
         
         self.presenter?.login(email: email, password: password)
+    }
+    
+    @IBAction func navigateToRegisterAction(_ sender: UIButton) {
+        self.presenter?.showRegister(viewController: self)
     }
 }
 

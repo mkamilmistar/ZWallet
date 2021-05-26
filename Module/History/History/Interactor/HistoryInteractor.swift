@@ -8,5 +8,6 @@
 import Foundation
 
 protocol HistoryInteractor {
-    func getHistoryTransaction()
+    func getHistoryThisWeek()
+    func getHistoryThisMonth()
 }

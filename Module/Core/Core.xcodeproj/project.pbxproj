@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		64D15BB6F8EDD2A1CE7FAC08 /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E25521AEFF1FF2E020C6CFAC /* Pods_Core.framework */; };
+		FA0530DC265DCF35009A0DAB /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0530DB265DCF35009A0DAB /* RegisterResponse.swift */; };
 		FA2ABEAF265B5ABF0079F738 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2ABEAE265B5ABF0079F738 /* UIViewExtension.swift */; };
 		FA2ABEB2265B5B220079F738 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2ABEB1265B5B220079F738 /* IntExtension.swift */; };
 		FA2ABEB6265B5C0E0079F738 /* UserDefaultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2ABEB5265B5C0E0079F738 /* UserDefaultHelper.swift */; };
@@ -38,6 +39,7 @@
 		825B4BDD946820915872EBDE /* Pods-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.release.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.release.xcconfig"; sourceTree = "<group>"; };
 		855230B7609B10B4633F2C9D /* Pods-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.debug.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"; sourceTree = "<group>"; };
 		E25521AEFF1FF2E020C6CFAC /* Pods_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA0530DB265DCF35009A0DAB /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
 		FA2ABEAE265B5ABF0079F738 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		FA2ABEB1265B5B220079F738 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		FA2ABEB5265B5C0E0079F738 /* UserDefaultHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultHelper.swift; sourceTree = "<group>"; };
@@ -61,6 +63,20 @@
 		FA6F7C88265B7BBC00CF5DA5 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		FA6F7C89265B7BBC00CF5DA5 /* TransactionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionCell.xib; sourceTree = "<group>"; };
 		FA6F7C8E265B7E3D00CF5DA5 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		FA73C446265CAEAF004AFAF4 /* NunitoSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-Black.ttf"; path = "../../../../../../../Downloads/Nunito_Sans/NunitoSans-Black.ttf"; sourceTree = "<group>"; };
+		FA73C447265CAEAF004AFAF4 /* NunitoSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-ExtraBold.ttf"; path = "../../../../../../../Downloads/Nunito_Sans/NunitoSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		FA73C448265CAEAF004AFAF4 /* NunitoSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-Light.ttf"; path = "../../../../../../../Downloads/Nunito_Sans/NunitoSans-Light.ttf"; sourceTree = "<group>"; };
+		FA73C449265CAEAF004AFAF4 /* NunitoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-Italic.ttf"; path = "../../../../../../../Downloads/Nunito_Sans/NunitoSans-Italic.ttf"; sourceTree = "<group>"; };
+		FA73C44A265CAEAF004AFAF4 /* NunitoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-Regular.ttf"; path = "../../../../../../../Downloads/Nunito_Sans/NunitoSans-Regular.ttf"; sourceTree = "<group>"; };
+		FA73C44B265CAEAF004AFAF4 /* NunitoSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-ExtraBoldItalic.ttf"; path = "../../../../../../../Downloads/Nunito_Sans/NunitoSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		FA73C44C265CAEAF004AFAF4 /* NunitoSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-LightItalic.ttf"; path = "../../../../../../../Downloads/Nunito_Sans/NunitoSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		FA73C44D265CAEAF004AFAF4 /* NunitoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-BoldItalic.ttf"; path = "../../../../../../../Downloads/Nunito_Sans/NunitoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		FA73C44E265CAEAF004AFAF4 /* NunitoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-Bold.ttf"; path = "../../../../../../../Downloads/Nunito_Sans/NunitoSans-Bold.ttf"; sourceTree = "<group>"; };
+		FA73C44F265CAEAF004AFAF4 /* NunitoSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-ExtraLightItalic.ttf"; path = "../../../../../../../Downloads/Nunito_Sans/NunitoSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		FA73C450265CAEAF004AFAF4 /* NunitoSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-SemiBold.ttf"; path = "../../../../../../../Downloads/Nunito_Sans/NunitoSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		FA73C451265CAEAF004AFAF4 /* NunitoSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-SemiBoldItalic.ttf"; path = "../../../../../../../Downloads/Nunito_Sans/NunitoSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		FA73C452265CAEAF004AFAF4 /* NunitoSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-ExtraLight.ttf"; path = "../../../../../../../Downloads/Nunito_Sans/NunitoSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		FA73C453265CAEAF004AFAF4 /* NunitoSans-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-BlackItalic.ttf"; path = "../../../../../../../Downloads/Nunito_Sans/NunitoSans-BlackItalic.ttf"; sourceTree = "<group>"; };
 		FA8E3422265B495B005C1AFF /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8E3425265B495B005C1AFF /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		FA8E3426265B495B005C1AFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,6 +110,23 @@
 				E25521AEFF1FF2E020C6CFAC /* Pods_Core.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA0530D9265DCF14009A0DAB /* LoginResponse */ = {
+			isa = PBXGroup;
+			children = (
+				FA2ABEC7265B5ECA0079F738 /* LoginResponse.swift */,
+				FA2ABECB265B5ED20079F738 /* LoginDataResponse.swift */,
+			);
+			path = LoginResponse;
+			sourceTree = "<group>";
+		};
+		FA0530DA265DCF25009A0DAB /* RegisterResponse */ = {
+			isa = PBXGroup;
+			children = (
+				FA0530DB265DCF35009A0DAB /* RegisterResponse.swift */,
+			);
+			path = RegisterResponse;
 			sourceTree = "<group>";
 		};
 		FA2ABEAD265B5AA50079F738 /* Extension */ = {
@@ -178,8 +211,8 @@
 		FA2ABEC4265B5E540079F738 /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				FA2ABEC7265B5ECA0079F738 /* LoginResponse.swift */,
-				FA2ABECB265B5ED20079F738 /* LoginDataResponse.swift */,
+				FA0530DA265DCF25009A0DAB /* RegisterResponse */,
+				FA0530D9265DCF14009A0DAB /* LoginResponse */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -219,6 +252,27 @@
 			path = TransactionCell;
 			sourceTree = "<group>";
 		};
+		FA73C445265CAE9C004AFAF4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FA73C446265CAEAF004AFAF4 /* NunitoSans-Black.ttf */,
+				FA73C453265CAEAF004AFAF4 /* NunitoSans-BlackItalic.ttf */,
+				FA73C44E265CAEAF004AFAF4 /* NunitoSans-Bold.ttf */,
+				FA73C44D265CAEAF004AFAF4 /* NunitoSans-BoldItalic.ttf */,
+				FA73C447265CAEAF004AFAF4 /* NunitoSans-ExtraBold.ttf */,
+				FA73C44B265CAEAF004AFAF4 /* NunitoSans-ExtraBoldItalic.ttf */,
+				FA73C452265CAEAF004AFAF4 /* NunitoSans-ExtraLight.ttf */,
+				FA73C44F265CAEAF004AFAF4 /* NunitoSans-ExtraLightItalic.ttf */,
+				FA73C449265CAEAF004AFAF4 /* NunitoSans-Italic.ttf */,
+				FA73C448265CAEAF004AFAF4 /* NunitoSans-Light.ttf */,
+				FA73C44C265CAEAF004AFAF4 /* NunitoSans-LightItalic.ttf */,
+				FA73C44A265CAEAF004AFAF4 /* NunitoSans-Regular.ttf */,
+				FA73C450265CAEAF004AFAF4 /* NunitoSans-SemiBold.ttf */,
+				FA73C451265CAEAF004AFAF4 /* NunitoSans-SemiBoldItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		FA8E3418265B495B005C1AFF = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +294,7 @@
 		FA8E3424265B495B005C1AFF /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				FA73C445265CAE9C004AFAF4 /* Fonts */,
 				FA6F7C86265B7B7200CF5DA5 /* Component */,
 				FA2ABEBE265B5E0F0079F738 /* Data */,
 				FA2ABEB4265B5C010079F738 /* Helper */,
@@ -360,6 +415,7 @@
 				FA2ABECF265B5F590079F738 /* AuthApi.swift in Sources */,
 				FA2ABEAF265B5ABF0079F738 /* UIViewExtension.swift in Sources */,
 				FA2ABED2265B63060079F738 /* AuthNetworkManager.swift in Sources */,
+				FA0530DC265DCF35009A0DAB /* RegisterResponse.swift in Sources */,
 				FA6F7C69265B69C600CF5DA5 /* BalanceApi.swift in Sources */,
 				FA2ABEB6265B5C0E0079F738 /* UserDefaultHelper.swift in Sources */,
 				FA2ABED8265B66CB0079F738 /* GetBalanceResponse.swift in Sources */,

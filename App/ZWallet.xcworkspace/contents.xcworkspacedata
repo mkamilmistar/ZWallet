@@ -19,4 +19,22 @@
    <FileRef
       location = "group:../Module/Login/Login.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:../Module/Register/Register.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Module/ConfirmTransaction/ConfirmTransaction.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Module/PINConfirmation/PINConfirmation.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Module/Receiver/Receiver.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Module/Transaction/Transaction.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Module/TransactionDetail/TransactionDetail.xcodeproj">
+   </FileRef>
 </Workspace>

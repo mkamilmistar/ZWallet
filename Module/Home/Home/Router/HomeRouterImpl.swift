@@ -25,7 +25,10 @@ public class HomeRouterImpl {
         
         vc.presenter = presenter
         
-        UIApplication.shared.windows.first?.rootViewController = vc
+        let navController = UINavigationController(rootViewController: vc)
+        navController.setNavigationBarHidden(true, animated: false)
+        
+        UIApplication.shared.windows.first?.rootViewController = navController
         UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
     

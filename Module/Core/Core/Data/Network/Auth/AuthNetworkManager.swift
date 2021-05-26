@@ -9,4 +9,6 @@ import Foundation
 
 public protocol AuthNetworkManager {
     func login(email: String, password: String, completion: @escaping (LoginDataResponse?, Error?) -> ())
+    func register(username: String, email: String, password: String,
+                  completion: @escaping (RegisterResponse?, Error?) -> ())
 }

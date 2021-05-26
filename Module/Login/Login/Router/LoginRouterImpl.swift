@@ -27,13 +27,20 @@ public class LoginRouterImpl {
         
         vc.presenter = presenter
         
-        UIApplication.shared.windows.first?.rootViewController = vc
+        let navController = UINavigationController(rootViewController: vc)
+        navController.setNavigationBarHidden(true, animated: false)
+        
+        UIApplication.shared.windows.first?.rootViewController = navController
         UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
 
 }
 
 extension LoginRouterImpl: LoginRouter {
+    func navigateToRegister(viewController: UIViewController) {
+        AppRouter.shared.registerScene!(viewController)
+    }
+    
     func navigateToHome() {
         NotificationCenter.default.post(name: Notification.Name("reloadRootView"), object: nil)
     }

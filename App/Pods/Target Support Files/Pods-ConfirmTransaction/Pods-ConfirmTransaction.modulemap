@@ -1,0 +1,6 @@
+framework module Pods_ConfirmTransaction {
+  umbrella header "Pods-ConfirmTransaction-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -21,17 +21,25 @@ class HistoryPresenterImpl: HistoryPresenter {
         self.router = router
     }
     
-    func loadHistoryTransaction() {
-        self.interactor.getHistoryTransaction()
+    func loadHistoryThisWeek() {
+        self.interactor.getHistoryThisWeek()
     }
     
-    func backToHome() {
-        self.router.navigateToHome()
+    func loadHistoryThisMonth() {
+        self.interactor.getHistoryThisMonth()
+    }
+    
+    func backToHome(viewController: UIViewController) {
+        self.router.navigateToHome(viewController: viewController)
     }
 }
 
 extension HistoryPresenterImpl: HistoryInteractorOutput {
-    func loadedHistoryTransaction(histories: [TransactionEntity]) {
-        self.view.showHistoryData(transactions: histories)
+    func loadedHistoryThisWeek(historiesThisWeek: [TransactionEntity]) {
+        self.view.showHistoryThisWeek(historiesThisWeek: historiesThisWeek)
+    }
+    
+    func loadedHistoryThisMonth(historiesThisMonth: [TransactionEntity]) {
+        self.view.showHistoryThisMonth(historiesThisMonth: historiesThisMonth)
     }
 }
