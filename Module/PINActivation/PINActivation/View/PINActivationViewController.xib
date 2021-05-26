@@ -61,7 +61,7 @@
                                 <action selector="confirmAction:" destination="-1" eventType="touchUpInside" id="N6Q-55-4YL"/>
                             </connections>
                         </button>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="080199" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ac-V4-HMT">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Pin" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ac-V4-HMT">
                             <rect key="frame" x="32" y="181.5" width="311" height="58"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="58" id="Xit-oD-cHt"/>

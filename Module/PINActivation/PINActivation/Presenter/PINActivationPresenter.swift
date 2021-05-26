@@ -9,5 +9,4 @@ import Foundation
 
 protocol PINActivationPresenter {
     func activatePin(pin: String)
-
 }

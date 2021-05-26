@@ -12,6 +12,8 @@ import Login
 import Home
 import Register
 import PINActivation
+import Receiver
+import ConfirmOTP
 
 @available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -82,6 +84,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             RegisterRouterImpl.navigateToModule(viewController: viewController)
         }
         
+        AppRouter.shared.confirmOTPScene = {
+            ConfirmOTPRouterImpl.navigateToModule()
+        }
+        
         AppRouter.shared.pinActivationScene = {
             PINActivationRouterImpl.navigateToModule()
         }
@@ -94,5 +100,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             HistoryRouterImpl.navigateToModule(viewController: viewController)
         }
         
+        AppRouter.shared.receiverScene = { viewController in
+            ReceiverRouterImpl.navigateToModule(viewController: viewController)
+        }
     }
  }

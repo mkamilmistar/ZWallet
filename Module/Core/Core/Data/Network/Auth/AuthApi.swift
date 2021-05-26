@@ -12,6 +12,7 @@ public enum AuthApi {
     case login(email: String, password: String)
     case register(username: String, email: String, password: String)
     case pinActivation(pin: String)
+    case confirmOTP(email: String, otp: String)
 }
 
 extension AuthApi: TargetType {
@@ -27,8 +28,9 @@ extension AuthApi: TargetType {
             return "auth/signup"
         case .pinActivation:
             return "auth/PIN"
+        case .confirmOTP(let email, let otp):
+            return "auth/activate/\(email)/\(otp)"
         }
-        
     }
     
     public var method: Moya.Method {
@@ -39,6 +41,8 @@ extension AuthApi: TargetType {
             return .post
         case .pinActivation:
             return .patch
+        case .confirmOTP:
+            return .get
         }
     }
     
@@ -63,6 +67,8 @@ extension AuthApi: TargetType {
                 parameters: ["PIN": pin],
                 encoding: JSONEncoding.default
             )
+        case .confirmOTP:
+            return .requestPlain
         }
     }
     

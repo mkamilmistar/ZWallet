@@ -18,7 +18,7 @@ public class LoginInteractorImpl: LoginInteractor {
         self.authNetworkManager = networkManager
     }
     
-    func postLoginData(email: String, password: String) {
+    public func postLoginData(email: String, password: String) {
         // Hit API login with sending email and password
         self.authNetworkManager.login(email: email, password: password) { data, error in
             if let loginData = data {

@@ -10,5 +10,5 @@ import UIKit
 
 protocol RegisterPresenter {
     func register(usernmae: String, email: String, password: String)
-    func backToLogin(viewController: UIViewController)
+    func backNavigation(viewController: UIViewController)
 }

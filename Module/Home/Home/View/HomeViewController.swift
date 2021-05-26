@@ -31,12 +31,15 @@ class HomeViewController: UIViewController {
         self.tableView.dataSource = self.dataSource
         self.presenter?.loadProfile()
         self.presenter?.loadTransaction()
-        
     }
     
 }
 
 extension HomeViewController: DashboardCellDelegate {
+    func showAllReceiver() {
+        self.presenter?.showReceiver(viewControoller: self)
+    }
+    
     func showAllTransaction() {
         self.presenter?.showHistory(viewController: self)
     }

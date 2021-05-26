@@ -20,8 +20,8 @@ class RegisterInteractorImpl: RegisterInteractor {
     func postRegisterData(username: String, email: String, password: String) {
         // Hit API
         self.authManagerNetwork.register(username: username, email: email, password: password) { (data, error) in
-            if let registerData = data {
-                print(registerData)
+            if data?.status == 200 {
+                UserDefaultHelper.shared.set(key: .userEmail, value: email)
                 self.interactorOutput?.registerResult(isSuccess: true)
             } else {
                 self.interactorOutput?.registerResult(isSuccess: false)

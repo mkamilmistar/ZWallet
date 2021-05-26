@@ -9,9 +9,15 @@
 /* Begin PBXBuildFile section */
 		64D15BB6F8EDD2A1CE7FAC08 /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E25521AEFF1FF2E020C6CFAC /* Pods_Core.framework */; };
 		FA0530DC265DCF35009A0DAB /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0530DB265DCF35009A0DAB /* RegisterResponse.swift */; };
-		FA0530FA265DF5FD009A0DAB /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0530F9265DF5FD009A0DAB /* UserEntity.swift */; };
 		FA053134265DFD00009A0DAB /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA053133265DFD00009A0DAB /* UIColorExtension.swift */; };
 		FA05313F265E07EA009A0DAB /* PINConfirmationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA05313E265E07EA009A0DAB /* PINConfirmationResponse.swift */; };
+		FA053152265E3C27009A0DAB /* ReceiverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA053150265E3C27009A0DAB /* ReceiverCell.swift */; };
+		FA053153265E3C27009A0DAB /* ReceiverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA053151265E3C27009A0DAB /* ReceiverCell.xib */; };
+		FA053159265E3E42009A0DAB /* ContactApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA053158265E3E42009A0DAB /* ContactApi.swift */; };
+		FA05315D265E3E51009A0DAB /* ContactNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA05315C265E3E51009A0DAB /* ContactNetworkManager.swift */; };
+		FA053160265E3E5D009A0DAB /* ContactNetworkManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA05315F265E3E5D009A0DAB /* ContactNetworkManagerImpl.swift */; };
+		FA053163265E3E69009A0DAB /* GetContactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA053162265E3E69009A0DAB /* GetContactResponse.swift */; };
+		FA053166265E3E72009A0DAB /* GetContactDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA053165265E3E72009A0DAB /* GetContactDataResponse.swift */; };
 		FA2ABEAF265B5ABF0079F738 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2ABEAE265B5ABF0079F738 /* UIViewExtension.swift */; };
 		FA2ABEB2265B5B220079F738 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2ABEB1265B5B220079F738 /* IntExtension.swift */; };
 		FA2ABEB6265B5C0E0079F738 /* UserDefaultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2ABEB5265B5C0E0079F738 /* UserDefaultHelper.swift */; };
@@ -36,6 +42,8 @@
 		FA6F7C8B265B7BBC00CF5DA5 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6F7C89265B7BBC00CF5DA5 /* TransactionCell.xib */; };
 		FA6F7C8F265B7E3D00CF5DA5 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F7C8E265B7E3D00CF5DA5 /* AppRouter.swift */; };
 		FA8E3427265B495B005C1AFF /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = FA8E3425265B495B005C1AFF /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAA255C8265E5508002F9A1E /* ReceiverEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA255C7265E5508002F9A1E /* ReceiverEntity.swift */; };
+		FAA25625265E7790002F9A1E /* OTPConfirmationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25624265E7790002F9A1E /* OTPConfirmationResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,9 +51,15 @@
 		855230B7609B10B4633F2C9D /* Pods-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.debug.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"; sourceTree = "<group>"; };
 		E25521AEFF1FF2E020C6CFAC /* Pods_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0530DB265DCF35009A0DAB /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
-		FA0530F9265DF5FD009A0DAB /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		FA053133265DFD00009A0DAB /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		FA05313E265E07EA009A0DAB /* PINConfirmationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINConfirmationResponse.swift; sourceTree = "<group>"; };
+		FA053150265E3C27009A0DAB /* ReceiverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverCell.swift; sourceTree = "<group>"; };
+		FA053151265E3C27009A0DAB /* ReceiverCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiverCell.xib; sourceTree = "<group>"; };
+		FA053158265E3E42009A0DAB /* ContactApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactApi.swift; sourceTree = "<group>"; };
+		FA05315C265E3E51009A0DAB /* ContactNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactNetworkManager.swift; sourceTree = "<group>"; };
+		FA05315F265E3E5D009A0DAB /* ContactNetworkManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactNetworkManagerImpl.swift; sourceTree = "<group>"; };
+		FA053162265E3E69009A0DAB /* GetContactResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetContactResponse.swift; sourceTree = "<group>"; };
+		FA053165265E3E72009A0DAB /* GetContactDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetContactDataResponse.swift; sourceTree = "<group>"; };
 		FA2ABEAE265B5ABF0079F738 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		FA2ABEB1265B5B220079F738 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		FA2ABEB5265B5C0E0079F738 /* UserDefaultHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultHelper.swift; sourceTree = "<group>"; };
@@ -86,6 +100,8 @@
 		FA8E3422265B495B005C1AFF /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8E3425265B495B005C1AFF /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		FA8E3426265B495B005C1AFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA255C7265E5508002F9A1E /* ReceiverEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverEntity.swift; sourceTree = "<group>"; };
+		FAA25624265E7790002F9A1E /* OTPConfirmationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPConfirmationResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +151,35 @@
 			path = RegisterResponse;
 			sourceTree = "<group>";
 		};
+		FA05314F265E3BFF009A0DAB /* ReceiverCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA053150265E3C27009A0DAB /* ReceiverCell.swift */,
+				FA053151265E3C27009A0DAB /* ReceiverCell.xib */,
+			);
+			path = ReceiverCell;
+			sourceTree = "<group>";
+		};
+		FA053156265E3E22009A0DAB /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				FA053157265E3E32009A0DAB /* Response */,
+				FA053158265E3E42009A0DAB /* ContactApi.swift */,
+				FA05315C265E3E51009A0DAB /* ContactNetworkManager.swift */,
+				FA05315F265E3E5D009A0DAB /* ContactNetworkManagerImpl.swift */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		FA053157265E3E32009A0DAB /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				FA053162265E3E69009A0DAB /* GetContactResponse.swift */,
+				FA053165265E3E72009A0DAB /* GetContactDataResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 		FA2ABEAD265B5AA50079F738 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +212,7 @@
 		FA2ABEBF265B5E140079F738 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				FA053156265E3E22009A0DAB /* Contact */,
 				FA2ABEC2265B5E3A0079F738 /* Auth */,
 				FA2ABEC3265B5E400079F738 /* Balance */,
 				FA2ABEC0265B5E290079F738 /* Invoice */,
@@ -189,7 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				FA6F7C82265B7B1700CF5DA5 /* TransactionEntity.swift */,
-				FA0530F9265DF5FD009A0DAB /* UserEntity.swift */,
+				FAA255C7265E5508002F9A1E /* ReceiverEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -219,6 +265,7 @@
 		FA2ABEC4265B5E540079F738 /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				FAA25624265E7790002F9A1E /* OTPConfirmationResponse.swift */,
 				FA0530DA265DCF25009A0DAB /* RegisterResponse */,
 				FA0530D9265DCF14009A0DAB /* LoginResponse */,
 				FA05313E265E07EA009A0DAB /* PINConfirmationResponse.swift */,
@@ -247,6 +294,7 @@
 		FA6F7C86265B7B7200CF5DA5 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				FA05314F265E3BFF009A0DAB /* ReceiverCell */,
 				FA6F7C87265B7B9B00CF5DA5 /* TransactionCell */,
 			);
 			path = Component;
@@ -384,6 +432,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA053153265E3C27009A0DAB /* ReceiverCell.xib in Resources */,
 				FA6F7C8B265B7BBC00CF5DA5 /* TransactionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,27 +470,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA6F7C73265B6CC000CF5DA5 /* GetInvoiceResponse.swift in Sources */,
+				FAA255C8265E5508002F9A1E /* ReceiverEntity.swift in Sources */,
 				FA2ABECF265B5F590079F738 /* AuthApi.swift in Sources */,
+				FA053163265E3E69009A0DAB /* GetContactResponse.swift in Sources */,
 				FA2ABEAF265B5ABF0079F738 /* UIViewExtension.swift in Sources */,
 				FA2ABED2265B63060079F738 /* AuthNetworkManager.swift in Sources */,
 				FA0530DC265DCF35009A0DAB /* RegisterResponse.swift in Sources */,
 				FA6F7C69265B69C600CF5DA5 /* BalanceApi.swift in Sources */,
 				FA2ABEB6265B5C0E0079F738 /* UserDefaultHelper.swift in Sources */,
-				FA0530FA265DF5FD009A0DAB /* UserEntity.swift in Sources */,
+				FA05315D265E3E51009A0DAB /* ContactNetworkManager.swift in Sources */,
+				FA053166265E3E72009A0DAB /* GetContactDataResponse.swift in Sources */,
 				FA2ABED8265B66CB0079F738 /* GetBalanceResponse.swift in Sources */,
 				FA2ABECC265B5ED20079F738 /* LoginDataResponse.swift in Sources */,
 				FA6F7C6F265B6BBA00CF5DA5 /* BalanceNetworkManagerImpl.swift in Sources */,
 				FA6F7C80265B798E00CF5DA5 /* InvoiceNetworkManagerImpl.swift in Sources */,
 				FA2ABEB2265B5B220079F738 /* IntExtension.swift in Sources */,
+				FA053152265E3C27009A0DAB /* ReceiverCell.swift in Sources */,
 				FA6F7C7D265B786000CF5DA5 /* InvoiceNetworkManager.swift in Sources */,
 				FA2ABEBB265B5D920079F738 /* AppConstant.swift in Sources */,
+				FA053160265E3E5D009A0DAB /* ContactNetworkManagerImpl.swift in Sources */,
 				FA6F7C7A265B782600CF5DA5 /* InvoiceApi.swift in Sources */,
 				FA6F7C8A265B7BBC00CF5DA5 /* TransactionCell.swift in Sources */,
 				FA053134265DFD00009A0DAB /* UIColorExtension.swift in Sources */,
 				FA6F7C6C265B6B5000CF5DA5 /* BalanceNetworkManager.swift in Sources */,
+				FAA25625265E7790002F9A1E /* OTPConfirmationResponse.swift in Sources */,
 				FA2ABED5265B63830079F738 /* AuthNetworkMangerImpl.swift in Sources */,
 				FA6F7C77265B6CCC00CF5DA5 /* GetInvoiceDataResponse.swift in Sources */,
 				FA6F7C8F265B7E3D00CF5DA5 /* AppRouter.swift in Sources */,
+				FA053159265E3E42009A0DAB /* ContactApi.swift in Sources */,
 				FA6F7C83265B7B1800CF5DA5 /* TransactionEntity.swift in Sources */,
 				FA2ABEDB265B66D80079F738 /* GetBalanceDataResponse.swift in Sources */,
 				FA2ABEC8265B5ECA0079F738 /* LoginResponse.swift in Sources */,

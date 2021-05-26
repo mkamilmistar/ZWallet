@@ -20,6 +20,12 @@ public class AppRouter {
         self.registerScene?(viewController)
     }
     
+    public var confirmOTPScene: (() -> ())? = nil
+    
+    public func navigateToConfirmOTP() {
+        self.confirmOTPScene?()
+    }
+    
     public var pinActivationScene: (() -> ())? = nil
     
     public func navigateToPINActivation() {
@@ -44,5 +50,11 @@ public class AppRouter {
     
     public func navigateToHistory(_ viewController: UIViewController) {
         self.historyScene?(viewController)
+    }
+    
+    public var receiverScene: ((_ viewController: UIViewController) -> ())? = nil
+    
+    public func navigateToReceiver(_ viewController: UIViewController) {
+        self.receiverScene?(viewController)
     }
 }

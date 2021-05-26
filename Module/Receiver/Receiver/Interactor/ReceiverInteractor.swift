@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import UIKit
+import Core
+
+public protocol ReceiverInteractor {
+    func getReceiverData()
+}

@@ -32,8 +32,8 @@ class RegisterViewController: UIViewController {
         self.presenter?.register(usernmae: username, email: email, password: password)
     }
     
-    @IBAction func navigateToLoginAction(_ sender: UIButton) {
-        self.presenter?.backToLogin(viewController: self)
+    @IBAction func backNavigationToLogin(_ sender: UIButton) {
+        self.presenter?.backNavigation(viewController: self)
     }
 }
 
@@ -41,7 +41,7 @@ extension RegisterViewController: RegisterView {
     func showError() {
         let alert = UIAlertController(
             title: "Peringatan",
-            message: "Username atau password anda salah, silahkan coba lagi",
+            message: "Username sudah ada",
             preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)

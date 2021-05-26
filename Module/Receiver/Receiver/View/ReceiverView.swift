@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import Core
+
+public protocol ReceiverView {
+    func showAllReceiver(receiverData: [ReceiverEntity])
+}

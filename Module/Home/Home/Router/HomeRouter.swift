@@ -11,4 +11,5 @@ import UIKit
 protocol HomeRouter {
     func navigateToHistory(viewController: UIViewController)
     func navigateToLogin()
+    func navigateToReceiver(viewController: UIViewController)
 }

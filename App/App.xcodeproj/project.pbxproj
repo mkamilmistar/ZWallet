@@ -40,6 +40,10 @@
 		FA8E340B265B48C7005C1AFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8E3409265B48C7005C1AFF /* Main.storyboard */; };
 		FA8E340D265B48C8005C1AFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8E340C265B48C8005C1AFF /* Assets.xcassets */; };
 		FA8E3410265B48C8005C1AFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8E340E265B48C8005C1AFF /* LaunchScreen.storyboard */; };
+		FAA255B3265E507E002F9A1E /* Receiver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA255B2265E507E002F9A1E /* Receiver.framework */; };
+		FAA255B4265E507E002F9A1E /* Receiver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAA255B2265E507E002F9A1E /* Receiver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FAA25629265E7F35002F9A1E /* ConfirmOTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA25628265E7F35002F9A1E /* ConfirmOTP.framework */; };
+		FAA2562A265E7F35002F9A1E /* ConfirmOTP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAA25628265E7F35002F9A1E /* ConfirmOTP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,10 +54,12 @@
 			dstSubfolderSpec = 10;
 			files = (
 				FA05313D265E001C009A0DAB /* PINActivation.framework in Embed Frameworks */,
+				FAA2562A265E7F35002F9A1E /* ConfirmOTP.framework in Embed Frameworks */,
 				FA6F7CB7265B92B800CF5DA5 /* History.framework in Embed Frameworks */,
 				FA6F7CB0265B91D100CF5DA5 /* Login.framework in Embed Frameworks */,
 				FA6F7CB4265B91D800CF5DA5 /* Core.framework in Embed Frameworks */,
 				FA6F7CBA265B92BB00CF5DA5 /* Home.framework in Embed Frameworks */,
+				FAA255B4265E507E002F9A1E /* Receiver.framework in Embed Frameworks */,
 				FA0530E8265DDBBA009A0DAB /* Register.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -95,6 +101,8 @@
 		FA8E340C265B48C8005C1AFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA8E340F265B48C8005C1AFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA8E3411265B48C8005C1AFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA255B2265E507E002F9A1E /* Receiver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Receiver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA25628265E7F35002F9A1E /* ConfirmOTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ConfirmOTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +111,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA6F7CAF265B91D100CF5DA5 /* Login.framework in Frameworks */,
+				FAA25629265E7F35002F9A1E /* ConfirmOTP.framework in Frameworks */,
 				FA6F7CB3265B91D800CF5DA5 /* Core.framework in Frameworks */,
 				428A6C3D232B630ACF3A103A /* Pods_App.framework in Frameworks */,
+				FAA255B3265E507E002F9A1E /* Receiver.framework in Frameworks */,
 				FA6F7CB9265B92BB00CF5DA5 /* Home.framework in Frameworks */,
 				FA05313C265E001C009A0DAB /* PINActivation.framework in Frameworks */,
 				FA6F7CB6265B92B800CF5DA5 /* History.framework in Frameworks */,
@@ -127,6 +137,8 @@
 		E52F0606F2BF5DACD1C7B7A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAA25628265E7F35002F9A1E /* ConfirmOTP.framework */,
+				FAA255B2265E507E002F9A1E /* Receiver.framework */,
 				FA05313B265E001C009A0DAB /* PINActivation.framework */,
 				FA0530E6265DDBBA009A0DAB /* Register.framework */,
 				FA6F7CB8265B92BB00CF5DA5 /* Home.framework */,

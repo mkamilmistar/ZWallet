@@ -28,13 +28,13 @@ class RegisterPresenterImpl: RegisterPresenter {
 extension RegisterPresenterImpl: RegisterInteractorOutput {
     func registerResult(isSuccess: Bool) {
         if isSuccess {
-            self.router.navigateToPINConfirmation()
+            self.router.navigateToConfirmOTP()
         } else {
             self.view.showError()
         }
     }
     
-    func backToLogin(viewController: UIViewController) {
-        self.router.backToLogin(viewController: viewController)
+    func backNavigation(viewController: UIViewController) {
+        self.router.backNavigation(viewController: viewController)
     }
 }

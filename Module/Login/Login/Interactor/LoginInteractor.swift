@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol LoginInteractor {
+public protocol LoginInteractor {
     func postLoginData(email: String, password: String)
 }

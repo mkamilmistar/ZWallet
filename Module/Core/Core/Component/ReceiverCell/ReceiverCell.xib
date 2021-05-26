@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NunitoSans-Bold.ttf">
+            <string>NunitoSans-Bold</string>
+        </array>
+        <array key="NunitoSans-Regular.ttf">
+            <string>NunitoSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReceiverCell" rowHeight="130" id="sqC-DH-S6C" customClass="ReceiverCell" customModule="Core" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="404" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="sqC-DH-S6C" id="fw9-w4-hae">
+                <rect key="frame" x="0.0" y="0.0" width="404" height="130"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ea8-36-gVB">
+                        <rect key="frame" x="0.0" y="0.0" width="404" height="88"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pvm-j2-eaH">
+                                <rect key="frame" x="16" y="20" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="0bn-FQ-1oC"/>
+                                    <constraint firstAttribute="height" constant="48" id="lY9-yg-ZO0"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U4O-IL-bhI">
+                                <rect key="frame" x="79" y="18.5" width="133.5" height="51.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Samuel Suhi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38x-KI-erO">
+                                        <rect key="frame" x="0.0" y="0.0" width="133.5" height="22"/>
+                                        <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="16"/>
+                                        <color key="textColor" red="0.30196078430000001" green="0.29411764709999999" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+62 813-8492-9994" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x16-yx-wrJ">
+                                        <rect key="frame" x="0.0" y="32" width="133.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="14"/>
+                                        <color key="textColor" red="0.47843137250000001" green="0.47058823529999999" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pvm-j2-eaH" firstAttribute="top" secondItem="ea8-36-gVB" secondAttribute="top" constant="20" id="1xP-nV-iNe"/>
+                            <constraint firstItem="U4O-IL-bhI" firstAttribute="centerY" secondItem="pvm-j2-eaH" secondAttribute="centerY" id="654-96-jUr"/>
+                            <constraint firstItem="pvm-j2-eaH" firstAttribute="centerY" secondItem="ea8-36-gVB" secondAttribute="centerY" id="6Qx-nh-CeA"/>
+                            <constraint firstItem="U4O-IL-bhI" firstAttribute="leading" secondItem="pvm-j2-eaH" secondAttribute="trailing" constant="15" id="BGf-bJ-pqo"/>
+                            <constraint firstAttribute="height" constant="88" id="DnE-t5-eiO"/>
+                            <constraint firstItem="pvm-j2-eaH" firstAttribute="leading" secondItem="ea8-36-gVB" secondAttribute="leading" constant="16" id="HRV-kt-ypa"/>
+                            <constraint firstAttribute="bottom" secondItem="pvm-j2-eaH" secondAttribute="bottom" constant="20" id="rVL-WG-2CF"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.98039215690000003" green="0.98823529409999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="ea8-36-gVB" firstAttribute="top" secondItem="fw9-w4-hae" secondAttribute="top" id="4dt-c4-GJZ"/>
+                    <constraint firstAttribute="trailing" secondItem="ea8-36-gVB" secondAttribute="trailing" id="XOS-U3-qP6"/>
+                    <constraint firstItem="ea8-36-gVB" firstAttribute="leading" secondItem="fw9-w4-hae" secondAttribute="leading" id="ehx-iE-8GH"/>
+                    <constraint firstAttribute="bottom" secondItem="ea8-36-gVB" secondAttribute="bottom" constant="20" id="g3F-ls-t5p"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="ewt-fO-1DS"/>
+            <color key="backgroundColor" red="0.98039215690000003" green="0.98823529409999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="backgroundCell" destination="ea8-36-gVB" id="Xef-ot-X71"/>
+                <outlet property="receiverNameLabel" destination="38x-KI-erO" id="Ydo-yJ-GCg"/>
+                <outlet property="receiverPhoneLabel" destination="x16-yx-wrJ" id="IcZ-PZ-TzJ"/>
+                <outlet property="receiverPhoto" destination="pvm-j2-eaH" id="Fzk-DW-cje"/>
+            </connections>
+            <point key="canvasLocation" x="169.56521739130437" y="148.66071428571428"/>
+        </tableViewCell>
+    </objects>
+</document>

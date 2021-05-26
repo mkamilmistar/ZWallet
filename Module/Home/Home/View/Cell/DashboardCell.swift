@@ -35,6 +35,10 @@ class DashboardCell: UITableViewCell {
         self.delegate?.showAllTransaction()
     }
     
+    @IBAction func transferAction(_ sender: UIButton) {
+        self.delegate?.showAllReceiver()
+    }
+    
     @IBAction func logoutAction(_ sender: Any) {
         self.delegate?.logout()
     }

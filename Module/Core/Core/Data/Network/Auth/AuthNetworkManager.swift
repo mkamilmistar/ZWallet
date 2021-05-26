@@ -12,4 +12,5 @@ public protocol AuthNetworkManager {
     func register(username: String, email: String, password: String,
                   completion: @escaping (RegisterResponse?, Error?) -> ())
     func pinConfirm(pin: String, completion: @escaping (PINConfirmationResponse?, Error?) -> ())
+    func otpConfirm(email: String, otp: String, completion: @escaping (OTPConfirmationResponse?, Error?) -> ())
 }

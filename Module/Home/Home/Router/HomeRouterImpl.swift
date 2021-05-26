@@ -35,6 +35,10 @@ public class HomeRouterImpl {
 }
 
 extension HomeRouterImpl: HomeRouter {
+    func navigateToReceiver(viewController: UIViewController) {
+        AppRouter.shared.navigateToReceiver(viewController)
+    }
+    
     func navigateToHistory(viewController: UIViewController) {
         AppRouter.shared.navigateToHistory(viewController)
     }

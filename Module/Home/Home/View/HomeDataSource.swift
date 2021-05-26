@@ -30,7 +30,7 @@ class HomeDataSource: NSObject, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DashboardCell", for: indexPath) as! DashboardCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DashboardCell.self), for: indexPath) as! DashboardCell
             cell.showData(userProfile: self.userProfile)
             cell.delegate = self.viewController
             cell.selectionStyle = .none

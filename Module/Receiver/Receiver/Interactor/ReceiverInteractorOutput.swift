@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import Core
+
+public protocol ReceiverInteractorOutput {
+    func loadedDataReceiver(contacts: [ReceiverEntity])
+}

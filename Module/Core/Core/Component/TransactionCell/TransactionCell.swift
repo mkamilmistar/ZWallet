@@ -19,10 +19,7 @@ public class TransactionCell: UITableViewCell {
     public override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        backgroundCell.layer.cornerRadius = 10
-        backgroundCell.layer.shadowColor = UIColor.black.cgColor
-        backgroundCell.layer.shadowOpacity = 0.1
-        backgroundCell.layer.shadowOffset = CGSize(width: 0, height: 1)
+        backgroundCell.setShadow(color: UIColor.black.cgColor, opacity: 0.1)
     }
     
     public func showData(transaction: TransactionEntity) {

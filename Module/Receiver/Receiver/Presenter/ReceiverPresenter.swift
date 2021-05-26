@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import UIKit
+
+public protocol ReceiverPresenter {
+    func loadDataReceiver()
+    func backToHome(viewController: UIViewController)
+}

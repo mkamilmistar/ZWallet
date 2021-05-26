@@ -11,7 +11,6 @@ import Core
 
 
 class HomePresenterImpl: HomePresenter {
-    
     let view: HomeView
     let interactor: HomeInteractor
     let router: HomeRouter
@@ -37,7 +36,12 @@ class HomePresenterImpl: HomePresenter {
     
     func logout() {
         UserDefaultHelper.shared.remove(key: .userToken)
+        UserDefaultHelper.shared.remove(key: .userEmail)
         self.router.navigateToLogin()
+    }
+    
+    func showReceiver(viewControoller: UIViewController) {
+        self.router.navigateToReceiver(viewController: viewControoller)
     }
 }
 

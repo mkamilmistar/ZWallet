@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import UIKit
 
 public protocol ReceiverRouter {
-    func navigateToHome()
+    func navigateToHome(viewController: UIViewController)
 }

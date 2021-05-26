@@ -33,6 +33,10 @@ target 'PINActivation' do
 	project '../Module/PINActivation/PINActivation'
 end
 
+target 'ConfirmOTP' do
+	project '../Module/ConfirmOTP/ConfirmOTP'
+end
+
 target 'Home' do
 	project '../Module/Home/Home'
 

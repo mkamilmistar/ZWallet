@@ -225,7 +225,7 @@
                                         <color key="titleColor" red="0.38823529411764707" green="0.47450980392156861" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
-                                        <action selector="navigateToLoginAction:" destination="-1" eventType="touchUpInside" id="gyV-jO-iFn"/>
+                                        <action selector="backNavigationToLogin:" destination="-1" eventType="touchUpInside" id="gyV-jO-iFn"/>
                                     </connections>
                                 </button>
                             </subviews>
