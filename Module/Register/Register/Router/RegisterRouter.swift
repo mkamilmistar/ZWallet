@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 protocol RegisterRouter {
-    func navigateToLogin()
+//    func navigateToLogin()
     func backToLogin(viewController: UIViewController)
+    func navigateToPINConfirmation()
 }

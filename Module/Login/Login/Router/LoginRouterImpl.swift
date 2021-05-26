@@ -44,4 +44,8 @@ extension LoginRouterImpl: LoginRouter {
     func navigateToHome() {
         NotificationCenter.default.post(name: Notification.Name("reloadRootView"), object: nil)
     }
+    
+    func navigateToPinActiovation() {
+        AppRouter.shared.navigateToPINActivation()
+    }
 }

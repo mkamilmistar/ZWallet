@@ -11,6 +11,7 @@ import Moya
 public enum AuthApi {
     case login(email: String, password: String)
     case register(username: String, email: String, password: String)
+    case pinActivation(pin: String)
 }
 
 extension AuthApi: TargetType {
@@ -24,7 +25,10 @@ extension AuthApi: TargetType {
             return "auth/login"
         case .register:
             return "auth/signup"
+        case .pinActivation:
+            return "auth/PIN"
         }
+        
     }
     
     public var method: Moya.Method {
@@ -33,6 +37,8 @@ extension AuthApi: TargetType {
             return .post
         case .register:
             return .post
+        case .pinActivation:
+            return .patch
         }
     }
     
@@ -52,12 +58,26 @@ extension AuthApi: TargetType {
                 parameters: ["username": username, "email": email, "password": password],
                 encoding: JSONEncoding.default
             )
+        case .pinActivation(pin: let pin):
+            return .requestParameters(
+                parameters: ["PIN": pin],
+                encoding: JSONEncoding.default
+            )
         }
     }
     
     public var headers: [String : String]? {
-        return [
-            "Content-Type": "application/json"
-        ]
+        let token: String = UserDefaultHelper.shared.get(key: .userToken) ?? ""
+        switch self {
+        case .pinActivation:
+            return [
+                "Content-Type": "application/json",
+                "Authorization": "Bearer \(token)"
+            ]
+        default:
+            return [
+                "Content-Type": "application/json"
+            ]
+        }
     }
 }

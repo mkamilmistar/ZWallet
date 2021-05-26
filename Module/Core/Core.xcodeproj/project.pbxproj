@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		64D15BB6F8EDD2A1CE7FAC08 /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E25521AEFF1FF2E020C6CFAC /* Pods_Core.framework */; };
 		FA0530DC265DCF35009A0DAB /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0530DB265DCF35009A0DAB /* RegisterResponse.swift */; };
+		FA0530FA265DF5FD009A0DAB /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0530F9265DF5FD009A0DAB /* UserEntity.swift */; };
+		FA053134265DFD00009A0DAB /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA053133265DFD00009A0DAB /* UIColorExtension.swift */; };
+		FA05313F265E07EA009A0DAB /* PINConfirmationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA05313E265E07EA009A0DAB /* PINConfirmationResponse.swift */; };
 		FA2ABEAF265B5ABF0079F738 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2ABEAE265B5ABF0079F738 /* UIViewExtension.swift */; };
 		FA2ABEB2265B5B220079F738 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2ABEB1265B5B220079F738 /* IntExtension.swift */; };
 		FA2ABEB6265B5C0E0079F738 /* UserDefaultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2ABEB5265B5C0E0079F738 /* UserDefaultHelper.swift */; };
@@ -40,6 +43,9 @@
 		855230B7609B10B4633F2C9D /* Pods-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.debug.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"; sourceTree = "<group>"; };
 		E25521AEFF1FF2E020C6CFAC /* Pods_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0530DB265DCF35009A0DAB /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
+		FA0530F9265DF5FD009A0DAB /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		FA053133265DFD00009A0DAB /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		FA05313E265E07EA009A0DAB /* PINConfirmationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINConfirmationResponse.swift; sourceTree = "<group>"; };
 		FA2ABEAE265B5ABF0079F738 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		FA2ABEB1265B5B220079F738 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		FA2ABEB5265B5C0E0079F738 /* UserDefaultHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultHelper.swift; sourceTree = "<group>"; };
@@ -134,6 +140,7 @@
 			children = (
 				FA2ABEB1265B5B220079F738 /* IntExtension.swift */,
 				FA2ABEAE265B5ABF0079F738 /* UIViewExtension.swift */,
+				FA053133265DFD00009A0DAB /* UIColorExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -182,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				FA6F7C82265B7B1700CF5DA5 /* TransactionEntity.swift */,
+				FA0530F9265DF5FD009A0DAB /* UserEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -213,6 +221,7 @@
 			children = (
 				FA0530DA265DCF25009A0DAB /* RegisterResponse */,
 				FA0530D9265DCF14009A0DAB /* LoginResponse */,
+				FA05313E265E07EA009A0DAB /* PINConfirmationResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -418,6 +427,7 @@
 				FA0530DC265DCF35009A0DAB /* RegisterResponse.swift in Sources */,
 				FA6F7C69265B69C600CF5DA5 /* BalanceApi.swift in Sources */,
 				FA2ABEB6265B5C0E0079F738 /* UserDefaultHelper.swift in Sources */,
+				FA0530FA265DF5FD009A0DAB /* UserEntity.swift in Sources */,
 				FA2ABED8265B66CB0079F738 /* GetBalanceResponse.swift in Sources */,
 				FA2ABECC265B5ED20079F738 /* LoginDataResponse.swift in Sources */,
 				FA6F7C6F265B6BBA00CF5DA5 /* BalanceNetworkManagerImpl.swift in Sources */,
@@ -427,6 +437,7 @@
 				FA2ABEBB265B5D920079F738 /* AppConstant.swift in Sources */,
 				FA6F7C7A265B782600CF5DA5 /* InvoiceApi.swift in Sources */,
 				FA6F7C8A265B7BBC00CF5DA5 /* TransactionCell.swift in Sources */,
+				FA053134265DFD00009A0DAB /* UIColorExtension.swift in Sources */,
 				FA6F7C6C265B6B5000CF5DA5 /* BalanceNetworkManager.swift in Sources */,
 				FA2ABED5265B63830079F738 /* AuthNetworkMangerImpl.swift in Sources */,
 				FA6F7C77265B6CCC00CF5DA5 /* GetInvoiceDataResponse.swift in Sources */,
@@ -434,6 +445,7 @@
 				FA6F7C83265B7B1800CF5DA5 /* TransactionEntity.swift in Sources */,
 				FA2ABEDB265B66D80079F738 /* GetBalanceDataResponse.swift in Sources */,
 				FA2ABEC8265B5ECA0079F738 /* LoginResponse.swift in Sources */,
+				FA05313F265E07EA009A0DAB /* PINConfirmationResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

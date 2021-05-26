@@ -11,6 +11,7 @@ import History
 import Login
 import Home
 import Register
+import PINActivation
 
 @available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -37,10 +38,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             AppRouter.shared.navigateToHome()
         } else {
             AppRouter.shared.navigateToLogin()
-            AppRouter.shared.registerScene = { viewController in
-                RegisterRouterImpl.navigateToModule(viewController: viewController)
-            }
-            
         }
     }
 
@@ -85,6 +82,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             RegisterRouterImpl.navigateToModule(viewController: viewController)
         }
         
+        AppRouter.shared.pinActivationScene = {
+            PINActivationRouterImpl.navigateToModule()
+        }
+        
         AppRouter.shared.homeScene = {
             HomeRouterImpl.navigateToModule()
         }
@@ -92,5 +93,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         AppRouter.shared.historyScene = { viewController in
             HistoryRouterImpl.navigateToModule(viewController: viewController)
         }
+        
     }
  }

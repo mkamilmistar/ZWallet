@@ -28,7 +28,7 @@ class RegisterPresenterImpl: RegisterPresenter {
 extension RegisterPresenterImpl: RegisterInteractorOutput {
     func registerResult(isSuccess: Bool) {
         if isSuccess {
-            self.router.navigateToLogin()
+            self.router.navigateToPINConfirmation()
         } else {
             self.view.showError()
         }

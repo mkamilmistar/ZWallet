@@ -12,6 +12,7 @@ public class LoginInteractorImpl: LoginInteractor {
    
     var interactorOutput: LoginInteractorOutput?
     let authNetworkManager: AuthNetworkManager
+//    let pinResponse: PINConfirmationResponse?
     
     init(networkManager: AuthNetworkManager) {
         self.authNetworkManager = networkManager
@@ -22,9 +23,16 @@ public class LoginInteractorImpl: LoginInteractor {
         self.authNetworkManager.login(email: email, password: password) { data, error in
             if let loginData = data {
                 // save user token to Userdefault
-                UserDefaultHelper.shared.set(key: .userToken, value: loginData.token)
+                UserDefaultHelper.shared.set(key: .userToken, value: loginData.data.token)
                 // tell the presenter if process is success
                 self.interactorOutput?.authenticationResult(isSuccess: true)
+                
+                if loginData.status == 200 {
+                    self.interactorOutput?.getPinStatus(isActivate: true)
+                } else {
+                    self.interactorOutput?.getPinStatus(isActivate: false)
+                }
+                
             } else {
                 // tell the presentel iff process is failed
                 self.interactorOutput?.authenticationResult(isSuccess: false)

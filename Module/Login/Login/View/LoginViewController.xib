@@ -153,7 +153,7 @@
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0M-A9-fVg">
                             <rect key="frame" x="16" y="380.5" width="343" height="57"/>
-                            <color key="backgroundColor" red="0.31372549020000001" green="0.41176470590000003" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.38823529411764707" green="0.47450980392156861" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="57" id="Edl-Iw-m7l"/>
                             </constraints>
@@ -170,7 +170,7 @@
                             </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8v9-Rl-yFZ" userLabel="Dont have">
-                            <rect key="frame" x="55" y="462.5" width="265" height="34"/>
+                            <rect key="frame" x="55" y="467.5" width="265" height="34"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account? Let's" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qs3-Jm-8Me">
                                     <rect key="frame" x="0.0" y="0.0" width="204" height="34"/>
@@ -182,7 +182,7 @@
                                     <rect key="frame" x="209" y="0.0" width="56" height="34"/>
                                     <fontDescription key="fontDescription" name="NunitoSans-SemiBold" family="Nunito Sans" pointSize="16"/>
                                     <state key="normal" title="Sign up">
-                                        <color key="titleColor" red="0.38823529410000002" green="0.47450980390000003" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleColor" red="0.38823529411764707" green="0.47450980392156861" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
                                         <action selector="navigateToRegisterAction:" destination="-1" eventType="touchUpInside" id="16I-K8-BZD"/>
@@ -205,7 +205,7 @@
                         <constraint firstItem="6fZ-88-aa1" firstAttribute="centerX" secondItem="1zX-cf-I8W" secondAttribute="centerX" id="cZo-n7-0F6"/>
                         <constraint firstItem="eQi-Mv-Fx1" firstAttribute="leading" secondItem="1zX-cf-I8W" secondAttribute="leading" id="eJn-0m-jkv"/>
                         <constraint firstItem="z0M-A9-fVg" firstAttribute="leading" secondItem="1zX-cf-I8W" secondAttribute="leading" constant="16" id="gMH-Nr-Xq4"/>
-                        <constraint firstItem="8v9-Rl-yFZ" firstAttribute="top" secondItem="z0M-A9-fVg" secondAttribute="bottom" constant="25" id="lRl-zC-myx"/>
+                        <constraint firstItem="8v9-Rl-yFZ" firstAttribute="top" secondItem="z0M-A9-fVg" secondAttribute="bottom" constant="30" id="lRl-zC-myx"/>
                         <constraint firstItem="ZfL-f2-8gY" firstAttribute="top" secondItem="6fZ-88-aa1" secondAttribute="bottom" constant="20" id="qpj-jG-dtB"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
@@ -217,7 +217,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZWallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsG-HE-yMm">
                     <rect key="frame" x="151.5" y="50" width="72" height="24"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                    <color key="textColor" red="0.31372549020000001" green="0.41176470590000003" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.38823529411764707" green="0.47450980392156861" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>

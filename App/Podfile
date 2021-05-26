@@ -29,6 +29,10 @@ target 'Register' do
 	project '../Module/Register/Register'
 end
 
+target 'PINActivation' do
+	project '../Module/PINActivation/PINActivation'
+end
+
 target 'Home' do
 	project '../Module/Home/Home'
 

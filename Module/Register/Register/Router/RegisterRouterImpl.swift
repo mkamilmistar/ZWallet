@@ -31,10 +31,14 @@ public class RegisterRouterImpl {
 
 extension RegisterRouterImpl: RegisterRouter {
     func backToLogin(viewController: UIViewController) {
-        viewController.navigationController?.popToRootViewController(animated: true)
+        viewController.navigationController?.popToRootViewController(animated: false)
     }
     
-    func navigateToLogin() {
-        AppRouter.shared.navigateToLogin()
+//    func navigateToLogin() {
+//        AppRouter.shared.navigateToLogin()
+//    }
+    
+    func navigateToPINConfirmation() {
+        AppRouter.shared.navigateToPINActivation()
     }
 }

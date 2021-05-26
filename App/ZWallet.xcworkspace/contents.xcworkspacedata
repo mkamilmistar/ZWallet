@@ -37,4 +37,7 @@
    <FileRef
       location = "group:../Module/TransactionDetail/TransactionDetail.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:../Module/PINActivation/PINActivation.xcodeproj">
+   </FileRef>
 </Workspace>
