@@ -9,5 +9,4 @@ import Foundation
 import UIKit
 
 protocol TransactionInteractorOutput {
-    func transactionResult(isSuccess: Bool)
 }

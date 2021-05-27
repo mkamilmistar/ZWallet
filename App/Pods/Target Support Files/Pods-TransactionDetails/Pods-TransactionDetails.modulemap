@@ -1,0 +1,6 @@
+framework module Pods_TransactionDetails {
+  umbrella header "Pods-TransactionDetails-umbrella.h"
+
+  export *
+  module * { export * }
+}

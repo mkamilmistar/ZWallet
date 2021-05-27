@@ -14,11 +14,8 @@ public class TransactionRouterImpl {
         let bundle = Bundle(identifier: "com.casestudy.Transaction")
         let vc = TransactionViewController(nibName: "TransactionViewController", bundle: bundle)
         
-        let networkManager = TransactionNetworkManagerImpl()
-        
-        let interactor = TransactionInteractorImpl(networkManager: networkManager)
         let router = TransactionRouterImpl()
-        let presenter = TransactionPresenterImpl(view: vc, interactor: interactor, router: router)
+        let presenter = TransactionPresenterImpl(view: vc, router: router)
         
         vc.presenter = presenter
         
@@ -35,7 +32,7 @@ public class TransactionRouterImpl {
 extension TransactionRouterImpl: TransactionRouter {
     public func navigateToDetailTransaction(viewController: UIViewController,
                                             passDataTransaction: ReceiverEntity, amount: Int, notes: String) {
-        AppRouter.shared.navigateToDetailTransaction(viewController, passDataTransaction, amount, notes)
+        AppRouter.shared.navigateToConfirmationTransaction(viewController, passDataTransaction, amount, notes)
     }
     
     public func backToHome() {

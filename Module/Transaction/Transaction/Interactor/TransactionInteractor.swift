@@ -8,5 +8,4 @@
 import Foundation
 
 public protocol TransactionInteractor {
-    func postTransaction(pin: String, receiver: Int, amount: Int, notes: String)
 }

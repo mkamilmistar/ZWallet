@@ -61,14 +61,8 @@ target 'Transaction' do
 	common_dependency
 end
 
-target 'ConfirmTransaction' do
-	project '../Module/ConfirmTransaction/ConfirmTransaction'
-
-	common_dependency
-end
-
-target 'TransactionDetail' do
-	project '../Module/TransactionDetail/TransactionDetail'
+target 'TransactionConfirmation' do
+	project '../Module/TransactionConfirmation/TransactionConfirmation'
 
 	common_dependency
 end
@@ -77,4 +71,8 @@ target 'PINConfirmation' do
 	project '../Module/PINConfirmation/PINConfirmation'
 
 	common_dependency
+end
+
+target 'TransactionDetails' do
+	project '../Module/TransactionDetails/TransactionDetails'
 end

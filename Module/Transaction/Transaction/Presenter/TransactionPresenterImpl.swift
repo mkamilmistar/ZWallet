@@ -11,12 +11,10 @@ import Core
 
 public class TransactionPresenterImpl: TransactionPresenter {
     var view: TransactionView
-    var interactor: TransactionInteractor
     var router: TransactionRouter
     
-    init(view: TransactionView, interactor: TransactionInteractor, router: TransactionRouter) {
+    init(view: TransactionView, router: TransactionRouter) {
         self.view = view
-        self.interactor = interactor
         self.router = router
     }
     

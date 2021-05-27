@@ -35,7 +35,8 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="57" id="dIE-6P-7io"/>
                     </constraints>
-                    <state key="normal" title="Confirm">
+                    <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="16"/>
+                    <state key="normal" title="Transfer Now">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <userDefinedRuntimeAttributes>

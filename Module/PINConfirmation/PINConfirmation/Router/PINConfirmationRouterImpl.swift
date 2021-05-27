@@ -42,6 +42,6 @@ extension PINConfirmationRouterImpl: PINConfirmationRouter {
     }
     
     public func navigateToTransactionStatus(viewController: UIViewController) {
-        viewController.navigationController?.popToRootViewController(animated: true)
+        AppRouter.shared.navigateToTransactionDetails(viewController)
     }
 }

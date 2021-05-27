@@ -23,9 +23,6 @@
       location = "group:../Module/Register/Register.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../Module/ConfirmTransaction/ConfirmTransaction.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:../Module/PINConfirmation/PINConfirmation.xcodeproj">
    </FileRef>
    <FileRef
@@ -35,12 +32,15 @@
       location = "group:../Module/Transaction/Transaction.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../Module/TransactionDetail/TransactionDetail.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:../Module/PINActivation/PINActivation.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:../Module/ConfirmOTP/ConfirmOTP.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Module/TransactionConfirmation/TransactionConfirmation.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Module/TransactionDetails/TransactionDetails.xcodeproj">
    </FileRef>
 </Workspace>

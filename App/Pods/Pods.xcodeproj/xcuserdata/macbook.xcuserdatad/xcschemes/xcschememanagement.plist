@@ -39,77 +39,77 @@
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
-		<key>Pods-ConfirmTransaction.xcscheme</key>
+		<key>Pods-Core.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
-		<key>Pods-Core.xcscheme</key>
+		<key>Pods-History.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
-		<key>Pods-History.xcscheme</key>
+		<key>Pods-Home.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>10</integer>
 		</dict>
-		<key>Pods-Home.xcscheme</key>
+		<key>Pods-Login.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>11</integer>
 		</dict>
-		<key>Pods-Login.xcscheme</key>
+		<key>Pods-PINActivation.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>12</integer>
 		</dict>
-		<key>Pods-PINActivation.xcscheme</key>
+		<key>Pods-PINConfirmation.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>13</integer>
 		</dict>
-		<key>Pods-PINConfirmation.xcscheme</key>
+		<key>Pods-Receiver.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>14</integer>
 		</dict>
-		<key>Pods-Receiver.xcscheme</key>
+		<key>Pods-Register.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>15</integer>
 		</dict>
-		<key>Pods-Register.xcscheme</key>
+		<key>Pods-Transaction.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>16</integer>
 		</dict>
-		<key>Pods-Transaction.xcscheme</key>
+		<key>Pods-TransactionConfirmation.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>17</integer>
 		</dict>
-		<key>Pods-TransactionDetail.xcscheme</key>
+		<key>Pods-TransactionDetails.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

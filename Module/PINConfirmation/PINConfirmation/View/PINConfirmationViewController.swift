@@ -31,15 +31,17 @@ class PINConfirmationViewController: UIViewController {
     
     @IBAction func confirmTransactionAction(_ sender: UIButton) {
         let pin = pinField.text ?? ""
-        print(amount)
-        print(notes)
-        print(pinField.text!)
+        
         self.presenter?.createTransaction(pin: pin, receiver: passDataReceiver.id, amount: amount, notes: notes)
     }
     
 }
 
 extension PINConfirmationViewController: PINConfirmationView {
+    func showSuccess() {
+        self.presenter?.navigateToTransactionDetails(viewController: self)
+    }
+    
     func showError() {
         let alert = UIAlertController(
             title: "Peringatan",

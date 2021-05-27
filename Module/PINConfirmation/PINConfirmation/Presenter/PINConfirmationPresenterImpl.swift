@@ -27,13 +27,17 @@ class PINConfirmationPresenterImpl: PINConfirmationPresenter {
     func createTransaction(pin: String, receiver: Int, amount: Int, notes: String) {
         self.interactor.postTransaction(pin: pin, receiver: receiver, amount: amount, notes: notes)
     }
+    
+    func navigateToTransactionDetails(viewController: UIViewController) {
+        self.router.navigateToTransactionStatus(viewController: viewController)
+    }
 }
 
 
 extension PINConfirmationPresenterImpl: PINConfirmationInteractorOutput {
     func transactionResult(isSuccess: Bool) {
         if isSuccess {
-            AppRouter.shared.navigateToHome()
+            self.view.showSuccess()
         } else {
             self.view.showError()
         }
