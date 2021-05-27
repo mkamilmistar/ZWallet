@@ -58,9 +58,9 @@ public class AppRouter {
         self.receiverScene?(viewController)
     }
     
-    public var transactionScene: ((_ viewController: UIViewController) -> ())? = nil
+    public var transactionScene: ((_ viewController: UIViewController, _ id: Int, _ name: String, _ phone: String, _ image: String) -> ())? = nil
     
-    public func navigateToTransaction(_ viewController: UIViewController) {
-        self.transactionScene?(viewController)
+    public func navigateToTransaction(_ viewController: UIViewController, _ id: Int, _ name: String, _ phone: String, _ image: String) {
+        self.transactionScene?(viewController, id, name, phone, image)
     }
 }

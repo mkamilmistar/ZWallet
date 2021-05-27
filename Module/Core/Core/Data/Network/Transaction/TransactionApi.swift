@@ -9,7 +9,7 @@ import Foundation
 import Moya
 
 public enum TransactionApi {
-    case createTransfer(receiver: Int, amount: Int, notes: String)
+    case createTransfer(pin: String, receiver: Int, amount: Int, notes: String)
 }
 
 extension TransactionApi: TargetType {
@@ -37,7 +37,7 @@ extension TransactionApi: TargetType {
     
     public var task: Task {
         switch self {
-        case .createTransfer(let receiver, let amount, let notes):
+        case .createTransfer( _, let receiver, let amount, let notes):
             return .requestParameters(
                 parameters: ["receiver": receiver, "amount": amount, "notes": notes],
                 encoding: JSONEncoding.default
@@ -48,10 +48,11 @@ extension TransactionApi: TargetType {
     public var headers: [String : String]? {
         let token: String = UserDefaultHelper.shared.get(key: .userToken) ?? ""
         switch self {
-        case .createTransfer:
+        case .createTransfer(let pin, _, _, _):
             return [
                 "Content-Type": "application/json",
-                "Authorization": "Bearer \(token)"
+                "Authorization": "Bearer \(token)",
+                "x-access-PIN": "\(pin)"
             ]
         }
     }

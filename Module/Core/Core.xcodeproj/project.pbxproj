@@ -50,6 +50,7 @@
 		FAA2564C265F1F36002F9A1E /* TransactionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2564B265F1F36002F9A1E /* TransactionResponse.swift */; };
 		FAA25662265F4A93002F9A1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA25661265F4A93002F9A1E /* Assets.xcassets */; };
 		FAA25666265F5AB2002F9A1E /* CommonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25665265F5AB2002F9A1E /* CommonResponse.swift */; };
+		FAA256BD265F8BB4002F9A1E /* ReceiverCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA256BC265F8BB4002F9A1E /* ReceiverCellDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +115,7 @@
 		FAA2564B265F1F36002F9A1E /* TransactionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionResponse.swift; sourceTree = "<group>"; };
 		FAA25661265F4A93002F9A1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAA25665265F5AB2002F9A1E /* CommonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonResponse.swift; sourceTree = "<group>"; };
+		FAA256BC265F8BB4002F9A1E /* ReceiverCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverCellDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			children = (
 				FA053150265E3C27009A0DAB /* ReceiverCell.swift */,
 				FA053151265E3C27009A0DAB /* ReceiverCell.xib */,
+				FAA256BC265F8BB4002F9A1E /* ReceiverCellDelegate.swift */,
 			);
 			path = ReceiverCell;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				FA2ABECF265B5F590079F738 /* AuthApi.swift in Sources */,
 				FA053163265E3E69009A0DAB /* GetContactResponse.swift in Sources */,
 				FA2ABEAF265B5ABF0079F738 /* UIViewExtension.swift in Sources */,
+				FAA256BD265F8BB4002F9A1E /* ReceiverCellDelegate.swift in Sources */,
 				FA2ABED2265B63060079F738 /* AuthNetworkManager.swift in Sources */,
 				FA0530DC265DCF35009A0DAB /* RegisterResponse.swift in Sources */,
 				FA6F7C69265B69C600CF5DA5 /* BalanceApi.swift in Sources */,

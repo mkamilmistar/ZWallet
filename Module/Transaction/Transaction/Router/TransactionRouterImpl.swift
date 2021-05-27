@@ -10,11 +10,23 @@ import UIKit
 import Core
 
 public class TransactionRouterImpl {
-    public static func navigateToModule(viewController: UIViewController) {
+    public static func navigateToModule(viewController: UIViewController, id: Int, name: String, phone: String, image: String) {
         let bundle = Bundle(identifier: "com.casestudy.Transaction")
         let vc = TransactionViewController(nibName: "TransactionViewController", bundle: bundle)
         
-//        let networkManager = TransactionNetworkManagerImpl()
+        let networkManager = TransactionNetworkManagerImpl()
+        
+        let interactor = TransactionInteractorImpl(networkManager: networkManager)
+        let router = TransactionRouterImpl()
+        let presenter = TransactionPresenterImpl(view: vc, interactor: interactor, router: router)
+        
+        vc.presenter = presenter
+        
+        // Get data from Receiver
+        vc.id = id
+        vc.name = name
+        vc.phone = phone
+        vc.image = image
         
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .coverVertical
@@ -33,6 +45,6 @@ extension TransactionRouterImpl: TransactionRouter {
     }
     
     public func backToReceiver(viewController: UIViewController) {
-        AppRouter.shared.navigateToTransaction(viewController)
+        viewController.navigationController?.popViewController(animated: true)
     }
 }

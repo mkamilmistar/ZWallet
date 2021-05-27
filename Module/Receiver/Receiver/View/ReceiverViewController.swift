@@ -8,7 +8,7 @@
 import UIKit
 import Core
 
-class ReceiverViewController: UIViewController {
+class ReceiverViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet var receiverTableView: UITableView!
     
@@ -29,14 +29,11 @@ class ReceiverViewController: UIViewController {
         self.receiverTableView.register(UINib(nibName: "ReceiverCell", bundle: Bundle(identifier: "com.casestudy.Core")), forCellReuseIdentifier: "ReceiverCell")
         
         self.receiverTableView.dataSource = self.dataSource
+        self.receiverTableView.delegate = self.dataSource
     }
     
     @IBAction func backTapAction(_ sender: UITapGestureRecognizer) {
         self.presenter?.backToHome(viewController: self)
-    }
-    
-    @IBAction func nextAction(_ sender: Any) {
-        self.presenter?.navigateToTransaction(viewController: self)
     }
 }
 
@@ -45,4 +42,14 @@ extension ReceiverViewController: ReceiverView {
         self.dataSource.allDataReceiver = receiverData
         self.receiverTableView.reloadData()
     }
+}
+
+extension ReceiverViewController: ReceiverCellDelegate {
+    func navigateToTransaction(id: Int, name: String, phone: String, image: String) {
+        self.presenter?.passingDataReceiver(viewController: self, id: id, name: name, phone: phone, image: image)
+    }
+    
+//    func navigateToTransaction() {
+//        self.presenter?.navigateToTransaction(viewController: self)
+//    }
 }

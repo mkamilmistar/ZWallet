@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Core
 
-public class ReceiverRouterImpl: ReceiverRouter {
+public class ReceiverRouterImpl {
     public static func navigateToModule(viewController: UIViewController) {
         let bundle = Bundle(identifier: "com.casestudy.Receiver")
         let vc = ReceiverViewController(nibName: "ReceiverViewController", bundle: bundle)
@@ -27,15 +27,18 @@ public class ReceiverRouterImpl: ReceiverRouter {
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .coverVertical
         
-        
         viewController.navigationController?.pushViewController(vc, animated: true)
     }
+ 
     
+}
+
+extension ReceiverRouterImpl: ReceiverRouter {
     public func navigateToHome(viewController: UIViewController) {
         viewController.navigationController?.popToRootViewController(animated: true)
     }
-    
-    public func navigateToTransaction(viewController: UIViewController) {
-        AppRouter.shared.navigateToTransaction(viewController)
+
+    public func navigateToTransaction(viewController: UIViewController, id: Int, name: String, phone: String, image: String) {
+        AppRouter.shared.navigateToTransaction(viewController, id, name, phone, image)
     }
 }

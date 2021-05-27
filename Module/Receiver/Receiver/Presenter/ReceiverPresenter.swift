@@ -11,5 +11,5 @@ import UIKit
 public protocol ReceiverPresenter {
     func loadDataReceiver()
     func backToHome(viewController: UIViewController)
-    func navigateToTransaction(viewController: UIViewController)
+    func passingDataReceiver(viewController: UIViewController, id: Int, name: String, phone: String, image: String)
 }

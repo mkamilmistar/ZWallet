@@ -129,8 +129,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             ReceiverRouterImpl.navigateToModule(viewController: viewController)
         }
         
-        AppRouter.shared.transactionScene = { viewController in
-            TransactionRouterImpl.navigateToModule(viewController: viewController)
+        AppRouter.shared.transactionScene = { (viewController, id, name, phone, image) in
+            TransactionRouterImpl.navigateToModule(viewController: viewController, id: id, name: name, phone: phone, image: image)
         }
+
     }
  }

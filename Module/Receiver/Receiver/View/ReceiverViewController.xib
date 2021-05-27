@@ -44,39 +44,18 @@
                     </connections>
                 </stackView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uQ8-X0-k41">
-                    <rect key="frame" x="0.0" y="56" width="375" height="511"/>
+                    <rect key="frame" x="0.0" y="56" width="375" height="611"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FA-Pf-czO">
-                    <rect key="frame" x="16" y="587" width="343" height="57"/>
-                    <color key="backgroundColor" red="0.38823529410000002" green="0.47450980390000003" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="57" id="GgS-M5-QT7"/>
-                    </constraints>
-                    <state key="normal" title="Next">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="14"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="nextAction:" destination="-1" eventType="touchUpInside" id="Ulv-X3-l9j"/>
-                    </connections>
-                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uQ8-X0-k41" secondAttribute="trailing" id="6cN-wP-mdG"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8FA-Pf-czO" secondAttribute="trailing" constant="16" id="Dn8-jB-w7N"/>
                 <constraint firstItem="NBy-Th-o3e" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="QkF-ll-DZx"/>
                 <constraint firstItem="NBy-Th-o3e" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="dOR-bV-w46"/>
                 <constraint firstItem="uQ8-X0-k41" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eBS-MR-QyO"/>
-                <constraint firstItem="8FA-Pf-czO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="id8-eb-mPy"/>
-                <constraint firstItem="8FA-Pf-czO" firstAttribute="top" secondItem="uQ8-X0-k41" secondAttribute="bottom" constant="20" id="lSg-eA-iKh"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uQ8-X0-k41" secondAttribute="bottom" constant="100" id="wAe-Ly-VOx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uQ8-X0-k41" secondAttribute="bottom" id="wAe-Ly-VOx"/>
                 <constraint firstItem="uQ8-X0-k41" firstAttribute="top" secondItem="NBy-Th-o3e" secondAttribute="bottom" constant="8" symbolic="YES" id="yaz-XI-UpJ"/>
             </constraints>
             <point key="canvasLocation" x="-55.072463768115945" y="84.375"/>

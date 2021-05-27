@@ -11,7 +11,7 @@ import UIKit
 import Transaction
 
 public class ReceiverPresenterImpl: ReceiverPresenter {
-    
+   
     let view: ReceiverView
     let interactor: ReceiverInteractor
     let router: ReceiverRouter
@@ -31,10 +31,9 @@ public class ReceiverPresenterImpl: ReceiverPresenter {
         self.router.navigateToHome(viewController: viewController)
     }
     
-    public func navigateToTransaction(viewController: UIViewController) {
-        self.router.navigateToTransaction(viewController: viewController)
+    public func passingDataReceiver(viewController: UIViewController,id: Int, name: String, phone: String, image: String) {
+        self.router.navigateToTransaction(viewController: viewController, id: id, name: name, phone: phone, image: image)
     }
-
 }
 
 extension ReceiverPresenterImpl: ReceiverInteractorOutput {

@@ -21,8 +21,8 @@ public class TransactionPresenterImpl: TransactionPresenter {
         self.router = router
     }
     
-    public func createTransaction(receiver: Int, amount: Int, notes: String) {
-        self.interactor.postTransaction(receiver: receiver, amount: amount, notes: notes)
+    public func createTransaction(pin: String, receiver: Int, amount: Int, notes: String) {
+        self.interactor.postTransaction(pin: pin, receiver: receiver, amount: amount, notes: notes)
         self.router.backToHome()
     }
     

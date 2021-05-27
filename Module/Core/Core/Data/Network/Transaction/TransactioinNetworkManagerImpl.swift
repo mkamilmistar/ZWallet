@@ -13,11 +13,11 @@ public class TransactionNetworkManagerImpl: TransactionNetworkManager {
         
     }
     
-    public func createRegister(receiver: Int, amount: Int, notes: String,
+    public func createRegister(receiver: Int, amount: Int, notes: String, pin: String,
                                completion: @escaping (TransactionResponse?, Error?) -> ()) {
         let provider = MoyaProvider<TransactionApi>()
         provider.request(.createTransfer(
-                            receiver: receiver, amount: amount, notes: notes)
+                            pin: pin, receiver: receiver, amount: amount, notes: notes)
         ) { (result) in
             switch result {
             case .success(let response):

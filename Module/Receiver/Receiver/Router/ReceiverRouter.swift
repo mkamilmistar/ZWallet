@@ -10,5 +10,11 @@ import UIKit
 
 public protocol ReceiverRouter {
     func navigateToHome(viewController: UIViewController)
-    func navigateToTransaction(viewController: UIViewController)
+    func navigateToTransaction(
+        viewController: UIViewController,
+        id: Int,
+        name: String,
+        phone: String,
+        image: String
+    )
 }

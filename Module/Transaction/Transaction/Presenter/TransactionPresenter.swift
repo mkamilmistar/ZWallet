@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 public protocol TransactionPresenter {
-    func createTransaction(receiver: Int, amount: Int, notes: String)
+    func createTransaction(pin: String, receiver: Int, amount: Int, notes: String)
     func backToReceiver(viewController: UIViewController)
     func backToHome(viewController: UIViewController)
 }
