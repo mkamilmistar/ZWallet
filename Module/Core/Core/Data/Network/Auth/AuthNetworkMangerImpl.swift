@@ -37,7 +37,7 @@ public class AuthNetworkManagerImpl: AuthNetworkManager {
             switch result {
             case .success(let response):
                 do {
-                    let newUser = try! JSONDecoder().decode(RegisterResponse.self, from: response.data)
+                    let newUser = try? JSONDecoder().decode(RegisterResponse.self, from: response.data)
                     completion(newUser, nil)
                 } 
             case .failure(let error):
@@ -46,13 +46,13 @@ public class AuthNetworkManagerImpl: AuthNetworkManager {
         }
     }
     
-    public func pinConfirm(pin: String, completion: @escaping (PINConfirmationResponse?, Error?) -> ()) {
+    public func pinActivate(pin: String, completion: @escaping (PINConfirmationResponse?, Error?) -> ()) {
         let provider = MoyaProvider<AuthApi>()
         provider.request(.pinActivation(pin: pin)) { (result) in
             switch result {
             case .success(let response):
                 do {
-                    let createPin = try! JSONDecoder().decode(PINConfirmationResponse.self, from: response.data)
+                    let createPin = try? JSONDecoder().decode(PINConfirmationResponse.self, from: response.data)
                     completion(createPin, nil)
                 }
             case .failure(let error):
@@ -77,4 +77,19 @@ public class AuthNetworkManagerImpl: AuthNetworkManager {
         }
     }
    
+    public func pinCheck(pin: String,
+                         completion: @escaping (CommonResponse?, Error?) -> ()) {
+        let provider = MoyaProvider<AuthApi>()
+        provider.request(.checkPIN(pin: pin)) { (result) in
+            switch result {
+            case .success(let response):
+                do {
+                    let checkOTP = try! JSONDecoder().decode(CommonResponse.self, from: response.data)
+                    completion(checkOTP, nil)
+                }
+            case .failure(let error):
+                completion(nil, error)
+            }
+        }
+    }
 }

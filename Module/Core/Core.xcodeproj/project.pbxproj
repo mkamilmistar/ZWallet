@@ -44,6 +44,12 @@
 		FA8E3427265B495B005C1AFF /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = FA8E3425265B495B005C1AFF /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAA255C8265E5508002F9A1E /* ReceiverEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA255C7265E5508002F9A1E /* ReceiverEntity.swift */; };
 		FAA25625265E7790002F9A1E /* OTPConfirmationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25624265E7790002F9A1E /* OTPConfirmationResponse.swift */; };
+		FAA25643265F1D6B002F9A1E /* TransactionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25642265F1D6B002F9A1E /* TransactionApi.swift */; };
+		FAA25646265F1D77002F9A1E /* TransactioinNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25645265F1D77002F9A1E /* TransactioinNetworkManager.swift */; };
+		FAA25649265F1D7E002F9A1E /* TransactioinNetworkManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25648265F1D7E002F9A1E /* TransactioinNetworkManagerImpl.swift */; };
+		FAA2564C265F1F36002F9A1E /* TransactionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2564B265F1F36002F9A1E /* TransactionResponse.swift */; };
+		FAA25662265F4A93002F9A1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA25661265F4A93002F9A1E /* Assets.xcassets */; };
+		FAA25666265F5AB2002F9A1E /* CommonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25665265F5AB2002F9A1E /* CommonResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +108,12 @@
 		FA8E3426265B495B005C1AFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAA255C7265E5508002F9A1E /* ReceiverEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverEntity.swift; sourceTree = "<group>"; };
 		FAA25624265E7790002F9A1E /* OTPConfirmationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPConfirmationResponse.swift; sourceTree = "<group>"; };
+		FAA25642265F1D6B002F9A1E /* TransactionApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionApi.swift; sourceTree = "<group>"; };
+		FAA25645265F1D77002F9A1E /* TransactioinNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactioinNetworkManager.swift; sourceTree = "<group>"; };
+		FAA25648265F1D7E002F9A1E /* TransactioinNetworkManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactioinNetworkManagerImpl.swift; sourceTree = "<group>"; };
+		FAA2564B265F1F36002F9A1E /* TransactionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionResponse.swift; sourceTree = "<group>"; };
+		FAA25661265F4A93002F9A1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAA25665265F5AB2002F9A1E /* CommonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +224,8 @@
 		FA2ABEBF265B5E140079F738 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				FAA25664265F5AA6002F9A1E /* CommonResponse */,
+				FAA25640265F1C42002F9A1E /* Transaction */,
 				FA053156265E3E22009A0DAB /* Contact */,
 				FA2ABEC2265B5E3A0079F738 /* Auth */,
 				FA2ABEC3265B5E400079F738 /* Balance */,
@@ -358,8 +372,36 @@
 				FA2ABEAD265B5AA50079F738 /* Extension */,
 				FA8E3425265B495B005C1AFF /* Core.h */,
 				FA8E3426265B495B005C1AFF /* Info.plist */,
+				FAA25661265F4A93002F9A1E /* Assets.xcassets */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		FAA25640265F1C42002F9A1E /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				FAA25641265F1D5C002F9A1E /* Response */,
+				FAA25642265F1D6B002F9A1E /* TransactionApi.swift */,
+				FAA25645265F1D77002F9A1E /* TransactioinNetworkManager.swift */,
+				FAA25648265F1D7E002F9A1E /* TransactioinNetworkManagerImpl.swift */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		FAA25641265F1D5C002F9A1E /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2564B265F1F36002F9A1E /* TransactionResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		FAA25664265F5AA6002F9A1E /* CommonResponse */ = {
+			isa = PBXGroup;
+			children = (
+				FAA25665265F5AB2002F9A1E /* CommonResponse.swift */,
+			);
+			path = CommonResponse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA053153265E3C27009A0DAB /* ReceiverCell.xib in Resources */,
+				FAA25662265F4A93002F9A1E /* Assets.xcassets in Resources */,
 				FA6F7C8B265B7BBC00CF5DA5 /* TransactionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +524,8 @@
 				FA05315D265E3E51009A0DAB /* ContactNetworkManager.swift in Sources */,
 				FA053166265E3E72009A0DAB /* GetContactDataResponse.swift in Sources */,
 				FA2ABED8265B66CB0079F738 /* GetBalanceResponse.swift in Sources */,
+				FAA2564C265F1F36002F9A1E /* TransactionResponse.swift in Sources */,
+				FAA25646265F1D77002F9A1E /* TransactioinNetworkManager.swift in Sources */,
 				FA2ABECC265B5ED20079F738 /* LoginDataResponse.swift in Sources */,
 				FA6F7C6F265B6BBA00CF5DA5 /* BalanceNetworkManagerImpl.swift in Sources */,
 				FA6F7C80265B798E00CF5DA5 /* InvoiceNetworkManagerImpl.swift in Sources */,
@@ -493,13 +538,16 @@
 				FA6F7C8A265B7BBC00CF5DA5 /* TransactionCell.swift in Sources */,
 				FA053134265DFD00009A0DAB /* UIColorExtension.swift in Sources */,
 				FA6F7C6C265B6B5000CF5DA5 /* BalanceNetworkManager.swift in Sources */,
+				FAA25649265F1D7E002F9A1E /* TransactioinNetworkManagerImpl.swift in Sources */,
 				FAA25625265E7790002F9A1E /* OTPConfirmationResponse.swift in Sources */,
+				FAA25643265F1D6B002F9A1E /* TransactionApi.swift in Sources */,
 				FA2ABED5265B63830079F738 /* AuthNetworkMangerImpl.swift in Sources */,
 				FA6F7C77265B6CCC00CF5DA5 /* GetInvoiceDataResponse.swift in Sources */,
 				FA6F7C8F265B7E3D00CF5DA5 /* AppRouter.swift in Sources */,
 				FA053159265E3E42009A0DAB /* ContactApi.swift in Sources */,
 				FA6F7C83265B7B1800CF5DA5 /* TransactionEntity.swift in Sources */,
 				FA2ABEDB265B66D80079F738 /* GetBalanceDataResponse.swift in Sources */,
+				FAA25666265F5AB2002F9A1E /* CommonResponse.swift in Sources */,
 				FA2ABEC8265B5ECA0079F738 /* LoginResponse.swift in Sources */,
 				FA05313F265E07EA009A0DAB /* PINConfirmationResponse.swift in Sources */,
 			);

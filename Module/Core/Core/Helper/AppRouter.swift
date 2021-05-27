@@ -20,10 +20,10 @@ public class AppRouter {
         self.registerScene?(viewController)
     }
     
-    public var confirmOTPScene: (() -> ())? = nil
+    public var confirmOTPScene: ((_ email: String, _ viewController: UIViewController) -> ())? = nil
     
-    public func navigateToConfirmOTP() {
-        self.confirmOTPScene?()
+    public func navigateToConfirmOTP(_ email: String, _ viewController: UIViewController) {
+        self.confirmOTPScene?(email, viewController)
     }
     
     public var pinActivationScene: (() -> ())? = nil
@@ -56,5 +56,11 @@ public class AppRouter {
     
     public func navigateToReceiver(_ viewController: UIViewController) {
         self.receiverScene?(viewController)
+    }
+    
+    public var transactionScene: ((_ viewController: UIViewController) -> ())? = nil
+    
+    public func navigateToTransaction(_ viewController: UIViewController) {
+        self.transactionScene?(viewController)
     }
 }

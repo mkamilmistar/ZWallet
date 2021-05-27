@@ -35,4 +35,7 @@ public class ReceiverRouterImpl: ReceiverRouter {
         viewController.navigationController?.popToRootViewController(animated: true)
     }
     
+    public func navigateToTransaction(viewController: UIViewController) {
+        AppRouter.shared.navigateToTransaction(viewController)
+    }
 }

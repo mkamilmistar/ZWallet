@@ -35,6 +35,9 @@ class ReceiverViewController: UIViewController {
         self.presenter?.backToHome(viewController: self)
     }
     
+    @IBAction func nextAction(_ sender: Any) {
+        self.presenter?.navigateToTransaction(viewController: self)
+    }
 }
 
 extension ReceiverViewController: ReceiverView {

@@ -30,15 +30,11 @@ public class RegisterRouterImpl {
 }
 
 extension RegisterRouterImpl: RegisterRouter {
+    func navigateToConfirmOTP(email: String, viewController: UIViewController) {
+        AppRouter.shared.navigateToConfirmOTP(email, viewController)
+    }
+    
     func backNavigation(viewController: UIViewController) {
         viewController.navigationController?.popToRootViewController(animated: false)
     }
-    
-    func navigateToConfirmOTP() {
-        AppRouter.shared.navigateToConfirmOTP()
-    }
-    
-//    func navigateToPINConfirmation() {
-//        AppRouter.shared.navigateToPINActivation()
-//    }
 }

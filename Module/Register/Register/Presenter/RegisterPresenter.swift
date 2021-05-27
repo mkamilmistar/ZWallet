@@ -11,4 +11,5 @@ import UIKit
 protocol RegisterPresenter {
     func register(usernmae: String, email: String, password: String)
     func backNavigation(viewController: UIViewController)
+    func parsingEmail(email: String, viewController: UIViewController)
 }

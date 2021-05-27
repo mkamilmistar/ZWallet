@@ -23,6 +23,8 @@
 		FAA255C5265E52AD002F9A1E /* ReceiverInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA255C4265E52AD002F9A1E /* ReceiverInteractorImpl.swift */; };
 		FAA255CC265E5B84002F9A1E /* ReceiverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA255CB265E5B84002F9A1E /* ReceiverPresenter.swift */; };
 		FAA255CE265E5B8D002F9A1E /* ReceiverPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA255CD265E5B8D002F9A1E /* ReceiverPresenterImpl.swift */; };
+		FAA2565D265F3918002F9A1E /* Transaction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA2565C265F3918002F9A1E /* Transaction.framework */; };
+		FAA2565E265F3918002F9A1E /* Transaction.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAA2565C265F3918002F9A1E /* Transaction.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +35,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				FAA255BB265E518C002F9A1E /* Core.framework in Embed Frameworks */,
+				FAA2565E265F3918002F9A1E /* Transaction.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +62,7 @@
 		FAA255C4265E52AD002F9A1E /* ReceiverInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverInteractorImpl.swift; sourceTree = "<group>"; };
 		FAA255CB265E5B84002F9A1E /* ReceiverPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverPresenter.swift; sourceTree = "<group>"; };
 		FAA255CD265E5B8D002F9A1E /* ReceiverPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverPresenterImpl.swift; sourceTree = "<group>"; };
+		FAA2565C265F3918002F9A1E /* Transaction.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Transaction.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 			files = (
 				551F2154E7D1F481D8B53AA6 /* Pods_Receiver.framework in Frameworks */,
 				FAA255BA265E518C002F9A1E /* Core.framework in Frameworks */,
+				FAA2565D265F3918002F9A1E /* Transaction.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +92,7 @@
 		7D6619AE02A5811ED5B1F977 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAA2565C265F3918002F9A1E /* Transaction.framework */,
 				FAA255B9265E518C002F9A1E /* Core.framework */,
 				271CEA38A79509F5035FC7EB /* Pods_Receiver.framework */,
 			);

@@ -10,4 +10,5 @@ import UIKit
 
 public protocol ReceiverRouter {
     func navigateToHome(viewController: UIViewController)
+    func navigateToTransaction(viewController: UIViewController)
 }

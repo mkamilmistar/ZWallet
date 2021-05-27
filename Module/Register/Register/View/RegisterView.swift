@@ -9,4 +9,5 @@ import Foundation
 
 protocol RegisterView {
     func showError()
+    func parsingEmail()
 }

@@ -9,7 +9,33 @@
 /* Begin PBXBuildFile section */
 		78B6CDA35BBCC60D7224A01F /* Pods_PINConfirmation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F5A490473E721ECAC422C9A /* Pods_PINConfirmation.framework */; };
 		FA73C4DB265CDAA2004AFAF4 /* PINConfirmation.h in Headers */ = {isa = PBXBuildFile; fileRef = FA73C4D9265CDAA2004AFAF4 /* PINConfirmation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAA2566C265F5F74002F9A1E /* PINConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2566A265F5F74002F9A1E /* PINConfirmationViewController.swift */; };
+		FAA2566D265F5F74002F9A1E /* PINConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA2566B265F5F74002F9A1E /* PINConfirmationViewController.xib */; };
+		FAA25670265F5F80002F9A1E /* PINConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2566F265F5F80002F9A1E /* PINConfirmationView.swift */; };
+		FAA25674265F5FA1002F9A1E /* PINConfirmationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25673265F5FA1002F9A1E /* PINConfirmationRouter.swift */; };
+		FAA25678265F5FA8002F9A1E /* PINConfirmationRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25677265F5FA8002F9A1E /* PINConfirmationRouterImpl.swift */; };
+		FAA2567C265F5FB9002F9A1E /* PINConfirmationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2567B265F5FB9002F9A1E /* PINConfirmationInteractor.swift */; };
+		FAA25680265F5FC1002F9A1E /* PINConfirmationInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2567F265F5FC1002F9A1E /* PINConfirmationInteractorOutput.swift */; };
+		FAA25688265F5FDA002F9A1E /* PINConfirmationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25687265F5FDA002F9A1E /* PINConfirmationPresenter.swift */; };
+		FAA2568C265F5FE1002F9A1E /* PINConfirmationPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2568B265F5FE1002F9A1E /* PINConfirmationPresenterImpl.swift */; };
+		FAA25690265F6927002F9A1E /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA2568F265F6927002F9A1E /* Core.framework */; };
+		FAA25691265F6927002F9A1E /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAA2568F265F6927002F9A1E /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FAA25694265F6E93002F9A1E /* PINConfirmationInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25693265F6E93002F9A1E /* PINConfirmationInteractorImpl.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FAA25692265F6927002F9A1E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FAA25691265F6927002F9A1E /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3F5A490473E721ECAC422C9A /* Pods_PINConfirmation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PINConfirmation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,6 +44,17 @@
 		FA73C4D6265CDAA2004AFAF4 /* PINConfirmation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PINConfirmation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA73C4D9265CDAA2004AFAF4 /* PINConfirmation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PINConfirmation.h; sourceTree = "<group>"; };
 		FA73C4DA265CDAA2004AFAF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA2566A265F5F74002F9A1E /* PINConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINConfirmationViewController.swift; sourceTree = "<group>"; };
+		FAA2566B265F5F74002F9A1E /* PINConfirmationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PINConfirmationViewController.xib; sourceTree = "<group>"; };
+		FAA2566F265F5F80002F9A1E /* PINConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINConfirmationView.swift; sourceTree = "<group>"; };
+		FAA25673265F5FA1002F9A1E /* PINConfirmationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINConfirmationRouter.swift; sourceTree = "<group>"; };
+		FAA25677265F5FA8002F9A1E /* PINConfirmationRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINConfirmationRouterImpl.swift; sourceTree = "<group>"; };
+		FAA2567B265F5FB9002F9A1E /* PINConfirmationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINConfirmationInteractor.swift; sourceTree = "<group>"; };
+		FAA2567F265F5FC1002F9A1E /* PINConfirmationInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINConfirmationInteractorOutput.swift; sourceTree = "<group>"; };
+		FAA25687265F5FDA002F9A1E /* PINConfirmationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINConfirmationPresenter.swift; sourceTree = "<group>"; };
+		FAA2568B265F5FE1002F9A1E /* PINConfirmationPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINConfirmationPresenterImpl.swift; sourceTree = "<group>"; };
+		FAA2568F265F6927002F9A1E /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA25693265F6E93002F9A1E /* PINConfirmationInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINConfirmationInteractorImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78B6CDA35BBCC60D7224A01F /* Pods_PINConfirmation.framework in Frameworks */,
+				FAA25690265F6927002F9A1E /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +83,7 @@
 		B3F4AE4C27191B33892C8E32 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAA2568F265F6927002F9A1E /* Core.framework */,
 				3F5A490473E721ECAC422C9A /* Pods_PINConfirmation.framework */,
 			);
 			name = Frameworks;
@@ -71,10 +110,52 @@
 		FA73C4D8265CDAA2004AFAF4 /* PINConfirmation */ = {
 			isa = PBXGroup;
 			children = (
+				FAA25685265F5FCB002F9A1E /* Presenter */,
+				FAA2567A265F5FAC002F9A1E /* Interactor */,
+				FAA25672265F5F90002F9A1E /* Router */,
+				FAA25668265F5F08002F9A1E /* View */,
 				FA73C4D9265CDAA2004AFAF4 /* PINConfirmation.h */,
 				FA73C4DA265CDAA2004AFAF4 /* Info.plist */,
 			);
 			path = PINConfirmation;
+			sourceTree = "<group>";
+		};
+		FAA25668265F5F08002F9A1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2566A265F5F74002F9A1E /* PINConfirmationViewController.swift */,
+				FAA2566B265F5F74002F9A1E /* PINConfirmationViewController.xib */,
+				FAA2566F265F5F80002F9A1E /* PINConfirmationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAA25672265F5F90002F9A1E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FAA25673265F5FA1002F9A1E /* PINConfirmationRouter.swift */,
+				FAA25677265F5FA8002F9A1E /* PINConfirmationRouterImpl.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FAA2567A265F5FAC002F9A1E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2567B265F5FB9002F9A1E /* PINConfirmationInteractor.swift */,
+				FAA2567F265F5FC1002F9A1E /* PINConfirmationInteractorOutput.swift */,
+				FAA25693265F6E93002F9A1E /* PINConfirmationInteractorImpl.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		FAA25685265F5FCB002F9A1E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FAA25687265F5FDA002F9A1E /* PINConfirmationPresenter.swift */,
+				FAA2568B265F5FE1002F9A1E /* PINConfirmationPresenterImpl.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,6 +181,7 @@
 				FA73C4D2265CDAA2004AFAF4 /* Sources */,
 				FA73C4D3265CDAA2004AFAF4 /* Frameworks */,
 				FA73C4D4265CDAA2004AFAF4 /* Resources */,
+				FAA25692265F6927002F9A1E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +202,7 @@
 				TargetAttributes = {
 					FA73C4D5265CDAA2004AFAF4 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -146,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA2566D265F5F74002F9A1E /* PINConfirmationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +265,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA25674265F5FA1002F9A1E /* PINConfirmationRouter.swift in Sources */,
+				FAA25688265F5FDA002F9A1E /* PINConfirmationPresenter.swift in Sources */,
+				FAA25678265F5FA8002F9A1E /* PINConfirmationRouterImpl.swift in Sources */,
+				FAA25694265F6E93002F9A1E /* PINConfirmationInteractorImpl.swift in Sources */,
+				FAA2567C265F5FB9002F9A1E /* PINConfirmationInteractor.swift in Sources */,
+				FAA2566C265F5F74002F9A1E /* PINConfirmationViewController.swift in Sources */,
+				FAA2568C265F5FE1002F9A1E /* PINConfirmationPresenterImpl.swift in Sources */,
+				FAA25680265F5FC1002F9A1E /* PINConfirmationInteractorOutput.swift in Sources */,
+				FAA25670265F5F80002F9A1E /* PINConfirmationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +406,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6D31DAC09AF150F3BC27A43F /* Pods-PINConfirmation.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = M8XS2W68DL;
@@ -331,6 +425,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -340,6 +435,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5A69B3E2CD6DD72BAEE77E4F /* Pods-PINConfirmation.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = M8XS2W68DL;

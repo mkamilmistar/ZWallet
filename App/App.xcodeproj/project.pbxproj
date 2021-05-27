@@ -20,7 +20,6 @@
 		FA6F7CB7265B92B800CF5DA5 /* History.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA6F7CB5265B92B800CF5DA5 /* History.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA6F7CB9265B92BB00CF5DA5 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6F7CB8265B92BB00CF5DA5 /* Home.framework */; };
 		FA6F7CBA265B92BB00CF5DA5 /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA6F7CB8265B92BB00CF5DA5 /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FA73C463265CAF23004AFAF4 /* NunitoSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA73C45A265CAEFA004AFAF4 /* NunitoSans-Black.ttf */; };
 		FA73C464265CAF23004AFAF4 /* NunitoSans-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA73C462265CAEFB004AFAF4 /* NunitoSans-BlackItalic.ttf */; };
 		FA73C465265CAF23004AFAF4 /* NunitoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA73C460265CAEFB004AFAF4 /* NunitoSans-Bold.ttf */; };
 		FA73C466265CAF23004AFAF4 /* NunitoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA73C457265CAEFA004AFAF4 /* NunitoSans-BoldItalic.ttf */; };
@@ -37,13 +36,15 @@
 		FA8E3404265B48C7005C1AFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E3403265B48C7005C1AFF /* AppDelegate.swift */; };
 		FA8E3406265B48C7005C1AFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E3405265B48C7005C1AFF /* SceneDelegate.swift */; };
 		FA8E3408265B48C7005C1AFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E3407265B48C7005C1AFF /* ViewController.swift */; };
-		FA8E340B265B48C7005C1AFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8E3409265B48C7005C1AFF /* Main.storyboard */; };
 		FA8E340D265B48C8005C1AFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8E340C265B48C8005C1AFF /* Assets.xcassets */; };
 		FA8E3410265B48C8005C1AFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8E340E265B48C8005C1AFF /* LaunchScreen.storyboard */; };
 		FAA255B3265E507E002F9A1E /* Receiver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA255B2265E507E002F9A1E /* Receiver.framework */; };
 		FAA255B4265E507E002F9A1E /* Receiver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAA255B2265E507E002F9A1E /* Receiver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FAA25629265E7F35002F9A1E /* ConfirmOTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA25628265E7F35002F9A1E /* ConfirmOTP.framework */; };
 		FAA2562A265E7F35002F9A1E /* ConfirmOTP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAA25628265E7F35002F9A1E /* ConfirmOTP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FAA2565A265F376A002F9A1E /* Transaction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA25659265F376A002F9A1E /* Transaction.framework */; };
+		FAA2565B265F376A002F9A1E /* Transaction.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAA25659265F376A002F9A1E /* Transaction.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FAA2568E265F6816002F9A1E /* NunitoSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA73C45A265CAEFA004AFAF4 /* NunitoSans-Black.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,6 +62,7 @@
 				FA6F7CBA265B92BB00CF5DA5 /* Home.framework in Embed Frameworks */,
 				FAA255B4265E507E002F9A1E /* Receiver.framework in Embed Frameworks */,
 				FA0530E8265DDBBA009A0DAB /* Register.framework in Embed Frameworks */,
+				FAA2565B265F376A002F9A1E /* Transaction.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,12 +99,12 @@
 		FA8E3403265B48C7005C1AFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA8E3405265B48C7005C1AFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FA8E3407265B48C7005C1AFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FA8E340A265B48C7005C1AFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA8E340C265B48C8005C1AFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA8E340F265B48C8005C1AFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA8E3411265B48C8005C1AFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAA255B2265E507E002F9A1E /* Receiver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Receiver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA25628265E7F35002F9A1E /* ConfirmOTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ConfirmOTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA25659265F376A002F9A1E /* Transaction.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Transaction.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				FA6F7CB3265B91D800CF5DA5 /* Core.framework in Frameworks */,
 				428A6C3D232B630ACF3A103A /* Pods_App.framework in Frameworks */,
 				FAA255B3265E507E002F9A1E /* Receiver.framework in Frameworks */,
+				FAA2565A265F376A002F9A1E /* Transaction.framework in Frameworks */,
 				FA6F7CB9265B92BB00CF5DA5 /* Home.framework in Frameworks */,
 				FA05313C265E001C009A0DAB /* PINActivation.framework in Frameworks */,
 				FA6F7CB6265B92B800CF5DA5 /* History.framework in Frameworks */,
@@ -137,6 +140,7 @@
 		E52F0606F2BF5DACD1C7B7A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAA25659265F376A002F9A1E /* Transaction.framework */,
 				FAA25628265E7F35002F9A1E /* ConfirmOTP.framework */,
 				FAA255B2265E507E002F9A1E /* Receiver.framework */,
 				FA05313B265E001C009A0DAB /* PINActivation.framework */,
@@ -206,7 +210,6 @@
 				FA8E3403265B48C7005C1AFF /* AppDelegate.swift */,
 				FA8E3405265B48C7005C1AFF /* SceneDelegate.swift */,
 				FA8E3407265B48C7005C1AFF /* ViewController.swift */,
-				FA8E3409265B48C7005C1AFF /* Main.storyboard */,
 				FA8E340C265B48C8005C1AFF /* Assets.xcassets */,
 				FA8E340E265B48C8005C1AFF /* LaunchScreen.storyboard */,
 				FA8E3411265B48C8005C1AFF /* Info.plist */,
@@ -274,7 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA73C463265CAF23004AFAF4 /* NunitoSans-Black.ttf in Resources */,
+				FAA2568E265F6816002F9A1E /* NunitoSans-Black.ttf in Resources */,
 				FA73C464265CAF23004AFAF4 /* NunitoSans-BlackItalic.ttf in Resources */,
 				FA73C465265CAF23004AFAF4 /* NunitoSans-Bold.ttf in Resources */,
 				FA73C466265CAF23004AFAF4 /* NunitoSans-BoldItalic.ttf in Resources */,
@@ -290,7 +293,6 @@
 				FA73C470265CAF23004AFAF4 /* NunitoSans-SemiBoldItalic.ttf in Resources */,
 				FA8E3410265B48C8005C1AFF /* LaunchScreen.storyboard in Resources */,
 				FA8E340D265B48C8005C1AFF /* Assets.xcassets in Resources */,
-				FA8E340B265B48C7005C1AFF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,14 +354,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FA8E3409265B48C7005C1AFF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FA8E340A265B48C7005C1AFF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FA8E340E265B48C8005C1AFF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -24,7 +24,10 @@
                 <outlet property="backgroundLogin" destination="1zX-cf-I8W" id="AaM-Cf-pfI"/>
                 <outlet property="emailField" destination="Fgy-Yp-WvL" id="2L1-ah-hjc"/>
                 <outlet property="emailText" destination="2Kk-ot-guu" id="gCm-sq-1C7"/>
+                <outlet property="eyeIcon" destination="fnu-U4-8Cl" id="oj1-r2-GDZ"/>
+                <outlet property="mailIcon" destination="cdt-LS-L9h" id="4ey-J7-EOL"/>
                 <outlet property="passwordField" destination="1Hy-PY-LLf" id="eIB-cf-B0E"/>
+                <outlet property="passwordIcon" destination="hQ4-8b-p0e" id="Sj5-zx-EVA"/>
                 <outlet property="passwordText" destination="mwu-HU-t0a" id="bva-l1-TjG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

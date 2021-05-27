@@ -9,7 +9,34 @@
 /* Begin PBXBuildFile section */
 		6DB5594E48BA0807A1338C84 /* Pods_Transaction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF12AA7D54225CF35EA9359D /* Pods_Transaction.framework */; };
 		FA73C4AF265CDA53004AFAF4 /* Transaction.h in Headers */ = {isa = PBXBuildFile; fileRef = FA73C4AD265CDA53004AFAF4 /* Transaction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAA2562D265F1A92002F9A1E /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2562C265F1A92002F9A1E /* TransactionView.swift */; };
+		FAA25631265F1A9D002F9A1E /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2562F265F1A9D002F9A1E /* TransactionViewController.swift */; };
+		FAA25632265F1A9D002F9A1E /* TransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA25630265F1A9D002F9A1E /* TransactionViewController.xib */; };
+		FAA25637265F1ADD002F9A1E /* TransactionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25636265F1ADD002F9A1E /* TransactionRouter.swift */; };
+		FAA2563A265F1AE4002F9A1E /* TransactionRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25639265F1AE4002F9A1E /* TransactionRouterImpl.swift */; };
+		FAA2563D265F1B2B002F9A1E /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA2563C265F1B2B002F9A1E /* Core.framework */; };
+		FAA2563E265F1B2B002F9A1E /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAA2563C265F1B2B002F9A1E /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FAA2564F265F2080002F9A1E /* TransactionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2564E265F2080002F9A1E /* TransactionInteractor.swift */; };
+		FAA25651265F20D1002F9A1E /* TransactionInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25650265F20D1002F9A1E /* TransactionInteractorOutput.swift */; };
+		FAA25653265F20F6002F9A1E /* TransactionInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25652265F20F6002F9A1E /* TransactionInteractorImpl.swift */; };
+		FAA25656265F2180002F9A1E /* TransactionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25655265F2180002F9A1E /* TransactionPresenter.swift */; };
+		FAA25658265F2187002F9A1E /* TransactionPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25657265F2187002F9A1E /* TransactionPresenterImpl.swift */; };
+		FAA25660265F3C28002F9A1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2565F265F3C28002F9A1E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FAA2563F265F1B2B002F9A1E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FAA2563E265F1B2B002F9A1E /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3FAA27CA7B504E2D939D60E0 /* Pods-Transaction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transaction.release.xcconfig"; path = "Target Support Files/Pods-Transaction/Pods-Transaction.release.xcconfig"; sourceTree = "<group>"; };
@@ -18,6 +45,18 @@
 		FA73C4AA265CDA53004AFAF4 /* Transaction.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Transaction.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA73C4AD265CDA53004AFAF4 /* Transaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
 		FA73C4AE265CDA53004AFAF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA2562C265F1A92002F9A1E /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		FAA2562F265F1A9D002F9A1E /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		FAA25630265F1A9D002F9A1E /* TransactionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionViewController.xib; sourceTree = "<group>"; };
+		FAA25636265F1ADD002F9A1E /* TransactionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRouter.swift; sourceTree = "<group>"; };
+		FAA25639265F1AE4002F9A1E /* TransactionRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRouterImpl.swift; sourceTree = "<group>"; };
+		FAA2563C265F1B2B002F9A1E /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA2564E265F2080002F9A1E /* TransactionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionInteractor.swift; sourceTree = "<group>"; };
+		FAA25650265F20D1002F9A1E /* TransactionInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionInteractorOutput.swift; sourceTree = "<group>"; };
+		FAA25652265F20F6002F9A1E /* TransactionInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionInteractorImpl.swift; sourceTree = "<group>"; };
+		FAA25655265F2180002F9A1E /* TransactionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionPresenter.swift; sourceTree = "<group>"; };
+		FAA25657265F2187002F9A1E /* TransactionPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionPresenterImpl.swift; sourceTree = "<group>"; };
+		FAA2565F265F3C28002F9A1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DB5594E48BA0807A1338C84 /* Pods_Transaction.framework in Frameworks */,
+				FAA2563D265F1B2B002F9A1E /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +85,7 @@
 		A38AEC6D9C7B7701B76BD806 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAA2563C265F1B2B002F9A1E /* Core.framework */,
 				AF12AA7D54225CF35EA9359D /* Pods_Transaction.framework */,
 			);
 			name = Frameworks;
@@ -71,10 +112,53 @@
 		FA73C4AC265CDA53004AFAF4 /* Transaction */ = {
 			isa = PBXGroup;
 			children = (
+				FAA25654265F2176002F9A1E /* Presenter */,
+				FAA25635265F1ACF002F9A1E /* Router */,
+				FAA25634265F1AC9002F9A1E /* Interactor */,
+				FAA2562B265F1A7F002F9A1E /* View */,
 				FA73C4AD265CDA53004AFAF4 /* Transaction.h */,
 				FA73C4AE265CDA53004AFAF4 /* Info.plist */,
+				FAA2565F265F3C28002F9A1E /* Assets.xcassets */,
 			);
 			path = Transaction;
+			sourceTree = "<group>";
+		};
+		FAA2562B265F1A7F002F9A1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2562C265F1A92002F9A1E /* TransactionView.swift */,
+				FAA2562F265F1A9D002F9A1E /* TransactionViewController.swift */,
+				FAA25630265F1A9D002F9A1E /* TransactionViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAA25634265F1AC9002F9A1E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2564E265F2080002F9A1E /* TransactionInteractor.swift */,
+				FAA25650265F20D1002F9A1E /* TransactionInteractorOutput.swift */,
+				FAA25652265F20F6002F9A1E /* TransactionInteractorImpl.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		FAA25635265F1ACF002F9A1E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FAA25636265F1ADD002F9A1E /* TransactionRouter.swift */,
+				FAA25639265F1AE4002F9A1E /* TransactionRouterImpl.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FAA25654265F2176002F9A1E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FAA25655265F2180002F9A1E /* TransactionPresenter.swift */,
+				FAA25657265F2187002F9A1E /* TransactionPresenterImpl.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,6 +184,7 @@
 				FA73C4A6265CDA53004AFAF4 /* Sources */,
 				FA73C4A7265CDA53004AFAF4 /* Frameworks */,
 				FA73C4A8265CDA53004AFAF4 /* Resources */,
+				FAA2563F265F1B2B002F9A1E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +205,7 @@
 				TargetAttributes = {
 					FA73C4A9265CDA53004AFAF4 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -146,6 +232,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA25660265F3C28002F9A1E /* Assets.xcassets in Resources */,
+				FAA25632265F1A9D002F9A1E /* TransactionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +269,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA2562D265F1A92002F9A1E /* TransactionView.swift in Sources */,
+				FAA2564F265F2080002F9A1E /* TransactionInteractor.swift in Sources */,
+				FAA25651265F20D1002F9A1E /* TransactionInteractorOutput.swift in Sources */,
+				FAA25656265F2180002F9A1E /* TransactionPresenter.swift in Sources */,
+				FAA25637265F1ADD002F9A1E /* TransactionRouter.swift in Sources */,
+				FAA25658265F2187002F9A1E /* TransactionPresenterImpl.swift in Sources */,
+				FAA25631265F1A9D002F9A1E /* TransactionViewController.swift in Sources */,
+				FAA25653265F20F6002F9A1E /* TransactionInteractorImpl.swift in Sources */,
+				FAA2563A265F1AE4002F9A1E /* TransactionRouterImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +410,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F1BA05F6630F3A781104E12C /* Pods-Transaction.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = M8XS2W68DL;
@@ -331,6 +429,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -340,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3FAA27CA7B504E2D939D60E0 /* Pods-Transaction.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = M8XS2W68DL;

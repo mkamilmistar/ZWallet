@@ -9,7 +9,6 @@ import Foundation
 import Core
 
 class RegisterInteractorImpl: RegisterInteractor {
-    
     var interactorOutput: RegisterInteractorOutput?
     var authManagerNetwork: AuthNetworkManager
     

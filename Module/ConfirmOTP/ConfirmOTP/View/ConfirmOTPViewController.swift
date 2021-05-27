@@ -14,6 +14,7 @@ class ConfirmOTPViewController: UIViewController {
     @IBOutlet var otpView: UIView!
     
     var presenter: ConfirmOTPPresenter?
+    var email: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +24,8 @@ class ConfirmOTPViewController: UIViewController {
     
     @IBAction func confirmAction(_ sender: UIButton) {
         let otp = OtpField.text!
-        let email: String? = UserDefaultHelper.shared.get(key: .userEmail)
-        self.presenter?.confirmOTP(email: email!, otp: otp)
+
+        self.presenter?.confirmOTP(email: email, otp: otp)
     }
 }
 

@@ -14,13 +14,13 @@ import Register
 import PINActivation
 import Receiver
 import ConfirmOTP
+import Transaction
 
 @available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
-
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         self.setupAppRouter()
@@ -30,17 +30,43 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = scene
         
         self.reloadRootView()
+//        self.timerToken()
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.reloadRootView), name: Notification.Name("reloadRootView"), object: nil)
     }
     
     @objc func reloadRootView() {
         let token: String? = UserDefaultHelper.shared.get(key: .userToken)
-        if token != nil {
+        let loginStatus: Int? = UserDefaultHelper.shared.get(key: .statusLogin)
+            
+        if token != nil && loginStatus == 200 {
             AppRouter.shared.navigateToHome()
+        } else if loginStatus == 403 {
+            AppRouter.shared.confirmOTPScene = { (email, viewController) in
+                ConfirmOTPRouterImpl.navigateToModule(email: email, viewController: viewController)
+            }
         } else {
             AppRouter.shared.navigateToLogin()
         }
+    }
+
+//    func timerToken() {
+//        let token: String? = UserDefaultHelper.shared.get(key: .userToken)
+//        if token != nil {
+//            Timer.scheduledTimer(timeInterval: 300,
+//                target: self,
+//                selector: #selector(self.resetDefault),
+//                userInfo: nil,
+//                repeats: true
+//            )
+//        }
+//    }
+    
+    @objc func resetDefault() {
+        UserDefaultHelper.shared.remove(key: .userToken)
+        UserDefaultHelper.shared.remove(key: .statusLogin)
+        UserDefaultHelper.shared.remove(key: .userEmail)
+        AppRouter.shared.navigateToLogin()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -72,7 +98,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 }
 
-
 @available(iOS 13.0, *)
  extension SceneDelegate {
     func setupAppRouter() {
@@ -84,8 +109,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             RegisterRouterImpl.navigateToModule(viewController: viewController)
         }
         
-        AppRouter.shared.confirmOTPScene = {
-            ConfirmOTPRouterImpl.navigateToModule()
+        AppRouter.shared.confirmOTPScene = { (email, viewController) in
+            ConfirmOTPRouterImpl.navigateToModule(email: email, viewController: viewController)
         }
         
         AppRouter.shared.pinActivationScene = {
@@ -102,6 +127,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         AppRouter.shared.receiverScene = { viewController in
             ReceiverRouterImpl.navigateToModule(viewController: viewController)
+        }
+        
+        AppRouter.shared.transactionScene = { viewController in
+            TransactionRouterImpl.navigateToModule(viewController: viewController)
         }
     }
  }

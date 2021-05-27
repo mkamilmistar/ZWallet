@@ -23,7 +23,7 @@ class PINActivationViewController: UIViewController {
 
     @IBAction func confirmAction(_ sender: UIButton) {
         let pin = pinField.text!
-        
+        print(pin)
         self.presenter?.activatePin(pin: pin)
     }
 }

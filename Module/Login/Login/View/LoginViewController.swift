@@ -15,6 +15,9 @@ class LoginViewController: UIViewController {
     @IBOutlet var backgroundLogin: UIView!
     @IBOutlet var emailField: UIStackView!
     @IBOutlet var passwordField: UIStackView!
+    @IBOutlet var mailIcon: UIImageView!
+    @IBOutlet var passwordIcon: UIImageView!
+    @IBOutlet var eyeIcon: UIImageView!
     
     var presenter: LoginPresenter?
     
@@ -22,6 +25,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         backgroundLogin.setShadow(color: UIColor.black.cgColor, opacity: 0.1)
+        
+        self.mailIcon.image = UIImage(named: "mail", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
+        self.passwordIcon.image = UIImage(named: "lock", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
     }
     
     @IBAction func loginAction(_ sender: Any) {

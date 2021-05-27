@@ -8,12 +8,14 @@
 import Foundation
 import Core
 import UIKit
+import Transaction
 
 public class ReceiverPresenterImpl: ReceiverPresenter {
     
     let view: ReceiverView
     let interactor: ReceiverInteractor
     let router: ReceiverRouter
+    var transactionRouter: TransactionRouter?
     
     init(view: ReceiverView, interactor: ReceiverInteractor, router: ReceiverRouter) {
         self.view = view
@@ -28,6 +30,11 @@ public class ReceiverPresenterImpl: ReceiverPresenter {
     public func backToHome(viewController: UIViewController) {
         self.router.navigateToHome(viewController: viewController)
     }
+    
+    public func navigateToTransaction(viewController: UIViewController) {
+        self.router.navigateToTransaction(viewController: viewController)
+    }
+
 }
 
 extension ReceiverPresenterImpl: ReceiverInteractorOutput {

@@ -24,6 +24,7 @@ public class LoginInteractorImpl: LoginInteractor {
             if let loginData = data {
                 // save user token to Userdefault
                 UserDefaultHelper.shared.set(key: .userToken, value: loginData.data.token)
+                UserDefaultHelper.shared.set(key: .statusLogin, value: loginData.status)
                 // tell the presenter if process is success
                 self.interactorOutput?.authenticationResult(isSuccess: true)
                 
