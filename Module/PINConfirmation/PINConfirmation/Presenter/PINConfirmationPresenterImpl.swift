@@ -10,7 +10,6 @@ import UIKit
 import Core
 
 class PINConfirmationPresenterImpl: PINConfirmationPresenter {
-    
     let view: PINConfirmationView
     let interactor: PINConfirmationInteractor
     let router: PINConfirmationRouter
@@ -24,15 +23,20 @@ class PINConfirmationPresenterImpl: PINConfirmationPresenter {
     func backNavigation(viewController: UIViewController) {
         self.router.backNavigation(viewController: viewController)
     }
+    
+    func createTransaction(pin: String, receiver: Int, amount: Int, notes: String) {
+        self.interactor.postTransaction(pin: pin, receiver: receiver, amount: amount, notes: notes)
+    }
 }
 
 
 extension PINConfirmationPresenterImpl: PINConfirmationInteractorOutput {
-    func getPinCheckResult(isSuccess: Bool) {
+    func transactionResult(isSuccess: Bool) {
         if isSuccess {
             AppRouter.shared.navigateToHome()
         } else {
             self.view.showError()
         }
     }
+    
 }

@@ -14,9 +14,6 @@
 		FAA256A1265F7AB3002F9A1E /* TransactionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA2569F265F7AB3002F9A1E /* TransactionDetailViewController.xib */; };
 		FAA256A4265F7ABD002F9A1E /* TransactionDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA256A3265F7ABD002F9A1E /* TransactionDetailPresenter.swift */; };
 		FAA256A7265F7AC7002F9A1E /* TransactionDetailPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA256A6265F7AC7002F9A1E /* TransactionDetailPresenterImpl.swift */; };
-		FAA256AA265F7ACF002F9A1E /* TransactionDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA256A9265F7ACF002F9A1E /* TransactionDetailInteractor.swift */; };
-		FAA256AD265F7AD9002F9A1E /* TransactionDetailInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA256AC265F7AD9002F9A1E /* TransactionDetailInteractorOutput.swift */; };
-		FAA256B0265F7AE1002F9A1E /* TransactionDetailInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA256AF265F7AE1002F9A1E /* TransactionDetailInteractorImpl.swift */; };
 		FAA256B3265F7AE9002F9A1E /* TransactionDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA256B2265F7AE9002F9A1E /* TransactionDetailRouter.swift */; };
 		FAA256B6265F7AF0002F9A1E /* TransactionDetailRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA256B5265F7AF0002F9A1E /* TransactionDetailRouterImpl.swift */; };
 		FAA256B9265F7BF2002F9A1E /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA256B8265F7BF2002F9A1E /* Core.framework */; };
@@ -49,9 +46,6 @@
 		FAA2569F265F7AB3002F9A1E /* TransactionDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionDetailViewController.xib; sourceTree = "<group>"; };
 		FAA256A3265F7ABD002F9A1E /* TransactionDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailPresenter.swift; sourceTree = "<group>"; };
 		FAA256A6265F7AC7002F9A1E /* TransactionDetailPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailPresenterImpl.swift; sourceTree = "<group>"; };
-		FAA256A9265F7ACF002F9A1E /* TransactionDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailInteractor.swift; sourceTree = "<group>"; };
-		FAA256AC265F7AD9002F9A1E /* TransactionDetailInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailInteractorOutput.swift; sourceTree = "<group>"; };
-		FAA256AF265F7AE1002F9A1E /* TransactionDetailInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailInteractorImpl.swift; sourceTree = "<group>"; };
 		FAA256B2265F7AE9002F9A1E /* TransactionDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailRouter.swift; sourceTree = "<group>"; };
 		FAA256B5265F7AF0002F9A1E /* TransactionDetailRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailRouterImpl.swift; sourceTree = "<group>"; };
 		FAA256B8265F7BF2002F9A1E /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				FAA25698265F7A87002F9A1E /* Router */,
-				FAA25697265F7A82002F9A1E /* Interactor */,
 				FAA25696265F7A7E002F9A1E /* Presenter */,
 				FAA25695265F7A7A002F9A1E /* View */,
 				FA73C4EF265CDB13004AFAF4 /* TransactionDetail.h */,
@@ -137,16 +130,6 @@
 				FAA256A6265F7AC7002F9A1E /* TransactionDetailPresenterImpl.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		FAA25697265F7A82002F9A1E /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				FAA256A9265F7ACF002F9A1E /* TransactionDetailInteractor.swift */,
-				FAA256AC265F7AD9002F9A1E /* TransactionDetailInteractorOutput.swift */,
-				FAA256AF265F7AE1002F9A1E /* TransactionDetailInteractorImpl.swift */,
-			);
-			path = Interactor;
 			sourceTree = "<group>";
 		};
 		FAA25698265F7A87002F9A1E /* Router */ = {
@@ -266,14 +249,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA256A0265F7AB3002F9A1E /* TransactionDetailViewController.swift in Sources */,
-				FAA256AA265F7ACF002F9A1E /* TransactionDetailInteractor.swift in Sources */,
 				FAA256B3265F7AE9002F9A1E /* TransactionDetailRouter.swift in Sources */,
 				FAA256A4265F7ABD002F9A1E /* TransactionDetailPresenter.swift in Sources */,
-				FAA256AD265F7AD9002F9A1E /* TransactionDetailInteractorOutput.swift in Sources */,
 				FAA256A7265F7AC7002F9A1E /* TransactionDetailPresenterImpl.swift in Sources */,
 				FAA256B6265F7AF0002F9A1E /* TransactionDetailRouterImpl.swift in Sources */,
 				FAA2569A265F7A9B002F9A1E /* TransactionDetailView.swift in Sources */,
-				FAA256B0265F7AE1002F9A1E /* TransactionDetailInteractorImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

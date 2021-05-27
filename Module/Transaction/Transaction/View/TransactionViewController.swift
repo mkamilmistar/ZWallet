@@ -16,23 +16,19 @@ public class TransactionViewController: UIViewController {
     @IBOutlet var amountField: UITextField!
     @IBOutlet var notesField: UITextField!
     @IBOutlet var pinField: UITextField!
+    @IBOutlet var notesIcon: UIImageView!
     
     @IBOutlet var imageReceiver: UIImageView!
     @IBOutlet var nameReceiver: UILabel!
     @IBOutlet var phoneReceiver: UILabel!
-  
-    
-    var id: Int = 0
-    var name: String = ""
-    var phone: String = ""
-    var image: String = ""
-    
+      
     @IBOutlet var background: UIView!
     @IBOutlet var receiverBG: UIView!
     
+    public var passDataReceiver: ReceiverEntity = ReceiverEntity(id: 0, name: "", phone: "", image: "")
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
-
         setupViewData()
     }
 
@@ -43,19 +39,18 @@ public class TransactionViewController: UIViewController {
     @IBAction func transactionAction(_ sender: Any) {
         let amount: Int = Int(amountField.text ?? "") ?? 0
         let notes = notesField.text ?? ""
-        let pin = pinField.text ?? ""
-        
-        self.presenter?.createTransaction(pin: pin, receiver: id, amount: amount, notes: notes)
+
+        self.presenter?.navigateToDetailTransaction(viewController: self, passDataTransaction: passDataReceiver, amount: amount, notes: notes)
+//        self.presenter?.createTransaction(pin: pin, receiver: passDataReceiver.id, amount: amount, notes: notes)
     }
     
     func setupViewData() {
-        self.nameReceiver.text = name
         self.background.backgroundColor = UIColor(red: 250/255, green: 252/255, blue: 255/255, alpha: 1)
         self.receiverBG.setShadow(color: UIColor.black.cgColor, opacity: 0.2)
-        
-        self.imageReceiver.kf.setImage(with: URL(string: image))
-        self.nameReceiver.text = name
-        self.phoneReceiver.text = phone
+        self.notesIcon.image = UIImage(named: "notes", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
+        self.imageReceiver.kf.setImage(with: URL(string: passDataReceiver.image))
+        self.nameReceiver.text = passDataReceiver.name
+        self.phoneReceiver.text = passDataReceiver.phone
     }
     
 }

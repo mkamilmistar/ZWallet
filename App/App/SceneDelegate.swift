@@ -15,6 +15,8 @@ import PINActivation
 import Receiver
 import ConfirmOTP
 import Transaction
+import TransactionDetail
+import PINConfirmation
 
 @available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -129,9 +131,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             ReceiverRouterImpl.navigateToModule(viewController: viewController)
         }
         
-        AppRouter.shared.transactionScene = { (viewController, id, name, phone, image) in
-            TransactionRouterImpl.navigateToModule(viewController: viewController, id: id, name: name, phone: phone, image: image)
+        AppRouter.shared.transactionScene = { (viewController, passingData) in
+            TransactionRouterImpl.navigateToModule(viewController: viewController, passingData: passingData)
         }
 
+        AppRouter.shared.transactionDetailScene = { (viewController, passingData, amount, notes) in
+            TransactionDetailRouterImpl.navigateToModule(viewController: viewController, passingData: passingData, amount: amount, notes: notes)
+        }
+        
+        AppRouter.shared.InputPINConfirmScene = { (viewController, passingData, amount, notes) in
+            PINConfirmationRouterImpl.navigateToModule(viewController: viewController, passDataTransaction: passingData, amount: amount, notes: notes)
+        }
     }
  }

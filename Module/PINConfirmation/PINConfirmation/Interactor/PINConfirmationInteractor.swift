@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import UIKit
 
 public protocol PINConfirmationInteractor {
-    func postPin(pin: String)
+    func postTransaction(pin: String, receiver: Int, amount: Int, notes: String)
 }

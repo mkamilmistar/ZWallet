@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol TransactionNetworkManager {
-    func createRegister(receiver: Int, amount: Int, notes: String, pin: String, completion: @escaping (TransactionResponse?, Error?) -> ())
+    func createTransaction(receiver: Int, amount: Int, notes: String, pin: String, completion: @escaping (TransactionResponse?, Error?) -> ())
 }

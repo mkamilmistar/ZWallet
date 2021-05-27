@@ -7,9 +7,10 @@
 
 import Foundation
 import UIKit
+import Core
 
 public protocol TransactionRouter {
-    func navigateToDetailTransaction(viewController: UIViewController)
+    func navigateToDetailTransaction(viewController: UIViewController, passDataTransaction: ReceiverEntity, amount: Int, notes: String)
     func backToReceiver(viewController: UIViewController)
     func backToHome()
 }

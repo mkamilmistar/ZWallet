@@ -7,14 +7,9 @@
 
 import Foundation
 import UIKit
+import Core
 
 public protocol ReceiverRouter {
     func navigateToHome(viewController: UIViewController)
-    func navigateToTransaction(
-        viewController: UIViewController,
-        id: Int,
-        name: String,
-        phone: String,
-        image: String
-    )
+    func navigateToTransaction(viewController: UIViewController, passingData: ReceiverEntity)
 }

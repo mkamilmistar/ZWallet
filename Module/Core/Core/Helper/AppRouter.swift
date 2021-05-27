@@ -58,9 +58,21 @@ public class AppRouter {
         self.receiverScene?(viewController)
     }
     
-    public var transactionScene: ((_ viewController: UIViewController, _ id: Int, _ name: String, _ phone: String, _ image: String) -> ())? = nil
+    public var transactionScene: ((_ viewController: UIViewController, _ passingData: ReceiverEntity) -> ())? = nil
     
-    public func navigateToTransaction(_ viewController: UIViewController, _ id: Int, _ name: String, _ phone: String, _ image: String) {
-        self.transactionScene?(viewController, id, name, phone, image)
+    public func navigateToTransaction(_ viewController: UIViewController, _ passingData: ReceiverEntity) {
+        self.transactionScene?(viewController, passingData)
+    }
+    
+    public var transactionDetailScene: ((_ viewController: UIViewController, _ passingData: ReceiverEntity, _ amount: Int, _ notes: String) -> ())? = nil
+    
+    public func navigateToDetailTransaction(_ viewController: UIViewController, _ passingData: ReceiverEntity, _ amount: Int, _ notes: String) {
+        self.transactionDetailScene?(viewController, passingData, amount, notes)
+    }
+    
+    public var InputPINConfirmScene: ((_ viewController: UIViewController, _ passingData: ReceiverEntity, _ amount: Int, _ notes: String) -> ())? = nil
+    
+    public func navigateToInputPINConfirm(_ viewController: UIViewController, _ passingData: ReceiverEntity, _ amount: Int, _ notes: String) {
+        self.InputPINConfirmScene?(viewController, passingData, amount, notes)
     }
 }

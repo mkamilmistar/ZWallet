@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol ReceiverCellDelegate {
-    func navigateToTransaction(id: Int, name: String, phone: String, image: String)
+    func passDataTransaction(passData: ReceiverEntity)
 }

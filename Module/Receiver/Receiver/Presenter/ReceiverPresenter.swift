@@ -7,9 +7,10 @@
 
 import Foundation
 import UIKit
+import Core
 
 public protocol ReceiverPresenter {
     func loadDataReceiver()
     func backToHome(viewController: UIViewController)
-    func passingDataReceiver(viewController: UIViewController, id: Int, name: String, phone: String, image: String)
+    func passingDataReceiver(viewController: UIViewController, passingData: ReceiverEntity)
 }

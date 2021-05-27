@@ -10,7 +10,7 @@ import UIKit
 import Core
 
 public class TransactionRouterImpl {
-    public static func navigateToModule(viewController: UIViewController, id: Int, name: String, phone: String, image: String) {
+    public static func navigateToModule(viewController: UIViewController, passingData: ReceiverEntity) {
         let bundle = Bundle(identifier: "com.casestudy.Transaction")
         let vc = TransactionViewController(nibName: "TransactionViewController", bundle: bundle)
         
@@ -23,11 +23,8 @@ public class TransactionRouterImpl {
         vc.presenter = presenter
         
         // Get data from Receiver
-        vc.id = id
-        vc.name = name
-        vc.phone = phone
-        vc.image = image
-        
+        vc.passDataReceiver = passingData
+    
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .coverVertical
         
@@ -36,12 +33,13 @@ public class TransactionRouterImpl {
 }
 
 extension TransactionRouterImpl: TransactionRouter {
-    public func backToHome() {
-        NotificationCenter.default.post(name: Notification.Name("reloadRootView"), object: nil)
+    public func navigateToDetailTransaction(viewController: UIViewController,
+                                            passDataTransaction: ReceiverEntity, amount: Int, notes: String) {
+        AppRouter.shared.navigateToDetailTransaction(viewController, passDataTransaction, amount, notes)
     }
     
-    public func navigateToDetailTransaction(viewController: UIViewController) {
-        viewController.navigationController?.pushViewController(viewController, animated: true)
+    public func backToHome() {
+        NotificationCenter.default.post(name: Notification.Name("reloadRootView"), object: nil)
     }
     
     public func backToReceiver(viewController: UIViewController) {

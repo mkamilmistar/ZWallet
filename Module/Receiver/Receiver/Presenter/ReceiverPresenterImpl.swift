@@ -31,8 +31,8 @@ public class ReceiverPresenterImpl: ReceiverPresenter {
         self.router.navigateToHome(viewController: viewController)
     }
     
-    public func passingDataReceiver(viewController: UIViewController,id: Int, name: String, phone: String, image: String) {
-        self.router.navigateToTransaction(viewController: viewController, id: id, name: name, phone: phone, image: image)
+    public func passingDataReceiver(viewController: UIViewController, passingData: ReceiverEntity) {
+        self.router.navigateToTransaction(viewController: viewController, passingData: passingData)
     }
 }
 

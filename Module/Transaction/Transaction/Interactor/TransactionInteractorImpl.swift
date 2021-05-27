@@ -18,7 +18,7 @@ public class TransactionInteractorImpl: TransactionInteractor {
     }
     
     public func postTransaction(pin: String, receiver: Int, amount: Int, notes: String) {
-        self.networkManager.createRegister(receiver: receiver, amount: amount, notes: notes, pin: pin) { (data, error) in
+        self.networkManager.createTransaction(receiver: receiver, amount: amount, notes: notes, pin: pin) { (data, error) in
             if data?.status == 200 {
                 self.interacotOutput?.transactionResult(isSuccess: true)
             } else {

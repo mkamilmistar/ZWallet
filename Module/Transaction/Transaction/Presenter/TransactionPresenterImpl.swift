@@ -10,7 +10,6 @@ import UIKit
 import Core
 
 public class TransactionPresenterImpl: TransactionPresenter {
-
     var view: TransactionView
     var interactor: TransactionInteractor
     var router: TransactionRouter
@@ -21,11 +20,6 @@ public class TransactionPresenterImpl: TransactionPresenter {
         self.router = router
     }
     
-    public func createTransaction(pin: String, receiver: Int, amount: Int, notes: String) {
-        self.interactor.postTransaction(pin: pin, receiver: receiver, amount: amount, notes: notes)
-        self.router.backToHome()
-    }
-    
     public func backToReceiver(viewController: UIViewController) {
         self.router.backToReceiver(viewController: viewController)
     }
@@ -34,6 +28,9 @@ public class TransactionPresenterImpl: TransactionPresenter {
         self.router.backToHome()
     }
     
+    public func navigateToDetailTransaction(viewController: UIViewController, passDataTransaction: ReceiverEntity, amount: Int, notes: String) {
+        self.router.navigateToDetailTransaction(viewController: viewController, passDataTransaction: passDataTransaction, amount: amount, notes: notes)
+    }
 }
 
 extension TransactionPresenterImpl: TransactionInteractorOutput {

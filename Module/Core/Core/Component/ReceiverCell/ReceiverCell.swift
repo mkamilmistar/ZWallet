@@ -16,6 +16,7 @@ public class ReceiverCell: UITableViewCell {
     @IBOutlet var backgroundCell: UIView!
     var url: String = ""
     var id: Int = 0
+    public var passDataTransaction: ReceiverEntity = ReceiverEntity(id: 0, name: "", phone: "", image: "")
     
     public var delegate: ReceiverCellDelegate?
     
@@ -33,12 +34,16 @@ public class ReceiverCell: UITableViewCell {
         self.receiverNameLabel.text = receiver.name
         self.receiverPhoneLabel.text = receiver.phone
         id = receiver.id
-    
         url = receiver.image
         self.receiverPhoto.kf.setImage(with: URL(string: url))
+        
+        passDataTransaction.id = receiver.id
+        passDataTransaction.name = self.receiverNameLabel.text ?? ""
+        passDataTransaction.phone = self.receiverPhoneLabel.text ?? ""
+        passDataTransaction.image = url
     }
 
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
-        self.delegate?.navigateToTransaction(id: id, name: self.receiverNameLabel.text ?? "", phone: self.receiverPhoneLabel.text ?? "", image: url)
+        self.delegate?.passDataTransaction(passData: passDataTransaction)
     }
 }

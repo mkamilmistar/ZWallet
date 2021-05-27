@@ -6,7 +6,11 @@
 //
 
 import Foundation
+import UIKit
+import Core
 
 protocol TransactionDetailPresenter {
-    
+    func navigateToCheckPIN(viewController: UIViewController, passDataTransaction: ReceiverEntity, amount: Int, notes: String)
+    func backToTransaction(viewController: UIViewController)
+
 }

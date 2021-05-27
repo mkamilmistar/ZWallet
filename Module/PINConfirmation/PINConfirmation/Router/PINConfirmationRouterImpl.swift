@@ -9,20 +9,23 @@ import Foundation
 import UIKit
 import Core
 
-class PINConfirmationRouterImpl {
-    public static func navigateToModule(viewController: UIViewController) {
+public class PINConfirmationRouterImpl {
+    public static func navigateToModule(viewController: UIViewController, passDataTransaction: ReceiverEntity, amount: Int, notes: String) {
         let bundle = Bundle(identifier: "com.casestudy.PINConfirmation")
         let vc = PINConfirmationViewController(nibName: String(describing: PINConfirmationViewController.self), bundle: bundle)
         
-        let netwokManager = AuthNetworkManagerImpl()
+        let netwokManager = TransactionNetworkManagerImpl()
         
         let router = PINConfirmationRouterImpl()
-        let interactor = PINConfirmationInteractorImpl(authNetworkManager: netwokManager)
+        let interactor = PINConfirmationInteractorImpl(transactionNetworkManager: netwokManager)
         let presenter = PINConfirmationPresenterImpl(view: vc, interactor: interactor, router: router)
         
         interactor.interactorOutput = presenter
-        
+
         vc.presenter = presenter
+        vc.amount = amount
+        vc.passDataReceiver = passDataTransaction
+        vc.notes = notes
         
         viewController.navigationController?.pushViewController(vc, animated: true)
     }
@@ -30,11 +33,15 @@ class PINConfirmationRouterImpl {
 }
 
 extension PINConfirmationRouterImpl: PINConfirmationRouter {
-    func backNavigation(viewController: UIViewController) {
+    public func navigateToHome(viewController: UIViewController) {
+        viewController.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    public func backNavigation(viewController: UIViewController) {
         viewController.navigationController?.popViewController(animated: true)
     }
     
-    func navigateToTransactionStatus(viewController: UIViewController) {
-        //
+    public func navigateToTransactionStatus(viewController: UIViewController) {
+        viewController.navigationController?.popToRootViewController(animated: true)
     }
 }

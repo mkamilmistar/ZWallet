@@ -13,7 +13,7 @@ public class TransactionNetworkManagerImpl: TransactionNetworkManager {
         
     }
     
-    public func createRegister(receiver: Int, amount: Int, notes: String, pin: String,
+    public func createTransaction(receiver: Int, amount: Int, notes: String, pin: String,
                                completion: @escaping (TransactionResponse?, Error?) -> ()) {
         let provider = MoyaProvider<TransactionApi>()
         provider.request(.createTransfer(

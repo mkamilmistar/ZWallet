@@ -38,7 +38,7 @@ extension ReceiverRouterImpl: ReceiverRouter {
         viewController.navigationController?.popToRootViewController(animated: true)
     }
 
-    public func navigateToTransaction(viewController: UIViewController, id: Int, name: String, phone: String, image: String) {
-        AppRouter.shared.navigateToTransaction(viewController, id, name, phone, image)
+    public func navigateToTransaction(viewController: UIViewController, passingData: ReceiverEntity) {
+        AppRouter.shared.navigateToTransaction(viewController, passingData)
     }
 }

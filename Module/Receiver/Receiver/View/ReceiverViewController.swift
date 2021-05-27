@@ -45,8 +45,8 @@ extension ReceiverViewController: ReceiverView {
 }
 
 extension ReceiverViewController: ReceiverCellDelegate {
-    func navigateToTransaction(id: Int, name: String, phone: String, image: String) {
-        self.presenter?.passingDataReceiver(viewController: self, id: id, name: name, phone: phone, image: image)
+    func passDataTransaction(passData: ReceiverEntity) {
+        self.presenter?.passingDataReceiver(viewController: self, passingData: passData)
     }
     
 //    func navigateToTransaction() {

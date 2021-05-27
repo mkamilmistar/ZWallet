@@ -6,21 +6,37 @@
 //
 
 import UIKit
+import Core
 
 class PINConfirmationViewController: UIViewController {
 
+    @IBOutlet var backIcon: UIImageView!
+    
     var presenter: PINConfirmationPresenter?
+    var passDataReceiver: ReceiverEntity = ReceiverEntity(id: 0, name: "", phone: "", image: "")
+    var amount: Int = 0
+    var notes: String = ""
+    
+    @IBOutlet var pinField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.backIcon.image = UIImage(named: "arrow-left", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
     }
-
 
     @IBAction func backAction(_ sender: UITapGestureRecognizer) {
         self.presenter?.backNavigation(viewController: self)
     }
+    
+    @IBAction func confirmTransactionAction(_ sender: UIButton) {
+        let pin = pinField.text ?? ""
+        print(amount)
+        print(notes)
+        print(pinField.text!)
+        self.presenter?.createTransaction(pin: pin, receiver: passDataReceiver.id, amount: amount, notes: notes)
+    }
+    
 }
 
 extension PINConfirmationViewController: PINConfirmationView {

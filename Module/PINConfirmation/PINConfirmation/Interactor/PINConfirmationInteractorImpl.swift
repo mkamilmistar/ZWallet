@@ -9,21 +9,22 @@ import Foundation
 import Core
 
 class PINConfirmationInteractorImpl: PINConfirmationInteractor {
-    
     var interactorOutput: PINConfirmationInteractorOutput?
-    let authNetworkManager: AuthNetworkManager
+    let transactionNetworkManager: TransactionNetworkManager
     
-    init(authNetworkManager: AuthNetworkManager) {
-        self.authNetworkManager = authNetworkManager
+    init(transactionNetworkManager: TransactionNetworkManager) {
+        self.transactionNetworkManager = transactionNetworkManager
     }
     
-    func postPin(pin: String) {
-        self.authNetworkManager.pinCheck(pin: pin) { (data, error) in
+    func postTransaction(pin: String, receiver: Int, amount: Int, notes: String) {
+        self.transactionNetworkManager.createTransaction(
+            receiver: receiver, amount: amount, notes: notes, pin: pin) { (data, error) in
             if data?.status == 200 {
-                self.interactorOutput?.getPinCheckResult(isSuccess: true)
+                self.interactorOutput?.transactionResult(isSuccess: true)
             } else {
-                self.interactorOutput?.getPinCheckResult(isSuccess: false)
+                self.interactorOutput?.transactionResult(isSuccess: false)
             }
         }
     }
+    
 }

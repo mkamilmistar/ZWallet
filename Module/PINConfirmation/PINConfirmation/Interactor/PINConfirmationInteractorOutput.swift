@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import UIKit
 
 public protocol PINConfirmationInteractorOutput {
-    func getPinCheckResult(isSuccess: Bool)
+    func transactionResult(isSuccess: Bool)
 }

@@ -6,7 +6,10 @@
 //
 
 import Foundation
+import UIKit
+import Core
 
-protocol TransactionDetailRouter {
-    
+public protocol TransactionDetailRouter {
+    func backToTransaction(viewController: UIViewController)
+    func navigateToInputPIN(viewController: UIViewController, passDataTransaction: ReceiverEntity, amount: Int, notes: String)
 }

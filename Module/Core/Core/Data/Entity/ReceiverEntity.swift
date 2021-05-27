@@ -8,10 +8,10 @@
 import Foundation
 
 public struct ReceiverEntity {
-    var id: Int
-    var name: String
-    var phone: String
-    var image: String
+    public var id: Int
+    public var name: String
+    public var phone: String
+    public var image: String
     
     public init(id: Int, name: String, phone: String, image: String) {
         self.id = id
