@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -18,7 +19,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfirmOTPViewController" customModule="ConfirmOTP" customModuleProvider="target">
             <connections>
-                <outlet property="OtpField" destination="2Rz-XV-dmZ" id="5m6-MR-4dT"/>
+                <outlet property="otpField" destination="n07-Qv-CsK" id="ODb-Dp-2gv"/>
                 <outlet property="otpView" destination="W9l-Dw-f89" id="4BY-uu-4GC"/>
                 <outlet property="view" destination="U7E-qf-G5i" id="BJD-Gn-LjT"/>
             </connections>
@@ -52,6 +53,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="57" id="O8i-mD-EQE"/>
                             </constraints>
+                            <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="18"/>
                             <state key="normal" title="Confirm">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
@@ -64,29 +66,27 @@
                                 <action selector="confirmAction:" destination="-1" eventType="touchUpInside" id="oRA-PB-oU2"/>
                             </connections>
                         </button>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input OTP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Rz-XV-dmZ">
-                            <rect key="frame" x="32" y="181.5" width="311" height="58"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n07-Qv-CsK" customClass="OTPFieldView" customModule="OTPFieldView">
+                            <rect key="frame" x="16" y="196" width="343" height="58"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="58" id="OOe-0H-J5o"/>
+                                <constraint firstAttribute="height" constant="58" id="lDX-ge-iC5"/>
                             </constraints>
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="24"/>
-                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                        </textField>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="n07-Qv-CsK" firstAttribute="leading" secondItem="W9l-Dw-f89" secondAttribute="leading" constant="16" id="0zq-ER-2yO"/>
                         <constraint firstAttribute="trailing" secondItem="cga-mR-dh9" secondAttribute="trailing" constant="32" id="3l8-84-A1u"/>
                         <constraint firstItem="cga-mR-dh9" firstAttribute="leading" secondItem="W9l-Dw-f89" secondAttribute="leading" constant="32" id="4Bc-Ig-M85"/>
                         <constraint firstItem="cga-mR-dh9" firstAttribute="centerX" secondItem="Jbe-4J-7eW" secondAttribute="centerX" id="7nf-wr-6Gi"/>
-                        <constraint firstItem="Lxg-Qx-S9D" firstAttribute="top" secondItem="2Rz-XV-dmZ" secondAttribute="bottom" constant="180" id="AcQ-jz-The"/>
                         <constraint firstItem="cga-mR-dh9" firstAttribute="top" secondItem="Jbe-4J-7eW" secondAttribute="bottom" constant="20" id="Kd0-gJ-3Zj"/>
                         <constraint firstItem="Jbe-4J-7eW" firstAttribute="top" secondItem="W9l-Dw-f89" secondAttribute="top" constant="40" id="MMi-aG-qVp"/>
-                        <constraint firstItem="2Rz-XV-dmZ" firstAttribute="top" secondItem="cga-mR-dh9" secondAttribute="bottom" constant="50" id="Mn3-c0-Pdc"/>
-                        <constraint firstItem="2Rz-XV-dmZ" firstAttribute="leading" secondItem="W9l-Dw-f89" secondAttribute="leading" constant="32" id="V87-2C-Q9S"/>
+                        <constraint firstItem="n07-Qv-CsK" firstAttribute="top" secondItem="cga-mR-dh9" secondAttribute="bottom" constant="64.5" id="W53-3q-OLb"/>
                         <constraint firstItem="Lxg-Qx-S9D" firstAttribute="leading" secondItem="W9l-Dw-f89" secondAttribute="leading" constant="16" id="Z4K-HW-nLd"/>
+                        <constraint firstItem="Lxg-Qx-S9D" firstAttribute="top" secondItem="n07-Qv-CsK" secondAttribute="bottom" constant="165.5" id="dQX-mn-JCR"/>
+                        <constraint firstAttribute="trailing" secondItem="n07-Qv-CsK" secondAttribute="trailing" constant="16" id="kXG-LD-aQB"/>
                         <constraint firstAttribute="trailing" secondItem="Lxg-Qx-S9D" secondAttribute="trailing" constant="16" id="ls3-wG-lPf"/>
-                        <constraint firstAttribute="trailing" secondItem="2Rz-XV-dmZ" secondAttribute="trailing" constant="32" id="o1U-1d-Xcq"/>
                         <constraint firstItem="Jbe-4J-7eW" firstAttribute="centerX" secondItem="W9l-Dw-f89" secondAttribute="centerX" id="ssi-Cm-GH1"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
@@ -116,4 +116,9 @@
             <point key="canvasLocation" x="-178.40000000000001" y="165.96701649175412"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

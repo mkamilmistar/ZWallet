@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -18,7 +19,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PINActivationViewController" customModule="PINActivation" customModuleProvider="target">
             <connections>
-                <outlet property="pinField" destination="1ac-V4-HMT" id="jDx-DL-9iQ"/>
+                <outlet property="pinField" destination="ngN-OU-7pn" id="oCg-O0-QiT"/>
                 <outlet property="view" destination="fI6-B9-y43" id="hPO-W5-RE5"/>
             </connections>
         </placeholder>
@@ -49,6 +50,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="57" id="JeE-BK-DWq"/>
                             </constraints>
+                            <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="18"/>
                             <state key="normal" title="Confirm">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
@@ -61,29 +63,27 @@
                                 <action selector="confirmAction:" destination="-1" eventType="touchUpInside" id="N6Q-55-4YL"/>
                             </connections>
                         </button>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Pin" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ac-V4-HMT">
-                            <rect key="frame" x="32" y="181.5" width="311" height="58"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ngN-OU-7pn" customClass="OTPFieldView" customModule="OTPFieldView">
+                            <rect key="frame" x="16" y="196" width="343" height="58"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="58" id="Xit-oD-cHt"/>
+                                <constraint firstAttribute="height" constant="58" id="hgF-kB-SNT"/>
                             </constraints>
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="24"/>
-                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                        </textField>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="3Io-nS-2AJ" firstAttribute="centerX" secondItem="PhU-6E-ysd" secondAttribute="centerX" id="0VB-3z-wFw"/>
-                        <constraint firstAttribute="trailing" secondItem="1ac-V4-HMT" secondAttribute="trailing" constant="32" id="IlN-uW-EcU"/>
+                        <constraint firstItem="ngN-OU-7pn" firstAttribute="leading" secondItem="r2W-62-jp7" secondAttribute="leading" constant="16" id="4a4-OE-0Wf"/>
+                        <constraint firstItem="ngN-OU-7pn" firstAttribute="top" secondItem="3Io-nS-2AJ" secondAttribute="bottom" constant="64.5" id="C6U-AI-fvi"/>
+                        <constraint firstItem="vaF-Yd-1Ak" firstAttribute="top" secondItem="ngN-OU-7pn" secondAttribute="bottom" constant="165.5" id="FNW-Pw-Dye"/>
                         <constraint firstAttribute="trailing" secondItem="vaF-Yd-1Ak" secondAttribute="trailing" constant="16" id="JUk-le-TNR"/>
                         <constraint firstItem="3Io-nS-2AJ" firstAttribute="leading" secondItem="r2W-62-jp7" secondAttribute="leading" constant="32" id="K8h-aZ-dw7"/>
                         <constraint firstAttribute="trailing" secondItem="3Io-nS-2AJ" secondAttribute="trailing" constant="32" id="Qgd-eH-PcF"/>
                         <constraint firstItem="vaF-Yd-1Ak" firstAttribute="leading" secondItem="r2W-62-jp7" secondAttribute="leading" constant="16" id="Zjf-on-dbV"/>
-                        <constraint firstItem="1ac-V4-HMT" firstAttribute="leading" secondItem="r2W-62-jp7" secondAttribute="leading" constant="32" id="cAA-gn-egx"/>
-                        <constraint firstItem="1ac-V4-HMT" firstAttribute="top" secondItem="3Io-nS-2AJ" secondAttribute="bottom" constant="50" id="dwu-IU-iSD"/>
+                        <constraint firstAttribute="trailing" secondItem="ngN-OU-7pn" secondAttribute="trailing" constant="16" id="ceb-aT-DZv"/>
                         <constraint firstItem="PhU-6E-ysd" firstAttribute="centerX" secondItem="r2W-62-jp7" secondAttribute="centerX" id="eIV-gN-4PA"/>
                         <constraint firstItem="3Io-nS-2AJ" firstAttribute="top" secondItem="PhU-6E-ysd" secondAttribute="bottom" constant="20" id="nIM-MV-g7m"/>
-                        <constraint firstItem="vaF-Yd-1Ak" firstAttribute="top" secondItem="1ac-V4-HMT" secondAttribute="bottom" constant="180" id="ufi-7x-yvP"/>
                         <constraint firstItem="PhU-6E-ysd" firstAttribute="top" secondItem="r2W-62-jp7" secondAttribute="top" constant="40" id="z4u-yp-ijT"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
@@ -113,4 +113,9 @@
             <point key="canvasLocation" x="-178.40000000000001" y="165.96701649175412"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

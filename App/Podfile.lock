@@ -6,11 +6,13 @@ PODS:
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
   - netfox (1.19.0)
+  - OTPFieldView (1.0.1)
 
 DEPENDENCIES:
   - Kingfisher
   - Moya
   - netfox
+  - OTPFieldView
 
 SPEC REPOS:
   trunk:
@@ -18,13 +20,15 @@ SPEC REPOS:
     - Kingfisher
     - Moya
     - netfox
+    - OTPFieldView
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   netfox: efeec1d23406df6cd605212f09a40957bb5654eb
+  OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
 
-PODFILE CHECKSUM: 55c9417c65d99c3564d268d9f64084055715e809
+PODFILE CHECKSUM: b251e76dd6aa06af9148064c05a2230831066e1b
 
 COCOAPODS: 1.10.1

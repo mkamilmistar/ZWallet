@@ -12,6 +12,7 @@ target 'App' do
   pod 'Moya'
   pod 'netfox', :configurations => ['Debug']
   common_dependency
+  pod 'OTPFieldView'
 end
 
 target 'Core' do
@@ -31,10 +32,14 @@ end
 
 target 'PINActivation' do
 	project '../Module/PINActivation/PINActivation'
+
+	pod 'OTPFieldView'
 end
 
 target 'ConfirmOTP' do
 	project '../Module/ConfirmOTP/ConfirmOTP'
+
+	pod 'OTPFieldView'
 end
 
 target 'Home' do
@@ -71,6 +76,7 @@ target 'PINConfirmation' do
 	project '../Module/PINConfirmation/PINConfirmation'
 
 	common_dependency
+	pod 'OTPFieldView'
 end
 
 target 'TransactionDetails' do

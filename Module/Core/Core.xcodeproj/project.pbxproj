@@ -63,6 +63,7 @@
 		FAA257ED2660F183002F9A1E /* RotatingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA257EC2660F183002F9A1E /* RotatingAnimation.swift */; };
 		FAA257F02660F193002F9A1E /* StrokeColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA257EF2660F193002F9A1E /* StrokeColorAnimation.swift */; };
 		FAA257F32660F20A002F9A1E /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA257F22660F20A002F9A1E /* UIViewControllerExtension.swift */; };
+		FAA2580A2661580D002F9A1E /* OTPViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA258092661580D002F9A1E /* OTPViewStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +141,7 @@
 		FAA257EC2660F183002F9A1E /* RotatingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingAnimation.swift; sourceTree = "<group>"; };
 		FAA257EF2660F193002F9A1E /* StrokeColorAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeColorAnimation.swift; sourceTree = "<group>"; };
 		FAA257F22660F20A002F9A1E /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		FAA258092661580D002F9A1E /* OTPViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +240,7 @@
 				FA2ABEBA265B5D920079F738 /* AppConstant.swift */,
 				FA6F7C8E265B7E3D00CF5DA5 /* AppRouter.swift */,
 				FA2ABEB5265B5C0E0079F738 /* UserDefaultHelper.swift */,
+				FAA258092661580D002F9A1E /* OTPViewStyle.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				FAA257F32660F20A002F9A1E /* UIViewControllerExtension.swift in Sources */,
 				FA2ABECF265B5F590079F738 /* AuthApi.swift in Sources */,
 				FA053163265E3E69009A0DAB /* GetContactResponse.swift in Sources */,
+				FAA2580A2661580D002F9A1E /* OTPViewStyle.swift in Sources */,
 				FA2ABEAF265B5ABF0079F738 /* UIViewExtension.swift in Sources */,
 				FAA256BD265F8BB4002F9A1E /* ReceiverCellDelegate.swift in Sources */,
 				FA2ABED2265B63060079F738 /* AuthNetworkManager.swift in Sources */,
