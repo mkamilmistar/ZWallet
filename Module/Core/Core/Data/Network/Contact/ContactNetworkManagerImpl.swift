@@ -14,7 +14,7 @@ public class ContactNetworkManagerImpl: ContactNetworkManager {
     }
     
     public func getContact(completion: @escaping ([GetContactDataResponse]?, Error?) -> ()) {
-        let provider = MoyaProvider<ContactApi>()
+        let provider = MoyaProvider<ContactApi>(isRefreshToken: true)
         provider.request(.getContact) { response in
             switch response {
             case .success(let result):

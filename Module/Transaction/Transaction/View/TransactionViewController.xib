@@ -63,6 +63,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="57" id="c3E-rC-YfF"/>
                     </constraints>
+                    <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="18"/>
                     <state key="normal" title="Continue">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>

@@ -33,10 +33,7 @@ public class ReceiverCell: UITableViewCell {
         self.receiverPhoneLabel.text = receiver.phone
         self.receiverPhoto.kf.setImage(with: URL(string: receiver.image))
         
-        passDataTransaction.id = receiver.id
-        passDataTransaction.name = self.receiverNameLabel.text ?? ""
-        passDataTransaction.phone = self.receiverPhoneLabel.text ?? ""
-        passDataTransaction.image = receiver.image
+        passDataTransaction = receiver
     }
 
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {

@@ -92,4 +92,21 @@ public class AuthNetworkManagerImpl: AuthNetworkManager {
             }
         }
     }
+    
+    public func refreshToken(email: String, refreshToken: String, completion: @escaping (RefreshTokenDataResponse?, Error?) -> ()) {
+        let provider = MoyaProvider<AuthApi>()
+        provider.request(.refreshToken(
+                            email: email, refreshToken: refreshToken)) { (response) in
+            switch response {
+            case .success(let result):
+                do {
+                    let refreshTokenResponse = try? JSONDecoder().decode(RefreshTokenResponse.self, from: result.data)
+                    completion(refreshTokenResponse?.data, nil)
+                }
+            case .failure(let error):
+                completion(nil, error)
+            }
+        }
+    }
+    
 }

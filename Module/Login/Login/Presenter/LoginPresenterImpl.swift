@@ -29,8 +29,8 @@ public class LoginPresenterImpl: LoginPresenter {
 }
 
 extension LoginPresenterImpl: LoginInteractorOutput {
-    func getPinStatus(isActivate: Bool) {
-        if isActivate {
+    func getPinStatus(hasPin: Bool) {
+        if hasPin {
             self.router.navigateToHome()
         } else {
             self.router.navigateToPinActiovation()

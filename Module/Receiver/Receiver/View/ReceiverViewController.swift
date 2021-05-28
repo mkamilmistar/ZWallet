@@ -11,6 +11,11 @@ import Core
 class ReceiverViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet var receiverTableView: UITableView!
+    @IBOutlet var searchField: UITextField!
+    @IBOutlet var contactFoundLabel: UILabel!
+    @IBOutlet var backIcon: UIImageView!
+    @IBOutlet var searchIcon: UIImageView!
+    @IBOutlet var searchBar: UISearchBar!
     
     var dataSource = ReceiverDataSource()
     
@@ -21,6 +26,9 @@ class ReceiverViewController: UIViewController, UITableViewDelegate {
 
         self.setupTableReceiver()
         self.presenter?.loadDataReceiver()
+        
+        self.backIcon.image = UIImage(named: "arrow-left", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
+        
     }
 
     func setupTableReceiver() {
@@ -30,6 +38,8 @@ class ReceiverViewController: UIViewController, UITableViewDelegate {
         
         self.receiverTableView.dataSource = self.dataSource
         self.receiverTableView.delegate = self.dataSource
+        self.searchBar.delegate = self.dataSource
+//        self.dataSource.delegate = self
     }
     
     @IBAction func backTapAction(_ sender: UITapGestureRecognizer) {
@@ -39,13 +49,20 @@ class ReceiverViewController: UIViewController, UITableViewDelegate {
 
 extension ReceiverViewController: ReceiverView {
     func showAllReceiver(receiverData: [ReceiverEntity]) {
-        self.dataSource.allDataReceiver = receiverData
+        self.dataSource.filteredData = receiverData
         self.receiverTableView.reloadData()
+        self.contactFoundLabel.text = "\(receiverData.count) Contact found"
     }
 }
 
 extension ReceiverViewController: ReceiverCellDelegate {
     func passDataTransaction(passData: ReceiverEntity) {
         self.presenter?.passingDataReceiver(viewController: self, passingData: passData)
+    }
+}
+
+extension ReceiverViewController: ReceiverDataSourceDelegate {
+    func reloadDataTable() {
+        self.receiverTableView.reloadData()
     }
 }

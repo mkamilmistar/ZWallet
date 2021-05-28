@@ -11,6 +11,7 @@ import Moya
 public enum AuthApi {
     case login(email: String, password: String)
     case register(username: String, email: String, password: String)
+    case refreshToken(email: String, refreshToken: String)
     case pinActivation(pin: String)
     case confirmOTP(email: String, otp: String)
     case checkPIN(pin: String)
@@ -33,6 +34,8 @@ extension AuthApi: TargetType {
             return "auth/activate/\(email)/\(otp)"
         case .checkPIN(let pin):
             return "auth/checkPIN/\(pin)"
+        case .refreshToken:
+            return "auth/refresh-token"
         }
     }
     
@@ -42,7 +45,7 @@ extension AuthApi: TargetType {
             return .post
         case .pinActivation:
             return .patch
-        case .confirmOTP, .checkPIN:
+        case .confirmOTP, .checkPIN, .refreshToken:
             return .get
         }
     }
@@ -58,25 +61,30 @@ extension AuthApi: TargetType {
                 parameters: ["email": email, "password": password],
                 encoding: JSONEncoding.default
             )
-        case .register(username: let username, email: let email, password: let password):
+        case .register(let username, let email, let password):
             return .requestParameters(
                 parameters: ["username": username, "email": email, "password": password],
                 encoding: JSONEncoding.default
             )
-        case .pinActivation(pin: let pin):
+        case .pinActivation(let pin):
             return .requestParameters(
                 parameters: ["PIN": pin],
                 encoding: JSONEncoding.default
             )
         case .confirmOTP, .checkPIN:
             return .requestPlain
+        case .refreshToken(let email, let refreshToken):
+            return .requestParameters(
+                parameters: ["email": email, "refreshToken": refreshToken],
+                encoding: JSONEncoding.default
+            )
         }
     }
     
     public var headers: [String : String]? {
         let token: String = UserDefaultHelper.shared.get(key: .userToken) ?? ""
         switch self {
-        case .pinActivation, .checkPIN:
+        case .pinActivation, .checkPIN, .refreshToken:
             return [
                 "Content-Type": "application/json",
                 "Authorization": "Bearer \(token)"

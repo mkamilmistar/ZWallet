@@ -33,43 +33,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = scene
         
         self.reloadRootView()
-//        self.timerToken()
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.reloadRootView), name: Notification.Name("reloadRootView"), object: nil)
     }
     
     @objc func reloadRootView() {
         let token: String? = UserDefaultHelper.shared.get(key: .userToken)
-        let loginStatus: Int? = UserDefaultHelper.shared.get(key: .statusLogin)
+        let pinStatus: Bool? = UserDefaultHelper.shared.get(key: .pinStatus)
             
-        if token != nil && loginStatus == 200 {
-            AppRouter.shared.navigateToHome()
-        } else if loginStatus == 403 {
-            AppRouter.shared.confirmOTPScene = { (email, viewController) in
-                ConfirmOTPRouterImpl.navigateToModule(email: email, viewController: viewController)
+        if token != nil {
+            if pinStatus != true {
+                AppRouter.shared.navigateToPINActivation()
+            } else {
+                AppRouter.shared.navigateToHome()
             }
         } else {
             AppRouter.shared.navigateToLogin()
         }
-    }
-
-//    func timerToken() {
-//        let token: String? = UserDefaultHelper.shared.get(key: .userToken)
-//        if token != nil {
-//            Timer.scheduledTimer(timeInterval: 300,
-//                target: self,
-//                selector: #selector(self.resetDefault),
-//                userInfo: nil,
-//                repeats: true
-//            )
-//        }
-//    }
-    
-    @objc func resetDefault() {
-        UserDefaultHelper.shared.remove(key: .userToken)
-        UserDefaultHelper.shared.remove(key: .statusLogin)
-        UserDefaultHelper.shared.remove(key: .userEmail)
-        AppRouter.shared.navigateToLogin()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

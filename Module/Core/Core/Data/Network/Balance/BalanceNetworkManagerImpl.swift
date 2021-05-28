@@ -14,7 +14,7 @@ public class BalanceNetworkManagerImpl: BalanceNetworkManager {
     }
     
     public func getBalance(completion: @escaping (GetBalanceDataResponse?, Error?) -> ()) {
-        let provider = MoyaProvider<BalanceApi>()
+        let provider = MoyaProvider<BalanceApi>(isRefreshToken: true)
         provider.request(.getBalance) { response in
             switch response {
             case .success(let result):

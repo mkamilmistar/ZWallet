@@ -76,3 +76,8 @@ end
 target 'TransactionDetails' do
 	project '../Module/TransactionDetails/TransactionDetails'
 end
+
+target 'TopUp' do
+	project '../Module/TopUp/TopUp'
+end
+

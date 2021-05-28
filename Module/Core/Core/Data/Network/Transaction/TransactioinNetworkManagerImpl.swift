@@ -15,7 +15,7 @@ public class TransactionNetworkManagerImpl: TransactionNetworkManager {
     
     public func createTransaction(receiver: Int, amount: Int, notes: String, pin: String,
                                completion: @escaping (TransactionResponse?, Error?) -> ()) {
-        let provider = MoyaProvider<TransactionApi>()
+        let provider = MoyaProvider<TransactionApi>(isRefreshToken: true)
         provider.request(.createTransfer(
                             pin: pin, receiver: receiver, amount: amount, notes: notes)
         ) { (result) in

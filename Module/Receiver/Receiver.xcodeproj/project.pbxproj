@@ -15,7 +15,6 @@
 		FA05317A265E463F009A0DAB /* ReceiverRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA053179265E463F009A0DAB /* ReceiverRouter.swift */; };
 		FA05317E265E4860009A0DAB /* ReceiverRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA05317D265E4860009A0DAB /* ReceiverRouterImpl.swift */; };
 		FA73C499265CDA16004AFAF4 /* Receiver.h in Headers */ = {isa = PBXBuildFile; fileRef = FA73C497265CDA16004AFAF4 /* Receiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FAA255B6265E5137002F9A1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA255B5265E5137002F9A1E /* Assets.xcassets */; };
 		FAA255BA265E518C002F9A1E /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA255B9265E518C002F9A1E /* Core.framework */; };
 		FAA255BB265E518C002F9A1E /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAA255B9265E518C002F9A1E /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FAA255C1265E5241002F9A1E /* ReceiverInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA255C0265E5241002F9A1E /* ReceiverInteractor.swift */; };
@@ -55,7 +54,6 @@
 		FA73C494265CDA16004AFAF4 /* Receiver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Receiver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA73C497265CDA16004AFAF4 /* Receiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Receiver.h; sourceTree = "<group>"; };
 		FA73C498265CDA16004AFAF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAA255B5265E5137002F9A1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAA255B9265E518C002F9A1E /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA255C0265E5241002F9A1E /* ReceiverInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverInteractor.swift; sourceTree = "<group>"; };
 		FAA255C2265E5273002F9A1E /* ReceiverInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverInteractorOutput.swift; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 				FA05316C265E44AE009A0DAB /* View */,
 				FA73C497265CDA16004AFAF4 /* Receiver.h */,
 				FA73C498265CDA16004AFAF4 /* Info.plist */,
-				FAA255B5265E5137002F9A1E /* Assets.xcassets */,
 			);
 			path = Receiver;
 			sourceTree = "<group>";
@@ -241,7 +238,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAA255B6265E5137002F9A1E /* Assets.xcassets in Resources */,
 				FA053170265E44C1009A0DAB /* ReceiverViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

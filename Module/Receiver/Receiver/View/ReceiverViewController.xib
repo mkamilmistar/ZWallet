@@ -8,10 +8,21 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NunitoSans-Bold.ttf">
+            <string>NunitoSans-Bold</string>
+        </array>
+        <array key="NunitoSans-Regular.ttf">
+            <string>NunitoSans-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReceiverViewController" customModule="Receiver" customModuleProvider="target">
             <connections>
+                <outlet property="backIcon" destination="pRi-go-bSl" id="Ap5-Jl-GnQ"/>
+                <outlet property="contactFoundLabel" destination="Y6I-Xc-X8L" id="7fj-fA-l5Z"/>
                 <outlet property="receiverTableView" destination="uQ8-X0-k41" id="RaI-ZL-0uw"/>
+                <outlet property="searchBar" destination="s88-e2-er6" id="uCA-1i-ysT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -44,21 +55,44 @@
                     </connections>
                 </stackView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uQ8-X0-k41">
-                    <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                    <rect key="frame" x="0.0" y="258" width="375" height="409"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dV-4r-psf">
+                    <rect key="frame" x="16" y="184" width="92.5" height="25"/>
+                    <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="18"/>
+                    <color key="textColor" red="0.31764705882352939" green="0.30980392156862746" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17 Contact Founds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6I-Xc-X8L">
+                    <rect key="frame" x="16" y="219" width="119" height="19.5"/>
+                    <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="14"/>
+                    <color key="textColor" red="0.5607843137254902" green="0.5607843137254902" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search receiver here" translatesAutoresizingMaskIntoConstraints="NO" id="s88-e2-er6">
+                    <rect key="frame" x="16" y="88" width="343" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uQ8-X0-k41" secondAttribute="trailing" id="6cN-wP-mdG"/>
+                <constraint firstItem="uQ8-X0-k41" firstAttribute="firstBaseline" secondItem="Y6I-Xc-X8L" secondAttribute="baseline" constant="25" id="A4a-OA-a42"/>
+                <constraint firstItem="9dV-4r-psf" firstAttribute="top" secondItem="s88-e2-er6" secondAttribute="bottom" constant="40" id="Flf-wA-4uM"/>
+                <constraint firstItem="s88-e2-er6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="KFZ-AU-p8N"/>
                 <constraint firstItem="NBy-Th-o3e" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="QkF-ll-DZx"/>
+                <constraint firstItem="9dV-4r-psf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="SZv-5j-dGJ"/>
+                <constraint firstItem="Y6I-Xc-X8L" firstAttribute="leading" secondItem="9dV-4r-psf" secondAttribute="leading" id="Ue5-Pm-iCt"/>
                 <constraint firstItem="NBy-Th-o3e" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="dOR-bV-w46"/>
                 <constraint firstItem="uQ8-X0-k41" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eBS-MR-QyO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="s88-e2-er6" secondAttribute="trailing" constant="16" id="gyR-TJ-IgX"/>
+                <constraint firstItem="s88-e2-er6" firstAttribute="top" secondItem="NBy-Th-o3e" secondAttribute="bottom" constant="40" id="heo-Ue-2nE"/>
+                <constraint firstItem="Y6I-Xc-X8L" firstAttribute="top" secondItem="9dV-4r-psf" secondAttribute="bottom" constant="10" id="rcb-6b-h0U"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uQ8-X0-k41" secondAttribute="bottom" id="wAe-Ly-VOx"/>
-                <constraint firstItem="uQ8-X0-k41" firstAttribute="top" secondItem="NBy-Th-o3e" secondAttribute="bottom" constant="8" symbolic="YES" id="yaz-XI-UpJ"/>
             </constraints>
-            <point key="canvasLocation" x="-55.072463768115945" y="84.375"/>
+            <point key="canvasLocation" x="-55.200000000000003" y="84.107946026986511"/>
         </view>
         <tapGestureRecognizer id="ODu-jV-9LF" userLabel="backtap">
             <connections>

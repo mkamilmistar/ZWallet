@@ -20,7 +20,7 @@ public class LoginRouterImpl {
         let networkManager = AuthNetworkManagerImpl()
         
         let router = LoginRouterImpl()
-        let interactor = LoginInteractorImpl(networkManager: networkManager)
+        let interactor = LoginInteractorImpl(authNetworkManager: networkManager)
         let presenter = LoginPresenterImpl(view: vc, interactor: interactor, router: router)
         
         interactor.interactorOutput = presenter

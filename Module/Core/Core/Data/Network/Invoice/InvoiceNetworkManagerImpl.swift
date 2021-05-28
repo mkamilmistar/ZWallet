@@ -14,7 +14,7 @@ public class InvoiceNetworkManagerImpl: InvoiceNetworkManager {
     }
     
     public func getThisWeekInvoice(completion: @escaping ([GetInvoiceDataResponse]?, Error?) -> ()) {
-        let provider = MoyaProvider<InvoiceApi>()
+        let provider = MoyaProvider<InvoiceApi>(isRefreshToken: true)
         provider.request(.getThisWeekInvoice) { response in
             switch response {
             case .success(let result):
@@ -32,7 +32,7 @@ public class InvoiceNetworkManagerImpl: InvoiceNetworkManager {
     }
     
     public func getAllInvoice(completion: @escaping ([GetInvoiceDataResponse]?, Error?) -> ()) {
-        let provider = MoyaProvider<InvoiceApi>()
+        let provider = MoyaProvider<InvoiceApi>(isRefreshToken: true)
         provider.request(.getAllInvoice) { response in
             switch response {
             case .success(let result):

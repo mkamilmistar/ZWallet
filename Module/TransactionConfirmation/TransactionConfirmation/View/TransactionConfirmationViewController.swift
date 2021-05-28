@@ -58,6 +58,12 @@ class TransactionConfirmationViewController: UIViewController {
         
         let url = URL(string: passDataReceiver.image)
         self.imagesReceiver.kf.setImage(with: url)
+        
+        let dateNow: String  = "dd MMM yyyy"
+        let hourNow: String = "HH:mm"
+        
+        self.dateLabel.text = dateNow.dateFormat()
+        self.timeLabel.text = hourNow.dateFormat()
     }
     
     func setupBackgroundView() {

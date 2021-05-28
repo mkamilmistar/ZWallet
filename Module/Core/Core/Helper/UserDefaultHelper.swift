@@ -30,10 +30,10 @@ public extension UserDefaultHelper {
     enum Key: String {
         case userToken
         case userEmail
-        case statusLogin
+        case refreshToken
+        case userTokenExpired
+        
+        case pinStatus
+        case loginStatus
     }
 }
-
-// UserDefaultHelper.shared.set(.userToken, "aaaa")
-// UserDefaultHelper.shared.get(.userToken) as String
-// UserDefaultHelper.shared.remove(.userToken)
