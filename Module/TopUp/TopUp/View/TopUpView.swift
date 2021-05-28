@@ -8,5 +8,5 @@
 import Foundation
 
 protocol TopUpView {
-    func showError()
+    
 }

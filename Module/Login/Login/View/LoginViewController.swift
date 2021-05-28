@@ -28,11 +28,15 @@ class LoginViewController: UIViewController {
         
         self.mailIcon.image = UIImage(named: "mail", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
         self.passwordIcon.image = UIImage(named: "lock", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
+        
+        setupLoadingView()
     }
     
     @IBAction func loginAction(_ sender: Any) {
         let email: String = emailText.text ?? ""
         let password: String = passwordText.text ?? ""
+        
+        
         
         self.presenter?.login(email: email, password: password)
     }

@@ -41,7 +41,6 @@ public class TransactionViewController: UIViewController {
         let notes = notesField.text ?? ""
 
         self.presenter?.navigateToDetailTransaction(viewController: self, passDataTransaction: passDataReceiver, amount: amount, notes: notes)
-//        self.presenter?.createTransaction(pin: pin, receiver: passDataReceiver.id, amount: amount, notes: notes)
     }
     
     func setupViewData() {

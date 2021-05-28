@@ -78,7 +78,5 @@ class TransactionConfirmationViewController: UIViewController {
 }
 
 extension TransactionConfirmationViewController: TransactionConfirmationView {
-    func showError() {
-        print("ERROR")
-    }
+    
 }

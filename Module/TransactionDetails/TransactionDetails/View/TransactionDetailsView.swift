@@ -8,5 +8,5 @@
 import Foundation
 
 protocol TransactionDetailsView {
-    func showError()
+    
 }

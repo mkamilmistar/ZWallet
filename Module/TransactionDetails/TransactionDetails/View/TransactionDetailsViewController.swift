@@ -26,7 +26,5 @@ class TransactionDetailsViewController: UIViewController {
 }
 
 extension TransactionDetailsViewController: TransactionDetailsView {
-    func showError() {
-        print("error")
-    }
+    
 }

@@ -30,14 +30,3 @@ public class TransactionPresenterImpl: TransactionPresenter {
         self.router.navigateToDetailTransaction(viewController: viewController, passDataTransaction: passDataTransaction, amount: amount, notes: notes)
     }
 }
-
-extension TransactionPresenterImpl: TransactionInteractorOutput {
-    func transactionResult(isSuccess: Bool) {
-        if isSuccess {
-            self.router.backToHome()
-        } else {
-            self.view.showError()
-        }
-    }
-    
-}

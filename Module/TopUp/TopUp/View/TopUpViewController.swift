@@ -18,7 +18,5 @@ class TopUpViewController: UIViewController {
 }
 
 extension TopUpViewController: TopUpView {
-    func showError() {
-        print("error")
-    }
+  
 }
