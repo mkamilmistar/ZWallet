@@ -28,19 +28,18 @@ class PINConfirmationPresenterImpl: PINConfirmationPresenter {
         self.interactor.postTransaction(pin: pin, receiver: receiver, amount: amount, notes: notes)
     }
     
-    func navigateToTransactionDetails(viewController: UIViewController) {
-        self.router.navigateToTransactionStatus(viewController: viewController)
+    func navigateToTransactionDetails(viewController: UIViewController, isSuccess: Bool, passDataTransaction: ReceiverEntity, amount: Int, notes: String) {
+        self.router.navigateToTransactionStatus(viewController: viewController, isSuccess: isSuccess, passDataTransaction: passDataTransaction, amount: amount, notes: notes)
     }
+   
 }
-
 
 extension PINConfirmationPresenterImpl: PINConfirmationInteractorOutput {
     func transactionResult(isSuccess: Bool) {
         if isSuccess {
-            self.view.showSuccess()
+            self.view.showTransactionDetails(isSuccess: true)
         } else {
-            self.view.showError()
+            self.view.showTransactionDetails(isSuccess: false)
         }
     }
-    
 }

@@ -39,7 +39,7 @@ class RegisterViewController: UIViewController {
 
 extension RegisterViewController: RegisterView {
     func parsingEmail() {
-        self.presenter?.parsingEmail(email: emailField.text ?? "", viewController: self)
+        self.presenter?.parsingEmail()
     }
     
     func showError() {

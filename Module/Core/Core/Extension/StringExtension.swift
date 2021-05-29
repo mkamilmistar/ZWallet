@@ -12,7 +12,7 @@ public extension String {
     func dateFormat() -> String {
         let dateFormatter = DateFormatter()
         let todaysDate = NSDate()
-        dateFormatter.locale = Locale(identifier: "id")
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.dateFormat = self
         let date =  dateFormatter.string(from: todaysDate as Date)
         return date

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Core
 
 public class LoginPresenterImpl: LoginPresenter {
     let view: LoginView
@@ -29,17 +30,13 @@ public class LoginPresenterImpl: LoginPresenter {
 }
 
 extension LoginPresenterImpl: LoginInteractorOutput {
-    func getPinStatus(hasPin: Bool) {
-        if hasPin {
+    func authenticationResult(isSuccess: Bool, isActivate: Bool, isSetPin: Bool) {
+        if isSuccess && isActivate && isSetPin {
             self.router.navigateToHome()
-        } else {
+        } else if isSuccess && isActivate && !isSetPin {
             self.router.navigateToPinActiovation()
-        }
-    }
-    
-    func authenticationResult(isSuccess: Bool) {
-        if isSuccess {
-            self.router.navigateToHome()
+        } else if isSuccess && !isActivate && !isSetPin {
+            AppRouter.shared.navigateToConfirmOTP()
         } else {
             self.view.showError()
         }

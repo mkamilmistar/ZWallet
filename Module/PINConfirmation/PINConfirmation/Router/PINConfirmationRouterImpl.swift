@@ -33,15 +33,15 @@ public class PINConfirmationRouterImpl {
 }
 
 extension PINConfirmationRouterImpl: PINConfirmationRouter {
+    public func navigateToTransactionStatus(viewController: UIViewController, isSuccess: Bool, passDataTransaction: ReceiverEntity, amount: Int, notes: String) {
+        AppRouter.shared.navigateToTransactionDetails(viewController, isSuccess, passDataTransaction, amount, notes)
+    }
+    
     public func navigateToHome(viewController: UIViewController) {
         viewController.navigationController?.popToRootViewController(animated: true)
     }
     
     public func backNavigation(viewController: UIViewController) {
         viewController.navigationController?.popViewController(animated: true)
-    }
-    
-    public func navigateToTransactionStatus(viewController: UIViewController) {
-        AppRouter.shared.navigateToTransactionDetails(viewController)
     }
 }

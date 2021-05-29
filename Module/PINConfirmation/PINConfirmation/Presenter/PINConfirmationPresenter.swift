@@ -7,9 +7,10 @@
 
 import Foundation
 import UIKit
+import Core
 
 protocol PINConfirmationPresenter {
     func createTransaction(pin: String, receiver: Int, amount: Int, notes: String)
     func backNavigation(viewController: UIViewController)
-    func navigateToTransactionDetails(viewController: UIViewController)
+    func navigateToTransactionDetails(viewController: UIViewController, isSuccess: Bool, passDataTransaction: ReceiverEntity, amount: Int, notes: String)
 }

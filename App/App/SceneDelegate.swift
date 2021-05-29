@@ -92,8 +92,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             RegisterRouterImpl.navigateToModule(viewController: viewController)
         }
         
-        AppRouter.shared.confirmOTPScene = { (email, viewController) in
-            ConfirmOTPRouterImpl.navigateToModule(email: email, viewController: viewController)
+        AppRouter.shared.confirmOTPScene = {
+            ConfirmOTPRouterImpl.navigateToModule()
         }
         
         AppRouter.shared.pinActivationScene = {
@@ -124,8 +124,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             PINConfirmationRouterImpl.navigateToModule(viewController: viewController, passDataTransaction: passingData, amount: amount, notes: notes)
         }
         
-        AppRouter.shared.transactionDetailsScene = { viewController in
-            TransactionDetailsRouterImpl.navigateToModule(viewController: viewController)
+        AppRouter.shared.transactionDetailsScene = { viewController, isSuccess, passingData, amount, notes in
+            TransactionDetailsRouterImpl.navigateToModule(viewController: viewController, isSuccess: isSuccess, passingData: passingData, amount: amount, notes: notes)
         }
     }
  }

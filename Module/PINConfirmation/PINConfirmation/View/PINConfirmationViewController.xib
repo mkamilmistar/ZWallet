@@ -100,15 +100,15 @@
                 <constraint firstItem="tg6-l0-dHX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="6DU-nz-CFc"/>
                 <constraint firstItem="e2X-L7-A45" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="80" id="BSK-Zs-UY8"/>
                 <constraint firstItem="tg6-l0-dHX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="BXg-xD-bP8"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Sdm-eX-Uxo" secondAttribute="trailing" constant="16" id="BmC-d7-SV1"/>
                 <constraint firstItem="9AH-5B-dQd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="GBx-8W-Nzx"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9AH-5B-dQd" secondAttribute="trailing" constant="16" id="KHa-z3-u7K"/>
                 <constraint firstItem="27K-yk-xYY" firstAttribute="top" secondItem="Sdm-eX-Uxo" secondAttribute="bottom" constant="180" id="KTf-cI-OwS"/>
                 <constraint firstItem="e2X-L7-A45" firstAttribute="top" secondItem="yXE-AR-xSO" secondAttribute="bottom" constant="40" id="WZ1-5O-JhW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="e2X-L7-A45" secondAttribute="trailing" constant="81.5" id="ajp-cm-Ye1"/>
-                <constraint firstItem="Sdm-eX-Uxo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="bbY-Ef-pvz"/>
                 <constraint firstItem="27K-yk-xYY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="c8r-nl-h8U"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="27K-yk-xYY" secondAttribute="trailing" constant="16" id="gv1-QV-U2y"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Sdm-eX-Uxo" secondAttribute="trailing" constant="16" id="qrY-KT-awk"/>
+                <constraint firstItem="Sdm-eX-Uxo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="w6e-P6-Z3x"/>
                 <constraint firstItem="9AH-5B-dQd" firstAttribute="top" secondItem="e2X-L7-A45" secondAttribute="bottom" constant="20" id="wpe-2k-fE5"/>
                 <constraint firstItem="Sdm-eX-Uxo" firstAttribute="top" secondItem="9AH-5B-dQd" secondAttribute="bottom" constant="68.5" id="zhL-It-Nfu"/>
             </constraints>

@@ -17,14 +17,12 @@ class TransactionConfirmationViewController: UIViewController {
     @IBOutlet var amountLabel: UILabel!
     @IBOutlet var balanceLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
-    @IBOutlet var timeLabel: UILabel!
     @IBOutlet var notesLabel: UILabel!
     
     @IBOutlet var receiverBG: UIView!
     @IBOutlet var amountBG: UIView!
     @IBOutlet var balanceBG: UIView!
     @IBOutlet var dateBG: UIView!
-    @IBOutlet var timeBG: UIView!
     @IBOutlet var notesBG: UIView!
     @IBOutlet var backIcon: UIImageView!
     
@@ -53,17 +51,15 @@ class TransactionConfirmationViewController: UIViewController {
         
         self.nameReceiver.text = passDataReceiver.name
         self.phoneReceiver.text = passDataReceiver.phone
-        self.amountLabel.text = String(amount)
+        self.amountLabel.text = amount.formatToIdr()
         self.notesLabel.text = notes
         
         let url = URL(string: passDataReceiver.image)
         self.imagesReceiver.kf.setImage(with: url)
         
-        let dateNow: String  = "dd MMM yyyy"
-        let hourNow: String = "HH:mm"
+        let dateNow: String  = "MMM dd, yyyy - HH:mm"
         
         self.dateLabel.text = dateNow.dateFormat()
-        self.timeLabel.text = hourNow.dateFormat()
     }
     
     func setupBackgroundView() {
@@ -71,7 +67,6 @@ class TransactionConfirmationViewController: UIViewController {
         amountBG.setShadow(color: UIColor.blue.cgColor, opacity: 0.1)
         balanceBG.setShadow(color: UIColor.blue.cgColor, opacity: 0.1)
         dateBG.setShadow(color: UIColor.blue.cgColor, opacity: 0.1)
-        timeBG.setShadow(color: UIColor.blue.cgColor, opacity: 0.1)
         notesBG.setShadow(color: UIColor.blue.cgColor, opacity: 0.1)
     }
 

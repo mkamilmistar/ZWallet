@@ -40,8 +40,8 @@ class PINConfirmationViewController: UIViewController {
 }
 
 extension PINConfirmationViewController: PINConfirmationView {
-    func showSuccess() {
-        self.presenter?.navigateToTransactionDetails(viewController: self)
+    func showTransactionDetails(isSuccess: Bool) {
+        self.presenter?.navigateToTransactionDetails(viewController: self, isSuccess: isSuccess, passDataTransaction: passDataReceiver, amount: amount, notes: notes)
     }
     
     func showError() {

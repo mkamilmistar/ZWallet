@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Core
 
 public protocol PINConfirmationInteractorOutput {
     func transactionResult(isSuccess: Bool)

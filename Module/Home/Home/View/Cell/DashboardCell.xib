@@ -91,11 +91,11 @@
                                         <rect key="frame" x="0.0" y="0.0" width="173.5" height="57"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdT-Zn-0Yg">
-                                                <rect key="frame" x="37.5" y="14.5" width="99" height="28"/>
+                                                <rect key="frame" x="36" y="14.5" width="102" height="28"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="28" id="YUO-O3-4xU"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="17"/>
                                                 <state key="normal" title="  Transfer" image="arrow-up (1)">
                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -121,11 +121,11 @@
                                         <rect key="frame" x="193.5" y="0.0" width="173.5" height="57"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7n-Y1-l3Q">
-                                                <rect key="frame" x="41" y="14.5" width="92" height="28"/>
+                                                <rect key="frame" x="40" y="14.5" width="94" height="28"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="28" id="ahs-8u-ktH"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="17"/>
                                                 <state key="normal" title="  Top Up" image="plus-1">
                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>

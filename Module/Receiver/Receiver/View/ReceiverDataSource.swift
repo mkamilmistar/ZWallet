@@ -9,20 +9,11 @@ import Foundation
 import UIKit
 import Core
 
-protocol ReceiverDataSourceDelegate: AnyObject {
-//    func navigateToTransaction()
-//    func searchBar(receiverData: [ReceiverEntity])
-//    func searchBarCancelButtonClicked(receiverData: [ReceiverEntity])
-    func reloadDataTable()
-}
-
 class ReceiverDataSource: NSObject, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
     var viewController: ReceiverViewController!
     var allDataReceiver: [ReceiverEntity] = []
     lazy var filteredData = self.allDataReceiver
-    
-    var delegate: ReceiverDataSourceDelegate?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredData.count
@@ -38,18 +29,4 @@ class ReceiverDataSource: NSObject, UITableViewDataSource, UITableViewDelegate, 
         
         return cell
     }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("searchText \(searchText)")
-        self.filteredData = allDataReceiver.filter({$0.name.hasPrefix(searchText)})
-        self.delegate?.reloadDataTable()
-    }
-
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        
-//        searchBar.text = nil
-        self.filteredData = self.allDataReceiver
-        self.delegate?.reloadDataTable()
-    }
-    
 }

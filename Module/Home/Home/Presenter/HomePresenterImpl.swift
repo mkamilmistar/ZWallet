@@ -37,6 +37,8 @@ class HomePresenterImpl: HomePresenter {
     func logout() {
         UserDefaultHelper.shared.remove(key: .userToken)
         UserDefaultHelper.shared.remove(key: .userEmail)
+        UserDefaultHelper.shared.remove(key: .refreshToken)
+        UserDefaultHelper.shared.remove(key: .userTokenExpired)
         self.router.navigateToLogin()
     }
     

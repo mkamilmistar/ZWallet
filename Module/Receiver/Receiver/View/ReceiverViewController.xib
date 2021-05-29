@@ -79,7 +79,7 @@
                 </searchBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" red="0.98039215686274506" green="0.9882352941176471" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uQ8-X0-k41" secondAttribute="trailing" id="6cN-wP-mdG"/>
                 <constraint firstItem="uQ8-X0-k41" firstAttribute="firstBaseline" secondItem="Y6I-Xc-X8L" secondAttribute="baseline" constant="25" id="A4a-OA-a42"/>

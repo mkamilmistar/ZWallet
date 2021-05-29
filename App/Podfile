@@ -81,6 +81,8 @@ end
 
 target 'TransactionDetails' do
 	project '../Module/TransactionDetails/TransactionDetails'
+
+	common_dependency
 end
 
 target 'TopUp' do

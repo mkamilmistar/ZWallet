@@ -8,6 +8,5 @@
 import Foundation
 
 protocol LoginInteractorOutput {
-    func authenticationResult(isSuccess: Bool)
-    func getPinStatus(hasPin: Bool)
+    func authenticationResult(isSuccess: Bool, isActivate: Bool, isSetPin: Bool)
 }

@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import Core
 
 public protocol PINConfirmationView {
     func showError()
-    func showSuccess()
+    func showTransactionDetails(isSuccess: Bool)
 }

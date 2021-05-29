@@ -10,4 +10,5 @@ import UIKit
 
 public protocol TransactionDetailsRouter {
     func navigateToHome()
+    func navigateToTransactionConfirmation(viewController: UIViewController)
 }

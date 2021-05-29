@@ -10,7 +10,7 @@ import UIKit
 import Core
 
 public class ConfirmOTPRouterImpl {
-    public static func navigateToModule(email: String, viewController: UIViewController) {
+    public static func navigateToModule() {
         let bundle = Bundle(identifier: "com.casestudy.ConfirmOTP")
         let vc = ConfirmOTPViewController(nibName: "ConfirmOTPViewController", bundle: bundle)
         
@@ -25,12 +25,14 @@ public class ConfirmOTPRouterImpl {
         vc.presenter = presenter
         
         //parsing data email to OTP
-        vc.email = email
+        let emailDefault: String? = UserDefaultHelper.shared.get(key: .userEmail)
+        vc.email = emailDefault ?? ""
         
         let navController = UINavigationController(rootViewController: vc)
         navController.setNavigationBarHidden(true, animated: false)
         
-        viewController.navigationController?.pushViewController(vc, animated: true)
+        UIApplication.shared.windows.first?.rootViewController = navController
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
 }
 

@@ -24,8 +24,8 @@ class RegisterPresenterImpl: RegisterPresenter {
         self.interactor.postRegisterData(username: usernmae, email: email, password: password)
     }
     
-    func parsingEmail(email: String, viewController: UIViewController) {
-        self.router.navigateToConfirmOTP(email: email, viewController: viewController)
+    func parsingEmail() {
+        self.router.navigateToConfirmOTP()
     }
 }
 

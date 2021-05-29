@@ -9,6 +9,6 @@ import Foundation
 import UIKit
 
 protocol RegisterRouter {
-    func navigateToConfirmOTP(email: String, viewController: UIViewController)
+    func navigateToConfirmOTP()
     func backNavigation(viewController: UIViewController)
 }

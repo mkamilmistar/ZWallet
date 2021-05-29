@@ -20,6 +20,8 @@ class PINActivationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.pinField.delegate = self
+        setupOtpView()
     }
 
 

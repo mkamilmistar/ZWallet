@@ -11,10 +11,8 @@ import Core
 class ReceiverViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet var receiverTableView: UITableView!
-    @IBOutlet var searchField: UITextField!
     @IBOutlet var contactFoundLabel: UILabel!
     @IBOutlet var backIcon: UIImageView!
-    @IBOutlet var searchIcon: UIImageView!
     @IBOutlet var searchBar: UISearchBar!
     
     var dataSource = ReceiverDataSource()
@@ -38,8 +36,8 @@ class ReceiverViewController: UIViewController, UITableViewDelegate {
         
         self.receiverTableView.dataSource = self.dataSource
         self.receiverTableView.delegate = self.dataSource
-        self.searchBar.delegate = self.dataSource
-//        self.dataSource.delegate = self
+        self.searchBar.delegate = self
+
     }
     
     @IBAction func backTapAction(_ sender: UITapGestureRecognizer) {
@@ -49,6 +47,7 @@ class ReceiverViewController: UIViewController, UITableViewDelegate {
 
 extension ReceiverViewController: ReceiverView {
     func showAllReceiver(receiverData: [ReceiverEntity]) {
+        self.dataSource.allDataReceiver = receiverData
         self.dataSource.filteredData = receiverData
         self.receiverTableView.reloadData()
         self.contactFoundLabel.text = "\(receiverData.count) Contact found"
@@ -61,8 +60,18 @@ extension ReceiverViewController: ReceiverCellDelegate {
     }
 }
 
-extension ReceiverViewController: ReceiverDataSourceDelegate {
-    func reloadDataTable() {
+extension ReceiverViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("searchText \(searchText)")
+        self.dataSource.filteredData = self.dataSource.allDataReceiver.filter({$0.name.hasPrefix(searchText)})
+        
+        self.receiverTableView.reloadData()
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        
+        searchBar.text = nil
+        self.dataSource.filteredData = self.dataSource.allDataReceiver
         self.receiverTableView.reloadData()
     }
 }

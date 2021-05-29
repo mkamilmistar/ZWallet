@@ -23,6 +23,8 @@ class ConfirmOTPViewController: UIViewController {
         super.viewDidLoad()
 
         otpView.setShadow(color: UIColor.black.cgColor, opacity: 0.1)
+        self.otpField.delegate = self
+        setupOtpView()
     }
     
     @IBAction func confirmAction(_ sender: UIButton) {

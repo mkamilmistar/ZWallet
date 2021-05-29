@@ -20,34 +20,28 @@ public class LoginInteractorImpl: LoginInteractor {
     public func postLoginData(email: String, password: String) {
         // Hit API login with sending email and password
         self.authNetworkManager.login(email: email, password: password) { data, error in
-            if let loginData = data?.data {
-                print("data true \(loginData)")
-                // save user token to Userdefault
-                UserDefaultHelper.shared.set(key: .userToken, value: loginData.token)
-                UserDefaultHelper.shared.set(key: .refreshToken, value: loginData.refreshToken)
-                UserDefaultHelper.shared.set(key: .userEmail, value: loginData.email)
+            if data?.status == 200 {
                 
                 // set refresh token expired
-                let tokenExpired: Date = Calendar.current.date(byAdding: .second, value: loginData.expiredIn, to: Date()) ?? Date()
+                let tokenExpired: Date = Calendar.current.date(byAdding: .second, value: data?.data.expiredIn ?? 0, to: Date()) ?? Date()
+                
+                UserDefaultHelper.shared.set(key: .userToken, value: data?.data.token)
+                UserDefaultHelper.shared.set(key: .refreshToken, value: data?.data.refreshToken)
+                UserDefaultHelper.shared.set(key: .userEmail, value: data?.data.email)
                 UserDefaultHelper.shared.set(key: .userTokenExpired, value: tokenExpired)
                 
-                // tell the presenter if process is success
-                self.interactorOutput?.authenticationResult(isSuccess: true)
-                
-                // get status PIN
-                if loginData.hasPin == true {
-                    self.interactorOutput?.getPinStatus(hasPin: true)
+                if data?.data.hasPin == true {
+                    UserDefaultHelper.shared.set(key: .pinStatus, value: data?.data.hasPin)
+                    UserDefaultHelper.shared.set(key: .loginStatus, value: data?.status)
+                    self.interactorOutput?.authenticationResult(isSuccess: true, isActivate: true, isSetPin: true)
                 } else {
-                    self.interactorOutput?.getPinStatus(hasPin: false)
+                    self.interactorOutput?.authenticationResult(isSuccess: true, isActivate: true, isSetPin: false)
                 }
                 
-                UserDefaultHelper.shared.set(key: .pinStatus, value: loginData.hasPin)
-                UserDefaultHelper.shared.set(key: .loginStatus, value: data?.status)
+            } else if data?.status == 404 {
+                self.interactorOutput?.authenticationResult(isSuccess: false, isActivate: false, isSetPin: false)
             } else {
-                print("data false")
-
-                // tell the presenter if process is failed
-                self.interactorOutput?.authenticationResult(isSuccess: false)
+                self.interactorOutput?.authenticationResult(isSuccess: true, isActivate: false, isSetPin: false)
             }
         }
     }
