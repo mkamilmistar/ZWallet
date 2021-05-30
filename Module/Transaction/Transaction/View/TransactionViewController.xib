@@ -25,6 +25,7 @@
                 <outlet property="amountField" destination="KPX-gR-TVu" id="ykE-vg-OV7"/>
                 <outlet property="backIcon" destination="ioy-Ox-VCe" id="dbj-Ir-7u5"/>
                 <outlet property="background" destination="i5M-Pr-FkT" id="3UA-J5-lIF"/>
+                <outlet property="continueButton" destination="Aik-tV-iY5" id="S5r-nG-Q9R"/>
                 <outlet property="imageReceiver" destination="Wtf-b4-yoE" id="DeW-u0-VJr"/>
                 <outlet property="loadingView" destination="cIQ-Wb-wdG" id="acp-59-b9Y"/>
                 <outlet property="nameReceiver" destination="xfO-6D-yfg" id="Jqy-mD-5Bv"/>

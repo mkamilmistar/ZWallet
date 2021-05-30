@@ -22,13 +22,15 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Login" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundLogin" destination="1zX-cf-I8W" id="AaM-Cf-pfI"/>
-                <outlet property="emailField" destination="Fgy-Yp-WvL" id="2L1-ah-hjc"/>
+                <outlet property="emailField" destination="2Kk-ot-guu" id="0ij-TD-NRc"/>
                 <outlet property="emailText" destination="2Kk-ot-guu" id="gCm-sq-1C7"/>
-                <outlet property="eyeIcon" destination="fnu-U4-8Cl" id="oj1-r2-GDZ"/>
+                <outlet property="lineTop" destination="Hxs-yK-eDh" id="PJQ-H9-Z9h"/>
+                <outlet property="loginBtn" destination="z0M-A9-fVg" id="bCb-Gg-5HU"/>
                 <outlet property="mailIcon" destination="cdt-LS-L9h" id="4ey-J7-EOL"/>
-                <outlet property="passwordField" destination="1Hy-PY-LLf" id="eIB-cf-B0E"/>
+                <outlet property="passwordField" destination="mwu-HU-t0a" id="mAq-7m-8Xt"/>
                 <outlet property="passwordIcon" destination="hQ4-8b-p0e" id="Sj5-zx-EVA"/>
                 <outlet property="passwordText" destination="mwu-HU-t0a" id="bva-l1-TjG"/>
+                <outlet property="showPassword" destination="lDG-o8-XHq" id="PY7-Da-CmN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -104,13 +106,17 @@
                                                     <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                 </textField>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye-crossed" translatesAutoresizingMaskIntoConstraints="NO" id="fnu-U4-8Cl">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDG-o8-XHq">
                                                     <rect key="frame" x="323" y="1" width="20" height="20"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="20" id="FHq-wH-Uwx"/>
-                                                        <constraint firstAttribute="height" constant="20" id="m1l-fA-4n1"/>
+                                                        <constraint firstAttribute="width" constant="20" id="09U-g4-gY4"/>
+                                                        <constraint firstAttribute="height" constant="20" id="Mab-Xz-Vsm"/>
                                                     </constraints>
-                                                </imageView>
+                                                    <state key="normal" image="eye-crossed"/>
+                                                    <connections>
+                                                        <action selector="showPassword:" destination="-1" eventType="touchUpInside" id="2RN-Bt-3eN"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hxs-yK-eDh" userLabel="Line">
@@ -122,10 +128,7 @@
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="1Hy-PY-LLf" secondAttribute="trailing" id="3b3-gT-U7E"/>
-                                        <constraint firstItem="Hxs-yK-eDh" firstAttribute="trailing" secondItem="1Hy-PY-LLf" secondAttribute="trailing" id="HrP-UD-wyJ"/>
-                                        <constraint firstItem="Hxs-yK-eDh" firstAttribute="leading" secondItem="1Hy-PY-LLf" secondAttribute="leading" id="QjS-xE-NIo"/>
-                                        <constraint firstItem="1Hy-PY-LLf" firstAttribute="leading" secondItem="1rX-AQ-tsk" secondAttribute="leading" id="glw-aB-Di1"/>
+                                        <constraint firstAttribute="height" constant="33" id="D2W-UC-Om9"/>
                                     </constraints>
                                 </stackView>
                             </subviews>

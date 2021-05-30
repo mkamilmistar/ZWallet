@@ -12,12 +12,14 @@ import Login
 import Home
 import Register
 import PINActivation
+import PINSuccess
 import Receiver
 import ConfirmOTP
 import Transaction
 import TransactionConfirmation
 import PINConfirmation
 import TransactionDetails
+import TopUp
 
 @available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -100,12 +102,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             PINActivationRouterImpl.navigateToModule()
         }
         
+        AppRouter.shared.pinSuccessScene = {
+            PINSuccessRouterImpl.navigateToModule()
+        }
+        
         AppRouter.shared.homeScene = {
             HomeRouterImpl.navigateToModule()
         }
         
         AppRouter.shared.historyScene = { viewController in
             HistoryRouterImpl.navigateToModule(viewController: viewController)
+        }
+        
+        AppRouter.shared.topUpScene = { viewController in
+            TopUpRouterImpl.navigateToModule(viewController: viewController)
         }
         
         AppRouter.shared.receiverScene = { viewController in

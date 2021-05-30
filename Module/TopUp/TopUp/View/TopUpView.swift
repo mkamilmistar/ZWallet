@@ -8,5 +8,6 @@
 import Foundation
 
 protocol TopUpView {
-    
+    func showHeader()
+    func showDataTopUp(topUpData: [TopUpEntity])
 }

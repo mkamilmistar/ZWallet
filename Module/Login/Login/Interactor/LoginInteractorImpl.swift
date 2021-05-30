@@ -37,11 +37,11 @@ public class LoginInteractorImpl: LoginInteractor {
                 } else {
                     self.interactorOutput?.authenticationResult(isSuccess: true, isActivate: true, isSetPin: false)
                 }
-                
-            } else if data?.status == 404 {
-                self.interactorOutput?.authenticationResult(isSuccess: false, isActivate: false, isSetPin: false)
             } else {
-                self.interactorOutput?.authenticationResult(isSuccess: true, isActivate: false, isSetPin: false)
+                if data?.status == 401 {
+                    self.interactorOutput?.authenticationResult(isSuccess: true, isActivate: false, isSetPin: false)
+                }
+                self.interactorOutput?.authenticationResult(isSuccess: false, isActivate: false, isSetPin: false)
             }
         }
     }

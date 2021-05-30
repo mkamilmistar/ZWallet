@@ -40,6 +40,10 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: DashboardCellDelegate {
+    func showTopUp() {
+        self.presenter?.showTopUp(viewController: self)
+    }
+    
     func showAllReceiver() {
         self.presenter?.showReceiver(viewControoller: self)
     }

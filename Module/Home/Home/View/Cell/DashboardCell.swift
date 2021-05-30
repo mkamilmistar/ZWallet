@@ -46,6 +46,10 @@ class DashboardCell: UITableViewCell {
         self.delegate?.showAllTransaction()
     }
     
+    @IBAction func topUpAction(_ sender: UIButton) {
+        self.delegate?.showTopUp()
+    }
+    
     @IBAction func transferAction(_ sender: UIButton) {
         self.delegate?.showAllReceiver()
     }

@@ -62,14 +62,20 @@ class HistoryViewController: UIViewController {
     
     @IBAction func ascendAction(_ sender: UITapGestureRecognizer) {
         self.dataSource.filteredDataWeek = self.dataSource.historyThisWeek
-        self.dataSource.filteredDataWeek.sort(by: {$0.name.lowercased() < $1.name.lowercased() })
+        self.dataSource.filteredDataWeek.sort(by: { $0.name.lowercased() < $1.name.lowercased() })
         self.tableView.reloadData()
+        
+        self.ascendBG.backgroundColor = #colorLiteral(red: 0.3882352941, green: 0.4745098039, blue: 0.9568627451, alpha: 1)
+        self.descendBG.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
     
     @IBAction func descendAction(_ sender: UITapGestureRecognizer) {
         self.dataSource.filteredDataWeek = self.dataSource.historyThisWeek
-        self.dataSource.filteredDataWeek.sort(by: {$0.name.lowercased() > $1.name.lowercased() })
+        self.dataSource.filteredDataWeek.sort(by: { $0.name.lowercased() > $1.name.lowercased() })
         self.tableView.reloadData()
+        
+        self.ascendBG.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        self.descendBG.backgroundColor = #colorLiteral(red: 0.3882352941, green: 0.4745098039, blue: 0.9568627451, alpha: 1)
     }
 }
 

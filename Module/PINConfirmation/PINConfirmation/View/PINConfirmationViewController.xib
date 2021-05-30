@@ -25,6 +25,7 @@
                 <outlet property="backIcon" destination="uSd-HB-186" id="O40-is-IoL"/>
                 <outlet property="loadingView" destination="03z-Cj-m2W" id="ZDu-nc-wBg"/>
                 <outlet property="pinField" destination="Sdm-eX-Uxo" id="fCU-eE-b7P"/>
+                <outlet property="transferButton" destination="27K-yk-xYY" id="I5b-Kr-j6c"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

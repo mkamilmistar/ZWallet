@@ -32,7 +32,7 @@ class RegisterPresenterImpl: RegisterPresenter {
 extension RegisterPresenterImpl: RegisterInteractorOutput {
     func registerResult(isSuccess: Bool) {
         if isSuccess {
-            self.view.parsingEmail()
+            self.view.navigateToOTP()
         } else {
             self.view.showError()
         }

@@ -55,8 +55,8 @@ extension ReceiverViewController: ReceiverView {
         DispatchQueue.main.async {
             self.dataSource.allDataReceiver = receiverData
             self.dataSource.filteredData = receiverData
+            self.contactFoundLabel.text = "\(self.dataSource.filteredData.count) Contact Found"
             self.receiverTableView.reloadData()
-            self.contactFoundLabel.text = "\(receiverData.count) Contact found"
             self.loadingView.stopAnimating()
         }
     }

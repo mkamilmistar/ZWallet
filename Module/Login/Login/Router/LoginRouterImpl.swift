@@ -48,4 +48,8 @@ extension LoginRouterImpl: LoginRouter {
     func navigateToPinActiovation() {
         AppRouter.shared.navigateToPINActivation()
     }
+    
+    func navigateToOTP() {
+        AppRouter.shared.navigateToConfirmOTP()
+    }
 }

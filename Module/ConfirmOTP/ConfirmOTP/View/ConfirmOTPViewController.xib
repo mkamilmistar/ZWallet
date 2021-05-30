@@ -19,6 +19,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfirmOTPViewController" customModule="ConfirmOTP" customModuleProvider="target">
             <connections>
+                <outlet property="confirmBtn" destination="Lxg-Qx-S9D" id="RQr-Q0-3fn"/>
                 <outlet property="otpField" destination="n07-Qv-CsK" id="ODb-Dp-2gv"/>
                 <outlet property="otpView" destination="W9l-Dw-f89" id="4BY-uu-4GC"/>
                 <outlet property="view" destination="U7E-qf-G5i" id="BJD-Gn-LjT"/>

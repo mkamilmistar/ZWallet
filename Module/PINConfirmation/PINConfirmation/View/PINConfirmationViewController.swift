@@ -15,6 +15,7 @@ class PINConfirmationViewController: UIViewController {
     @IBOutlet var loadingView: NVActivityIndicatorView!
     @IBOutlet var pinField: OTPFieldView!
     @IBOutlet var backIcon: UIImageView!
+    @IBOutlet var transferButton: UIButton!
     
     var pinValue: String = ""
     var presenter: PINConfirmationPresenter?
@@ -30,6 +31,10 @@ class PINConfirmationViewController: UIViewController {
         self.setupOtpView()
         self.loadingView.color = #colorLiteral(red: 0.4625302553, green: 0.5670406818, blue: 0.9667261243, alpha: 1)
         self.loadingView.type = .ballRotateChase
+        
+        transferButton.isEnabled = false
+        transferButton.backgroundColor = #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8549019608, alpha: 1)
+        transferButton.setTitleColor(#colorLiteral(red: 0.5333333333, green: 0.5333333333, blue: 0.5607843137, alpha: 1), for: .normal)
     }
 
     @IBAction func backAction(_ sender: UITapGestureRecognizer) {
@@ -63,6 +68,15 @@ extension PINConfirmationViewController: PINConfirmationView {
 
 extension PINConfirmationViewController: OTPFieldViewDelegate {
     func hasEnteredAllOTP(hasEnteredAll hasEntered: Bool) -> Bool {
+        if hasEntered == true {
+            transferButton.isEnabled = true
+            transferButton.backgroundColor = #colorLiteral(red: 0.4625302553, green: 0.5670406818, blue: 0.9667261243, alpha: 1)
+            transferButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        } else {
+            transferButton.isEnabled = false
+            transferButton.backgroundColor = #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8549019608, alpha: 1)
+            transferButton.setTitleColor(#colorLiteral(red: 0.5333333333, green: 0.5333333333, blue: 0.5607843137, alpha: 1), for: .normal)
+        }
         return false
     }
     

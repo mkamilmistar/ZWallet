@@ -28,6 +28,7 @@ public class TransactionViewController: UIViewController {
     @IBOutlet var receiverBG: UIView!
     @IBOutlet var userBalanceLabel: UILabel!
     @IBOutlet var backIcon: UIImageView!
+    @IBOutlet var continueButton: UIButton!
     
     public var passDataReceiver: ReceiverEntity = ReceiverEntity(id: 0, name: "", phone: "", image: "")
     
@@ -40,6 +41,24 @@ public class TransactionViewController: UIViewController {
         self.loadingView.type = .ballRotateChase
         self.loadingView.startAnimating()
         self.backIcon.image = UIImage(named: "arrow-left", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
+        
+        continueButton.isEnabled = false
+        continueButton.backgroundColor = #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8549019608, alpha: 1)
+        continueButton.setTitleColor(#colorLiteral(red: 0.5333333333, green: 0.5333333333, blue: 0.5607843137, alpha: 1), for: .normal)
+        notesField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+        amountField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        if amountField.text?.isEmpty ?? false || notesField.text?.isEmpty ?? false {
+            continueButton.isEnabled = false
+            continueButton.backgroundColor = #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8549019608, alpha: 1)
+            continueButton.setTitleColor(#colorLiteral(red: 0.5333333333, green: 0.5333333333, blue: 0.5607843137, alpha: 1), for: .normal)
+        } else {
+            continueButton.isEnabled = true
+            continueButton.backgroundColor = #colorLiteral(red: 0.4625302553, green: 0.5670406818, blue: 0.9667261243, alpha: 1)
+            continueButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        }
     }
 
     @IBAction func backAction(_ sender: UITapGestureRecognizer) {

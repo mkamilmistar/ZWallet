@@ -134,7 +134,7 @@
                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="transferAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="T9C-vM-olU"/>
+                                                    <action selector="topUpAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="CNy-VC-aGs"/>
                                                 </connections>
                                             </button>
                                         </subviews>

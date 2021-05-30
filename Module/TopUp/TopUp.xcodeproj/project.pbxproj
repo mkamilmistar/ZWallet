@@ -14,6 +14,16 @@
 		FAA257D82660D8E8002F9A1E /* TopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA257D72660D8E8002F9A1E /* TopUpView.swift */; };
 		FAA257DB2660D9DF002F9A1E /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA257DA2660D9DF002F9A1E /* Core.framework */; };
 		FAA257DC2660D9DF002F9A1E /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAA257DA2660D9DF002F9A1E /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FAA258C2266371DB002F9A1E /* TopUpViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA258C0266371DB002F9A1E /* TopUpViewCell.swift */; };
+		FAA258C3266371DB002F9A1E /* TopUpViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA258C1266371DB002F9A1E /* TopUpViewCell.xib */; };
+		FAA258C6266371F1002F9A1E /* TopUpEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA258C5266371F1002F9A1E /* TopUpEntity.swift */; };
+		FAA258CB2663728F002F9A1E /* HeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA258C92663728F002F9A1E /* HeaderViewCell.swift */; };
+		FAA258CC2663728F002F9A1E /* HeaderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA258CA2663728F002F9A1E /* HeaderViewCell.xib */; };
+		FAA258CE26637617002F9A1E /* TopUpDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA258CD26637617002F9A1E /* TopUpDataSource.swift */; };
+		FAA258D126637B27002F9A1E /* TopUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA258D026637B27002F9A1E /* TopUpPresenter.swift */; };
+		FAA258D326637B7A002F9A1E /* TopUpPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA258D226637B7A002F9A1E /* TopUpPresenterImpl.swift */; };
+		FAA258D626637BC3002F9A1E /* TopUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA258D526637BC3002F9A1E /* TopUpRouter.swift */; };
+		FAA258D826637BE3002F9A1E /* TopUpRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA258D726637BE3002F9A1E /* TopUpRouterImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +51,16 @@
 		FAA257D32660D8DE002F9A1E /* TopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopUpViewController.xib; sourceTree = "<group>"; };
 		FAA257D72660D8E8002F9A1E /* TopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUpView.swift; sourceTree = "<group>"; };
 		FAA257DA2660D9DF002F9A1E /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA258C0266371DB002F9A1E /* TopUpViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUpViewCell.swift; sourceTree = "<group>"; };
+		FAA258C1266371DB002F9A1E /* TopUpViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopUpViewCell.xib; sourceTree = "<group>"; };
+		FAA258C5266371F1002F9A1E /* TopUpEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUpEntity.swift; sourceTree = "<group>"; };
+		FAA258C92663728F002F9A1E /* HeaderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewCell.swift; sourceTree = "<group>"; };
+		FAA258CA2663728F002F9A1E /* HeaderViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderViewCell.xib; sourceTree = "<group>"; };
+		FAA258CD26637617002F9A1E /* TopUpDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUpDataSource.swift; sourceTree = "<group>"; };
+		FAA258D026637B27002F9A1E /* TopUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUpPresenter.swift; sourceTree = "<group>"; };
+		FAA258D226637B7A002F9A1E /* TopUpPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUpPresenterImpl.swift; sourceTree = "<group>"; };
+		FAA258D526637BC3002F9A1E /* TopUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUpRouter.swift; sourceTree = "<group>"; };
+		FAA258D726637BE3002F9A1E /* TopUpRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUpRouterImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +116,9 @@
 		FAA257B32660D839002F9A1E /* TopUp */ = {
 			isa = PBXGroup;
 			children = (
+				FAA258D426637BB8002F9A1E /* Router */,
+				FAA258C4266371DF002F9A1E /* Entity */,
+				FAA258BE26637175002F9A1E /* Presenter */,
 				FAA257D12660D8C8002F9A1E /* View */,
 				FAA257B42660D839002F9A1E /* TopUp.h */,
 				FAA257B52660D839002F9A1E /* Info.plist */,
@@ -106,11 +129,50 @@
 		FAA257D12660D8C8002F9A1E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FAA258BF2663717E002F9A1E /* Cell */,
 				FAA257D22660D8DE002F9A1E /* TopUpViewController.swift */,
 				FAA257D32660D8DE002F9A1E /* TopUpViewController.xib */,
 				FAA257D72660D8E8002F9A1E /* TopUpView.swift */,
+				FAA258CD26637617002F9A1E /* TopUpDataSource.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FAA258BE26637175002F9A1E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FAA258D026637B27002F9A1E /* TopUpPresenter.swift */,
+				FAA258D226637B7A002F9A1E /* TopUpPresenterImpl.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FAA258BF2663717E002F9A1E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FAA258C0266371DB002F9A1E /* TopUpViewCell.swift */,
+				FAA258C1266371DB002F9A1E /* TopUpViewCell.xib */,
+				FAA258C92663728F002F9A1E /* HeaderViewCell.swift */,
+				FAA258CA2663728F002F9A1E /* HeaderViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FAA258C4266371DF002F9A1E /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FAA258C5266371F1002F9A1E /* TopUpEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		FAA258D426637BB8002F9A1E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FAA258D526637BC3002F9A1E /* TopUpRouter.swift */,
+				FAA258D726637BE3002F9A1E /* TopUpRouterImpl.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +246,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA258CC2663728F002F9A1E /* HeaderViewCell.xib in Resources */,
+				FAA258C3266371DB002F9A1E /* TopUpViewCell.xib in Resources */,
 				FAA257D52660D8DE002F9A1E /* TopUpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,8 +284,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA258D126637B27002F9A1E /* TopUpPresenter.swift in Sources */,
+				FAA258C2266371DB002F9A1E /* TopUpViewCell.swift in Sources */,
+				FAA258CE26637617002F9A1E /* TopUpDataSource.swift in Sources */,
+				FAA258C6266371F1002F9A1E /* TopUpEntity.swift in Sources */,
 				FAA257D42660D8DE002F9A1E /* TopUpViewController.swift in Sources */,
+				FAA258D626637BC3002F9A1E /* TopUpRouter.swift in Sources */,
+				FAA258D326637B7A002F9A1E /* TopUpPresenterImpl.swift in Sources */,
 				FAA257D82660D8E8002F9A1E /* TopUpView.swift in Sources */,
+				FAA258CB2663728F002F9A1E /* HeaderViewCell.swift in Sources */,
+				FAA258D826637BE3002F9A1E /* TopUpRouterImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@ import OTPFieldView
 
 class ConfirmOTPViewController: UIViewController {
 
-    
+    @IBOutlet var confirmBtn: UIButton!
     @IBOutlet var otpField: OTPFieldView!
     @IBOutlet var otpView: UIView!
     
@@ -25,10 +25,13 @@ class ConfirmOTPViewController: UIViewController {
         otpView.setShadow(color: UIColor.black.cgColor, opacity: 0.1)
         self.otpField.delegate = self
         setupOtpView()
+        
+        confirmBtn.isEnabled = false
+        confirmBtn.backgroundColor = #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8549019608, alpha: 1)
+        confirmBtn.setTitleColor(#colorLiteral(red: 0.5333333333, green: 0.5333333333, blue: 0.5607843137, alpha: 1), for: .normal)
     }
     
     @IBAction func confirmAction(_ sender: UIButton) {
-
         self.presenter?.confirmOTP(email: email, otp: otpValue)
     }
 }
@@ -46,6 +49,15 @@ extension ConfirmOTPViewController: ConfirmOTPView {
 
 extension ConfirmOTPViewController: OTPFieldViewDelegate {
     func hasEnteredAllOTP(hasEnteredAll hasEntered: Bool) -> Bool {
+        if hasEntered == true {
+            confirmBtn.isEnabled = true
+            confirmBtn.backgroundColor = #colorLiteral(red: 0.4625302553, green: 0.5670406818, blue: 0.9667261243, alpha: 1)
+            confirmBtn.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        } else {
+            confirmBtn.isEnabled = false
+            confirmBtn.backgroundColor = #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8549019608, alpha: 1)
+            confirmBtn.setTitleColor(#colorLiteral(red: 0.5333333333, green: 0.5333333333, blue: 0.5607843137, alpha: 1), for: .normal)
+        }
         return false
     }
     

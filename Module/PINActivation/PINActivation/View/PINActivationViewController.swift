@@ -12,6 +12,7 @@ import OTPFieldView
 class PINActivationViewController: UIViewController {
 
 
+    @IBOutlet var confirmButton: UIButton!
     @IBOutlet var pinField: OTPFieldView!
     
     var presenter: PINActivationPresenter?
@@ -22,8 +23,11 @@ class PINActivationViewController: UIViewController {
 
         self.pinField.delegate = self
         setupOtpView()
+        
+        confirmButton.isEnabled = false
+        confirmButton.backgroundColor = #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8549019608, alpha: 1)
+        confirmButton.setTitleColor(#colorLiteral(red: 0.5333333333, green: 0.5333333333, blue: 0.5607843137, alpha: 1), for: .normal)
     }
-
 
     @IBAction func confirmAction(_ sender: UIButton) {
         self.presenter?.activatePin(pin: pinValue)
@@ -43,6 +47,15 @@ extension PINActivationViewController: PINActivationView {
 
 extension PINActivationViewController: OTPFieldViewDelegate {
     func hasEnteredAllOTP(hasEnteredAll hasEntered: Bool) -> Bool {
+        if hasEntered == true {
+            confirmButton.isEnabled = true
+            confirmButton.backgroundColor = #colorLiteral(red: 0.4625302553, green: 0.5670406818, blue: 0.9667261243, alpha: 1)
+            confirmButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        } else {
+            confirmButton.isEnabled = false
+            confirmButton.backgroundColor = #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8549019608, alpha: 1)
+            confirmButton.setTitleColor(#colorLiteral(red: 0.5333333333, green: 0.5333333333, blue: 0.5607843137, alpha: 1), for: .normal)
+        }
         return false
     }
     

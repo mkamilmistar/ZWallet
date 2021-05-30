@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Core
 
 public class PINActivationPresenterImpl: PINActivationPresenter {
     let view: PINActivationView
@@ -22,12 +23,17 @@ public class PINActivationPresenterImpl: PINActivationPresenter {
     func activatePin(pin: String) {
         self.interactor.postPinActivation(pin: pin)
     }
+    
+    func navigateToHome() {
+        self.router.navigateToHome()
+    }
 }
 
 extension PINActivationPresenterImpl: PINActivationInteractorOutput {
     func pinActivateResult(isSuccess: Bool) {
         if isSuccess {
-            self.router.navigateToHome()
+//            self.router.navigateToHome()
+            AppRouter.shared.navigateToPinSuccess()
         } else {
             self.view.showError()
         }

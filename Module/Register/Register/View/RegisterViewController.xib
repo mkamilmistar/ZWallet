@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -24,10 +25,12 @@
                 <outlet property="emailField" destination="dYs-dR-7SR" id="x7R-e6-zJK"/>
                 <outlet property="emailIcon" destination="d0W-11-fOV" id="qfb-w7-Q6M"/>
                 <outlet property="emailStack" destination="xDP-Er-46k" id="Bbt-8q-mQx"/>
+                <outlet property="loadingView" destination="840-aW-nMu" id="Dv2-Oh-rvR"/>
                 <outlet property="passwordField" destination="h2R-eQ-d1c" id="NQg-6V-ZQo"/>
                 <outlet property="passwordIcon" destination="EbE-PU-xmg" id="vmL-zn-On7"/>
                 <outlet property="passwordStack" destination="6ob-O9-iRU" id="4j3-GT-1kw"/>
-                <outlet property="showPasswordIcon" destination="CNp-Kq-GoU" id="PoE-rR-lTB"/>
+                <outlet property="registerBtn" destination="oJE-2h-GLD" id="SpN-8l-hLX"/>
+                <outlet property="showPasswordBtn" destination="LTd-DU-L8h" id="VXM-qc-lG0"/>
                 <outlet property="signUpBG" destination="xJd-ue-25w" id="eu5-Nx-k6A"/>
                 <outlet property="usernameField" destination="hnN-1Y-fCa" id="L4p-Mu-9PN"/>
                 <outlet property="usernameIcon" destination="pUb-aB-V1X" id="6o5-mG-8W0"/>
@@ -139,17 +142,20 @@
                                                     <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                 </textField>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye-crossed" translatesAutoresizingMaskIntoConstraints="NO" id="CNp-Kq-GoU">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTd-DU-L8h">
                                                     <rect key="frame" x="323" y="1" width="20" height="20"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="20" id="Qd6-2c-GKi"/>
-                                                        <constraint firstAttribute="height" constant="20" id="sU6-NC-gdD"/>
+                                                        <constraint firstAttribute="width" constant="20" id="I6L-YR-2Mi"/>
+                                                        <constraint firstAttribute="height" constant="20" id="rkh-ZC-25Q"/>
                                                     </constraints>
-                                                </imageView>
+                                                    <state key="normal" image="eye-crossed"/>
+                                                    <connections>
+                                                        <action selector="showPasswordAction:" destination="-1" eventType="touchUpInside" id="BCs-FL-git"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="CNp-Kq-GoU" secondAttribute="trailing" id="DGA-TH-QoM"/>
-                                                <constraint firstItem="CNp-Kq-GoU" firstAttribute="leading" secondItem="h2R-eQ-d1c" secondAttribute="trailing" constant="10" id="qdj-dw-1Le"/>
+                                                <constraint firstItem="LTd-DU-L8h" firstAttribute="leading" secondItem="h2R-eQ-d1c" secondAttribute="trailing" constant="10" id="cwm-au-4fi"/>
                                             </constraints>
                                         </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ra6-jr-c3w" userLabel="Line">
@@ -165,6 +171,7 @@
                                         <constraint firstItem="EbE-PU-xmg" firstAttribute="leading" secondItem="hjh-ht-LgT" secondAttribute="leading" id="PwP-2A-jM2"/>
                                         <constraint firstAttribute="trailing" secondItem="Ra6-jr-c3w" secondAttribute="trailing" id="XnG-UM-Qxu"/>
                                         <constraint firstItem="Ra6-jr-c3w" firstAttribute="leading" secondItem="hjh-ht-LgT" secondAttribute="leading" id="pvb-wz-ucw"/>
+                                        <constraint firstAttribute="height" constant="33" id="q5U-aK-lYg"/>
                                         <constraint firstAttribute="trailing" secondItem="6ob-O9-iRU" secondAttribute="trailing" id="yQj-z4-wdO"/>
                                     </constraints>
                                 </stackView>
@@ -265,6 +272,14 @@
                     <color key="textColor" red="0.38823529411764707" green="0.47450980392156861" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="840-aW-nMu" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                    <rect key="frame" x="162.5" y="345.5" width="50" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Lp3-0o-mnD"/>
+                        <constraint firstAttribute="width" constant="50" id="Tb9-m1-o1q"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="i8D-XS-0VN"/>
             <color key="backgroundColor" red="0.94117647059999998" green="0.94901960780000005" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -272,8 +287,10 @@
                 <constraint firstItem="i8D-XS-0VN" firstAttribute="bottom" secondItem="xJd-ue-25w" secondAttribute="bottom" id="1az-yz-C6E"/>
                 <constraint firstItem="xJd-ue-25w" firstAttribute="leading" secondItem="i8D-XS-0VN" secondAttribute="leading" id="4t3-mg-ch0"/>
                 <constraint firstItem="i8D-XS-0VN" firstAttribute="trailing" secondItem="xJd-ue-25w" secondAttribute="trailing" id="6VU-Tz-Jum"/>
+                <constraint firstItem="840-aW-nMu" firstAttribute="centerY" secondItem="imn-UJ-Wno" secondAttribute="centerY" id="QeS-je-gJ4"/>
                 <constraint firstItem="xJd-ue-25w" firstAttribute="top" secondItem="bEE-HP-o8k" secondAttribute="bottom" constant="50" id="YPX-o6-GeB"/>
                 <constraint firstItem="bEE-HP-o8k" firstAttribute="top" secondItem="i8D-XS-0VN" secondAttribute="top" constant="50" id="g1h-FC-yBS"/>
+                <constraint firstItem="840-aW-nMu" firstAttribute="centerX" secondItem="imn-UJ-Wno" secondAttribute="centerX" id="m2m-Zz-uNg"/>
                 <constraint firstItem="bEE-HP-o8k" firstAttribute="centerX" secondItem="i8D-XS-0VN" secondAttribute="centerX" id="yIP-FJ-TkP"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -285,5 +302,8 @@
         <image name="lock" width="72" height="72"/>
         <image name="mail" width="72" height="72"/>
         <image name="person" width="72" height="72"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

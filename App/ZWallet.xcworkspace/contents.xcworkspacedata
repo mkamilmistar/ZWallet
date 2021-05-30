@@ -46,4 +46,7 @@
    <FileRef
       location = "group:../Module/TopUp/TopUp.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:../Module/PINSuccess/PINSuccess.xcodeproj">
+   </FileRef>
 </Workspace>

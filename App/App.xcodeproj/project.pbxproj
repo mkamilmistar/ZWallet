@@ -57,6 +57,8 @@
 		FAA2578F2660167C002F9A1E /* NunitoSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAA2573826600986002F9A1E /* NunitoSans-SemiBoldItalic.ttf */; };
 		FAA257DF2660D9F0002F9A1E /* TopUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA257DE2660D9F0002F9A1E /* TopUp.framework */; };
 		FAA257E02660D9F0002F9A1E /* TopUp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAA257DE2660D9F0002F9A1E /* TopUp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FAA258B526636010002F9A1E /* PINSuccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA258B426636010002F9A1E /* PINSuccess.framework */; };
+		FAA258B626636010002F9A1E /* PINSuccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAA258B426636010002F9A1E /* PINSuccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -66,6 +68,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				FAA258B626636010002F9A1E /* PINSuccess.framework in Embed Frameworks */,
 				FAA2578126601224002F9A1E /* TransactionDetails.framework in Embed Frameworks */,
 				FAA256CA265FEC30002F9A1E /* PINActivation.framework in Embed Frameworks */,
 				FAA25709266005AF002F9A1E /* TransactionConfirmation.framework in Embed Frameworks */,
@@ -130,6 +133,7 @@
 		FAA2573926600986002F9A1E /* NunitoSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-Black.ttf"; path = "../../../../../../../Downloads/Nunito_Sans/NunitoSans-Black.ttf"; sourceTree = "<group>"; };
 		FAA2577F26601224002F9A1E /* TransactionDetails.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TransactionDetails.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA257DE2660D9F0002F9A1E /* TopUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TopUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA258B426636010002F9A1E /* PINSuccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PINSuccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 				FA6F7CB3265B91D800CF5DA5 /* Core.framework in Frameworks */,
 				428A6C3D232B630ACF3A103A /* Pods_App.framework in Frameworks */,
 				FAA255B3265E507E002F9A1E /* Receiver.framework in Frameworks */,
+				FAA258B526636010002F9A1E /* PINSuccess.framework in Frameworks */,
 				FAA2565A265F376A002F9A1E /* Transaction.framework in Frameworks */,
 				FA6F7CB9265B92BB00CF5DA5 /* Home.framework in Frameworks */,
 				FA05313C265E001C009A0DAB /* PINActivation.framework in Frameworks */,
@@ -171,6 +176,7 @@
 		E52F0606F2BF5DACD1C7B7A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAA258B426636010002F9A1E /* PINSuccess.framework */,
 				FAA257DE2660D9F0002F9A1E /* TopUp.framework */,
 				FAA2577F26601224002F9A1E /* TransactionDetails.framework */,
 				FAA25707266005AF002F9A1E /* TransactionConfirmation.framework */,

@@ -55,8 +55,6 @@
 		FAA2579626609998002F9A1E /* RefreshTokenDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2579526609998002F9A1E /* RefreshTokenDataResponse.swift */; };
 		FAA2579A26609BE8002F9A1E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2579926609BE8002F9A1E /* StringExtension.swift */; };
 		FAA2579D26609FB3002F9A1E /* MoyaExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2579C26609FB3002F9A1E /* MoyaExtension.swift */; };
-		FAA257A22660CE42002F9A1E /* TopUpViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA257A02660CE42002F9A1E /* TopUpViewCell.swift */; };
-		FAA257A32660CE42002F9A1E /* TopUpViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA257A12660CE42002F9A1E /* TopUpViewCell.xib */; };
 		FAA257F32660F20A002F9A1E /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA257F22660F20A002F9A1E /* UIViewControllerExtension.swift */; };
 		FAA2580A2661580D002F9A1E /* OTPViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA258092661580D002F9A1E /* OTPViewStyle.swift */; };
 		FAA2582126625B22002F9A1E /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2582026625B22002F9A1E /* UserEntity.swift */; };
@@ -130,8 +128,6 @@
 		FAA2579526609998002F9A1E /* RefreshTokenDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenDataResponse.swift; sourceTree = "<group>"; };
 		FAA2579926609BE8002F9A1E /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		FAA2579C26609FB3002F9A1E /* MoyaExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaExtension.swift; sourceTree = "<group>"; };
-		FAA257A02660CE42002F9A1E /* TopUpViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUpViewCell.swift; sourceTree = "<group>"; };
-		FAA257A12660CE42002F9A1E /* TopUpViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopUpViewCell.xib; sourceTree = "<group>"; };
 		FAA257F22660F20A002F9A1E /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		FAA258092661580D002F9A1E /* OTPViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewStyle.swift; sourceTree = "<group>"; };
 		FAA2582026625B22002F9A1E /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
@@ -338,7 +334,6 @@
 		FA6F7C86265B7B7200CF5DA5 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				FAA2579F2660CE2A002F9A1E /* TopUpCell */,
 				FA05314F265E3BFF009A0DAB /* ReceiverCell */,
 				FA6F7C87265B7B9B00CF5DA5 /* TransactionCell */,
 			);
@@ -444,15 +439,6 @@
 			path = RefreshTokenResponse;
 			sourceTree = "<group>";
 		};
-		FAA2579F2660CE2A002F9A1E /* TopUpCell */ = {
-			isa = PBXGroup;
-			children = (
-				FAA257A02660CE42002F9A1E /* TopUpViewCell.swift */,
-				FAA257A12660CE42002F9A1E /* TopUpViewCell.xib */,
-			);
-			path = TopUpCell;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -524,7 +510,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA053153265E3C27009A0DAB /* ReceiverCell.xib in Resources */,
-				FAA257A32660CE42002F9A1E /* TopUpViewCell.xib in Resources */,
 				FAA25662265F4A93002F9A1E /* Assets.xcassets in Resources */,
 				FA6F7C8B265B7BBC00CF5DA5 /* TransactionCell.xib in Resources */,
 			);
@@ -594,7 +579,6 @@
 				FA6F7C8A265B7BBC00CF5DA5 /* TransactionCell.swift in Sources */,
 				FA053134265DFD00009A0DAB /* UIColorExtension.swift in Sources */,
 				FA6F7C6C265B6B5000CF5DA5 /* BalanceNetworkManager.swift in Sources */,
-				FAA257A22660CE42002F9A1E /* TopUpViewCell.swift in Sources */,
 				FAA25649265F1D7E002F9A1E /* TransactioinNetworkManagerImpl.swift in Sources */,
 				FAA2579226609978002F9A1E /* RefreshTokenResponse.swift in Sources */,
 				FAA25625265E7790002F9A1E /* OTPConfirmationResponse.swift in Sources */,

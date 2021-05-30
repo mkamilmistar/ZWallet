@@ -31,12 +31,13 @@ public class LoginPresenterImpl: LoginPresenter {
 
 extension LoginPresenterImpl: LoginInteractorOutput {
     func authenticationResult(isSuccess: Bool, isActivate: Bool, isSetPin: Bool) {
+        print(isSuccess,isActivate,isSetPin)
         if isSuccess && isActivate && isSetPin {
             self.router.navigateToHome()
         } else if isSuccess && isActivate && !isSetPin {
             self.router.navigateToPinActiovation()
         } else if isSuccess && !isActivate && !isSetPin {
-            AppRouter.shared.navigateToConfirmOTP()
+            self.router.navigateToOTP()
         } else {
             self.view.showError()
         }

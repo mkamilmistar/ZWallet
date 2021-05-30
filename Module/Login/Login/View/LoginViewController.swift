@@ -13,13 +13,18 @@ class LoginViewController: UIViewController {
     @IBOutlet var emailText: UITextField!
     @IBOutlet var passwordText: UITextField!
     @IBOutlet var backgroundLogin: UIView!
-    @IBOutlet var emailField: UIStackView!
-    @IBOutlet var passwordField: UIStackView!
+    
+    @IBOutlet var emailField: UITextField!
+    @IBOutlet var passwordField: UITextField!
+    
+    @IBOutlet var showPassword: UIButton!
     @IBOutlet var mailIcon: UIImageView!
     @IBOutlet var passwordIcon: UIImageView!
-    @IBOutlet var eyeIcon: UIImageView!
+    @IBOutlet var loginBtn: UIButton!
+    @IBOutlet var lineTop: UIView!
     
     var presenter: LoginPresenter?
+    var iconClick: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +33,29 @@ class LoginViewController: UIViewController {
         
         self.mailIcon.image = UIImage(named: "mail", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
         self.passwordIcon.image = UIImage(named: "lock", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
-        self.eyeIcon.image = UIImage(named: "eye-crossed", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
+        let eye = UIImage(named: "eye-crossed", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
+        showPassword.setImage(eye, for: .normal)
         
-        setupLoadingView()
+        loginBtn.isEnabled = false
+        loginBtn.backgroundColor = #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8549019608, alpha: 1)
+        loginBtn.setTitleColor(#colorLiteral(red: 0.5333333333, green: 0.5333333333, blue: 0.5607843137, alpha: 1), for: .normal)
+        
+        emailField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+        passwordField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
     }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        if emailField.text?.isEmpty ?? false || passwordField.text?.isEmpty ?? false {
+            loginBtn.isEnabled = false
+            loginBtn.backgroundColor = #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8549019608, alpha: 1)
+            loginBtn.setTitleColor(#colorLiteral(red: 0.5333333333, green: 0.5333333333, blue: 0.5607843137, alpha: 1), for: .normal)
+        } else {
+            loginBtn.isEnabled = true
+            loginBtn.backgroundColor = #colorLiteral(red: 0.4625302553, green: 0.5670406818, blue: 0.9667261243, alpha: 1)
+            loginBtn.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        }
+    }
+
     
     @IBAction func loginAction(_ sender: Any) {
         let email: String = emailText.text ?? ""
@@ -44,6 +68,16 @@ class LoginViewController: UIViewController {
     
     @IBAction func navigateToRegisterAction(_ sender: UIButton) {
         self.presenter?.showRegister(viewController: self)
+    }
+    
+    @IBAction func showPassword(_ sender: UIButton) {
+        if iconClick == true {
+            passwordField.isSecureTextEntry = false
+        } else {
+            passwordField.isSecureTextEntry = true
+        }
+        
+        iconClick = !iconClick
     }
 }
 

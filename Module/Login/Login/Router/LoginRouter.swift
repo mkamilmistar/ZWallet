@@ -12,4 +12,5 @@ protocol LoginRouter {
     func navigateToHome()
     func navigateToPinActiovation()
     func navigateToRegister(viewController: UIViewController)
+    func navigateToOTP()
 }

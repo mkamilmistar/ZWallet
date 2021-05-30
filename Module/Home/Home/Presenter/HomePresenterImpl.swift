@@ -45,6 +45,10 @@ class HomePresenterImpl: HomePresenter {
     func showReceiver(viewControoller: UIViewController) {
         self.router.navigateToReceiver(viewController: viewControoller)
     }
+    
+    func showTopUp(viewController: UIViewController) {
+        self.router.navigateToTopUp(viewController: viewController)
+    }
 }
 
 extension HomePresenterImpl: HomeInteractorOutput {

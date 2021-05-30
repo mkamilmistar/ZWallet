@@ -38,6 +38,12 @@ public class AppRouter {
         self.loginScene?()
     }
     
+    public var pinSuccessScene: (() -> ())? = nil
+    
+    public func navigateToPinSuccess() {
+        self.pinSuccessScene?()
+    }
+    
     // END OF AUTH
     
     public var homeScene: (() -> ())? = nil
@@ -50,6 +56,12 @@ public class AppRouter {
     
     public func navigateToHistory(_ viewController: UIViewController) {
         self.historyScene?(viewController)
+    }
+    
+    public var topUpScene: ((_ viewController: UIViewController) -> ())? = nil
+    
+    public func navigateToTopUp(_ viewController: UIViewController) {
+        self.topUpScene?(viewController)
     }
     
     public var receiverScene: ((_ viewController: UIViewController) -> ())? = nil

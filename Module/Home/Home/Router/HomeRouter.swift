@@ -12,4 +12,5 @@ protocol HomeRouter {
     func navigateToHistory(viewController: UIViewController)
     func navigateToLogin()
     func navigateToReceiver(viewController: UIViewController)
+    func navigateToTopUp(viewController: UIViewController)
 }

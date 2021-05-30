@@ -13,5 +13,6 @@ protocol HomePresenter {
     func loadTransaction()
     func showHistory(viewController: UIViewController)
     func showReceiver(viewControoller: UIViewController)
+    func showTopUp(viewController: UIViewController)
     func logout()
 }

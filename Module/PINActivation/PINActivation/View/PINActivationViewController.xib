@@ -19,6 +19,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PINActivationViewController" customModule="PINActivation" customModuleProvider="target">
             <connections>
+                <outlet property="confirmButton" destination="vaF-Yd-1Ak" id="lTa-bS-jsn"/>
                 <outlet property="pinField" destination="ngN-OU-7pn" id="oCg-O0-QiT"/>
                 <outlet property="view" destination="fI6-B9-y43" id="hPO-W5-RE5"/>
             </connections>

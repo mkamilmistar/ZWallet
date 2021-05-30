@@ -51,6 +51,10 @@ target 'ConfirmOTP' do
 	common_dependency
 end
 
+target 'PINSuccess' do 
+	project '../Module/PINSuccess/PINSuccess'
+end
+
 target 'Home' do
 	project '../Module/Home/Home'
 
