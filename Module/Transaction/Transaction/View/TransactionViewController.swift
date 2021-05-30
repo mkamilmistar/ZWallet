@@ -29,6 +29,7 @@ public class TransactionViewController: UIViewController {
     @IBOutlet var userBalanceLabel: UILabel!
     @IBOutlet var backIcon: UIImageView!
     @IBOutlet var continueButton: UIButton!
+    var currentString: String = ""
     
     public var passDataReceiver: ReceiverEntity = ReceiverEntity(id: 0, name: "", phone: "", image: "")
     
@@ -42,34 +43,10 @@ public class TransactionViewController: UIViewController {
         self.loadingView.startAnimating()
         self.backIcon.image = UIImage(named: "arrow-left", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
         
-        continueButton.isEnabled = false
-        continueButton.backgroundColor = #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8549019608, alpha: 1)
-        continueButton.setTitleColor(#colorLiteral(red: 0.5333333333, green: 0.5333333333, blue: 0.5607843137, alpha: 1), for: .normal)
+        disabledMainButton(continueButton)
         notesField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
         amountField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
-    }
-    
-    @objc func textFieldDidChange(_ textField: UITextField) {
-        if amountField.text?.isEmpty ?? false || notesField.text?.isEmpty ?? false {
-            continueButton.isEnabled = false
-            continueButton.backgroundColor = #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8549019608, alpha: 1)
-            continueButton.setTitleColor(#colorLiteral(red: 0.5333333333, green: 0.5333333333, blue: 0.5607843137, alpha: 1), for: .normal)
-        } else {
-            continueButton.isEnabled = true
-            continueButton.backgroundColor = #colorLiteral(red: 0.4625302553, green: 0.5670406818, blue: 0.9667261243, alpha: 1)
-            continueButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
-        }
-    }
-
-    @IBAction func backAction(_ sender: UITapGestureRecognizer) {
-        self.presenter?.backToReceiver(viewController: self)
-    }
-    
-    @IBAction func transactionAction(_ sender: Any) {
-        let amount: Int = Int(amountField.text ?? "") ?? 0
-        let notes = notesField.text ?? ""
-
-        self.presenter?.navigateToDetailTransaction(viewController: self, passDataTransaction: passDataReceiver, amount: amount, notes: notes)
+        amountField.delegate = self
     }
     
     func setupViewData() {
@@ -81,6 +58,24 @@ public class TransactionViewController: UIViewController {
         self.phoneReceiver.text = passDataReceiver.phone
     }
     
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        if amountField.text?.isEmpty ?? false || notesField.text?.isEmpty ?? false {
+            disabledMainButton(continueButton)
+        } else {
+           enabledMainButton(continueButton)
+        }
+    }
+
+    @IBAction func backAction(_ sender: UITapGestureRecognizer) {
+        self.presenter?.backToReceiver(viewController: self)
+    }
+    
+    @IBAction func transactionAction(_ sender: Any) {
+        let amount: Int = (amountField.text)?.setStringToInt ?? 0
+        let notes = notesField.text ?? ""
+
+        self.presenter?.navigateToDetailTransaction(viewController: self, passDataTransaction: passDataReceiver, amount: amount, notes: notes)
+    }
 }
 
 extension TransactionViewController: TransactionView {
@@ -98,5 +93,35 @@ extension TransactionViewController: TransactionView {
             preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+}
+
+extension TransactionViewController: UITextFieldDelegate {
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        switch string {
+        case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9":
+            currentString += string
+            formatCurrency(string: currentString)
+        default:
+            let array = Array(string)
+            var currentStringArray = Array(currentString)
+            if array.count == 0 && currentStringArray.count != 0 {
+                currentStringArray.removeLast()
+                currentString = ""
+                for character in currentStringArray {
+                    currentString += String(character)
+                }
+                formatCurrency(string: currentString)
+            }
+        }
+        return false
+    }
+    
+    func formatCurrency(string: String) {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = Locale(identifier: "id_ID")
+        let numberFromField = (NSString(string: currentString).doubleValue)
+        amountField.text = formatter.string(from: NSNumber(value: numberFromField))
     }
 }

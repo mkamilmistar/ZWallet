@@ -7,6 +7,7 @@
 
 import UIKit
 import NVActivityIndicatorView
+import Core
 
 class RegisterViewController: UIViewController {
 
@@ -44,9 +45,7 @@ class RegisterViewController: UIViewController {
         let passwordIcon = UIImage(named: "eye-crossed", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
         showPasswordBtn.setImage(passwordIcon, for: .normal)
         
-        registerBtn.isEnabled = false
-        registerBtn.backgroundColor = #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8549019608, alpha: 1)
-        registerBtn.setTitleColor(#colorLiteral(red: 0.5333333333, green: 0.5333333333, blue: 0.5607843137, alpha: 1), for: .normal)
+        disabledMainButton(registerBtn)
         
         emailField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
         usernameField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
@@ -55,13 +54,9 @@ class RegisterViewController: UIViewController {
     
     @objc func textFieldDidChange(_ textField: UITextField) {
         if emailField.text?.isEmpty ?? false || passwordField.text?.isEmpty ?? false || usernameField.text?.isEmpty ?? false {
-            registerBtn.isEnabled = false
-            registerBtn.backgroundColor = #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8549019608, alpha: 1)
-            registerBtn.setTitleColor(#colorLiteral(red: 0.5333333333, green: 0.5333333333, blue: 0.5607843137, alpha: 1), for: .normal)
+            disabledMainButton(registerBtn)
         } else {
-            registerBtn.isEnabled = true
-            registerBtn.backgroundColor = #colorLiteral(red: 0.4625302553, green: 0.5670406818, blue: 0.9667261243, alpha: 1)
-            registerBtn.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+            enabledMainButton(registerBtn)
         }
     }
 

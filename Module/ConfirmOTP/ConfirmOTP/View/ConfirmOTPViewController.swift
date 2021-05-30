@@ -26,9 +26,7 @@ class ConfirmOTPViewController: UIViewController {
         self.otpField.delegate = self
         setupOtpView()
         
-        confirmBtn.isEnabled = false
-        confirmBtn.backgroundColor = #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8549019608, alpha: 1)
-        confirmBtn.setTitleColor(#colorLiteral(red: 0.5333333333, green: 0.5333333333, blue: 0.5607843137, alpha: 1), for: .normal)
+       disabledMainButton(confirmBtn)
     }
     
     @IBAction func confirmAction(_ sender: UIButton) {
@@ -50,13 +48,9 @@ extension ConfirmOTPViewController: ConfirmOTPView {
 extension ConfirmOTPViewController: OTPFieldViewDelegate {
     func hasEnteredAllOTP(hasEnteredAll hasEntered: Bool) -> Bool {
         if hasEntered == true {
-            confirmBtn.isEnabled = true
-            confirmBtn.backgroundColor = #colorLiteral(red: 0.4625302553, green: 0.5670406818, blue: 0.9667261243, alpha: 1)
-            confirmBtn.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+            enabledMainButton(confirmBtn)
         } else {
-            confirmBtn.isEnabled = false
-            confirmBtn.backgroundColor = #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8549019608, alpha: 1)
-            confirmBtn.setTitleColor(#colorLiteral(red: 0.5333333333, green: 0.5333333333, blue: 0.5607843137, alpha: 1), for: .normal)
+            disabledMainButton(confirmBtn)
         }
         return false
     }

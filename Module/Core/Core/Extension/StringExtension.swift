@@ -17,6 +17,26 @@ public extension String {
         let date =  dateFormatter.string(from: todaysDate as Date)
         return date
     }
+    
+    var setStringToInt: Int {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = Locale(identifier: "id_ID")
+
+        if let number = formatter.number(from: self) {
+            return number.intValue
+        } else {
+            return 0
+        }
+    }
+    
+    var setStringToDecimal: Decimal {
+        if let formatterDecimal: Decimal = Decimal(string: self) {
+            return formatterDecimal
+        } else {
+            return 0.0
+        }
+    }
 }
 
 

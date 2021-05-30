@@ -24,9 +24,7 @@ class PINActivationViewController: UIViewController {
         self.pinField.delegate = self
         setupOtpView()
         
-        confirmButton.isEnabled = false
-        confirmButton.backgroundColor = #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8549019608, alpha: 1)
-        confirmButton.setTitleColor(#colorLiteral(red: 0.5333333333, green: 0.5333333333, blue: 0.5607843137, alpha: 1), for: .normal)
+        disabledMainButton(confirmButton)
     }
 
     @IBAction func confirmAction(_ sender: UIButton) {
@@ -48,13 +46,9 @@ extension PINActivationViewController: PINActivationView {
 extension PINActivationViewController: OTPFieldViewDelegate {
     func hasEnteredAllOTP(hasEnteredAll hasEntered: Bool) -> Bool {
         if hasEntered == true {
-            confirmButton.isEnabled = true
-            confirmButton.backgroundColor = #colorLiteral(red: 0.4625302553, green: 0.5670406818, blue: 0.9667261243, alpha: 1)
-            confirmButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+            enabledMainButton(confirmButton)
         } else {
-            confirmButton.isEnabled = false
-            confirmButton.backgroundColor = #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8549019608, alpha: 1)
-            confirmButton.setTitleColor(#colorLiteral(red: 0.5333333333, green: 0.5333333333, blue: 0.5607843137, alpha: 1), for: .normal)
+           disabledMainButton(confirmButton)
         }
         return false
     }
