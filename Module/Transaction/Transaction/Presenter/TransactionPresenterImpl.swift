@@ -9,24 +9,37 @@ import Foundation
 import UIKit
 import Core
 
-public class TransactionPresenterImpl: TransactionPresenter {
+class TransactionPresenterImpl: TransactionPresenter {
+ 
+    var interactor: TransactionInteractor
     var view: TransactionView
     var router: TransactionRouter
     
-    init(view: TransactionView, router: TransactionRouter) {
+    init(view: TransactionView, interactor: TransactionInteractor, router: TransactionRouter) {
         self.view = view
+        self.interactor = interactor
         self.router = router
     }
     
-    public func backToReceiver(viewController: UIViewController) {
+    func backToReceiver(viewController: UIViewController) {
         self.router.backToReceiver(viewController: viewController)
     }
     
-    public func backToHome(viewController: UIViewController) {
+    func backToHome(viewController: UIViewController) {
         self.router.backToHome()
     }
     
-    public func navigateToDetailTransaction(viewController: UIViewController, passDataTransaction: ReceiverEntity, amount: Int, notes: String) {
+    func navigateToDetailTransaction(viewController: UIViewController, passDataTransaction: ReceiverEntity, amount: Int, notes: String) {
         self.router.navigateToDetailTransaction(viewController: viewController, passDataTransaction: passDataTransaction, amount: amount, notes: notes)
+    }
+    
+    func getUserBalance() {
+        self.interactor.getBalance()
+    }
+}
+
+extension TransactionPresenterImpl: TransactionInteractorOutput {
+    func getBalance(balance: Int) {
+        self.view.getUserBalance(balance: balance)
     }
 }

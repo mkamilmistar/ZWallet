@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Core
 
-class ReceiverDataSource: NSObject, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+class ReceiverDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     var viewController: ReceiverViewController!
     var allDataReceiver: [ReceiverEntity] = []

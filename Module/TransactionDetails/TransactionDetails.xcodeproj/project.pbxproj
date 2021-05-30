@@ -18,6 +18,9 @@
 		FAA2577926600F97002F9A1E /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAA2577726600F97002F9A1E /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FAA2577C26600FF8002F9A1E /* TransactionDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2577B26600FF8002F9A1E /* TransactionDetailsPresenter.swift */; };
 		FAA2577E2660101D002F9A1E /* TransactionDetailsPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2577D2660101D002F9A1E /* TransactionDetailsPresenterImpl.swift */; };
+		FAA2582D266284F0002F9A1E /* TransactionDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2582C266284EF002F9A1E /* TransactionDetailsInteractor.swift */; };
+		FAA2582F266284F7002F9A1E /* TransactionDetailsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2582E266284F7002F9A1E /* TransactionDetailsInteractorOutput.swift */; };
+		FAA25831266284FE002F9A1E /* TransactionDetailsInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25830266284FE002F9A1E /* TransactionDetailsInteractorImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +52,9 @@
 		FAA2577726600F97002F9A1E /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA2577B26600FF8002F9A1E /* TransactionDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsPresenter.swift; sourceTree = "<group>"; };
 		FAA2577D2660101D002F9A1E /* TransactionDetailsPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsPresenterImpl.swift; sourceTree = "<group>"; };
+		FAA2582C266284EF002F9A1E /* TransactionDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsInteractor.swift; sourceTree = "<group>"; };
+		FAA2582E266284F7002F9A1E /* TransactionDetailsInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsInteractorOutput.swift; sourceTree = "<group>"; };
+		FAA25830266284FE002F9A1E /* TransactionDetailsInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsInteractorImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,7 @@
 		FAA2574626600C3E002F9A1E /* TransactionDetails */ = {
 			isa = PBXGroup;
 			children = (
+				FAA2582B266284D2002F9A1E /* Interactor */,
 				FAA2577026600F5B002F9A1E /* Router */,
 				FAA2576E26600F4C002F9A1E /* Presenter */,
 				FAA2576326600C8B002F9A1E /* View */,
@@ -139,6 +146,16 @@
 				FAA2577426600F88002F9A1E /* TransactionDetailsRouterImpl.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		FAA2582B266284D2002F9A1E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2582C266284EF002F9A1E /* TransactionDetailsInteractor.swift */,
+				FAA2582E266284F7002F9A1E /* TransactionDetailsInteractorOutput.swift */,
+				FAA25830266284FE002F9A1E /* TransactionDetailsInteractorImpl.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,9 +268,12 @@
 				FAA2577E2660101D002F9A1E /* TransactionDetailsPresenterImpl.swift in Sources */,
 				FAA2577C26600FF8002F9A1E /* TransactionDetailsPresenter.swift in Sources */,
 				FAA2577526600F88002F9A1E /* TransactionDetailsRouterImpl.swift in Sources */,
+				FAA2582F266284F7002F9A1E /* TransactionDetailsInteractorOutput.swift in Sources */,
 				FAA2576C26600CF6002F9A1E /* TransactionDetailsView.swift in Sources */,
+				FAA2582D266284F0002F9A1E /* TransactionDetailsInteractor.swift in Sources */,
 				FAA2577226600F68002F9A1E /* TransactionDetailsRouter.swift in Sources */,
 				FAA2576826600CED002F9A1E /* TransactionDetailsViewController.swift in Sources */,
+				FAA25831266284FE002F9A1E /* TransactionDetailsInteractorImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

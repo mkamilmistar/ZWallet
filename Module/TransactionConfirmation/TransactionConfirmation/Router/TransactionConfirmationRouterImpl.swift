@@ -15,10 +15,14 @@ public class TransactionConfirmationRouterImpl {
         let bundle = Bundle(identifier: "com.casestudy.TransactionConfirmation")
         let vc = TransactionConfirmationViewController(nibName: "TransactionConfirmationViewController", bundle: bundle)
         
+        let balanceNetworkManager = BalanceNetworkManagerImpl()
+        
         let router = TransactionConfirmationRouterImpl()
-        let presenter = TransactionConfirmationPresenterImpl(view: vc, router: router)
+        let interactor = TransactionConfirmationInteractorImpl(balanceNetworkManager: balanceNetworkManager)
+        let presenter = TransactionConfirmationPresenterImpl(view: vc, interactor: interactor, router: router)
 
         vc.presenter = presenter
+        interactor.interactorOutput = presenter
         
         // Get data from Receiver
         vc.passDataReceiver = passingData

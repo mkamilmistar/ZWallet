@@ -14,10 +14,15 @@ public class TransactionRouterImpl {
         let bundle = Bundle(identifier: "com.casestudy.Transaction")
         let vc = TransactionViewController(nibName: "TransactionViewController", bundle: bundle)
         
+        let balanceNetwork = BalanceNetworkManagerImpl()
+        
         let router = TransactionRouterImpl()
-        let presenter = TransactionPresenterImpl(view: vc, router: router)
+        let interactor = TransactionInteractorImpl(balanceNetworkManager: balanceNetwork)
+        let presenter = TransactionPresenterImpl(view: vc, interactor: interactor, router: router)
         
         vc.presenter = presenter
+        
+        interactor.interactorOutput = presenter
         
         // Get data from Receiver
         vc.passDataReceiver = passingData

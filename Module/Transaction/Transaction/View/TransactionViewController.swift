@@ -12,10 +12,10 @@ import Kingfisher
 public class TransactionViewController: UIViewController {
     
     var presenter: TransactionPresenter?
+    var balance: Int = 0
     
     @IBOutlet var amountField: UITextField!
     @IBOutlet var notesField: UITextField!
-    @IBOutlet var pinField: UITextField!
     @IBOutlet var notesIcon: UIImageView!
     
     @IBOutlet var imageReceiver: UIImageView!
@@ -24,12 +24,15 @@ public class TransactionViewController: UIViewController {
       
     @IBOutlet var background: UIView!
     @IBOutlet var receiverBG: UIView!
+    @IBOutlet var userBalanceLabel: UILabel!
     
     public var passDataReceiver: ReceiverEntity = ReceiverEntity(id: 0, name: "", phone: "", image: "")
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         setupViewData()
+        
+        self.presenter?.getUserBalance()
     }
 
     @IBAction func backAction(_ sender: UITapGestureRecognizer) {
@@ -55,6 +58,10 @@ public class TransactionViewController: UIViewController {
 }
 
 extension TransactionViewController: TransactionView {
+    func getUserBalance(balance: Int) {
+        self.userBalanceLabel.text = "\(balance.formatToIdr()) Available"
+    }
+    
     func showError() {
         let alert = UIAlertController(
             title: "Peringatan",

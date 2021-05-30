@@ -62,7 +62,7 @@ extension ReceiverViewController: ReceiverCellDelegate {
 
 extension ReceiverViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("searchText \(searchText)")
+//        print("searchText \(searchText)")
         self.dataSource.filteredData = self.dataSource.allDataReceiver.filter({$0.name.hasPrefix(searchText)})
         
         self.receiverTableView.reloadData()

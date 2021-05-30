@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import Core
 
 protocol TransactionView {
     func showError()
+    func getUserBalance(balance: Int)
 }

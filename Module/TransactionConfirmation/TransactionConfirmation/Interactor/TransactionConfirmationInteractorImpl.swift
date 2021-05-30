@@ -1,27 +1,29 @@
 //
-//  TransactionInteractorImpl.swift
-//  Transaction
+//  TransactionConfirmationInteractorImpl.swift
+//  TransactionConfirmation
 //
-//  Created by MacBook on 27/05/21.
+//  Created by MacBook on 29/05/21.
 //
 
 import Foundation
 import Core
 
-public class TransactionInteractorImpl: TransactionInteractor {
+public class TransactionConfirmationInteractorImpl : TransactionConfirmationInteractor {
     
-    var interactorOutput: TransactionInteractorOutput?
+    var interactorOutput: TransactionConfirmationInteractorOutput?
     let balanceNetworkManager: BalanceNetworkManager
     
     init(balanceNetworkManager: BalanceNetworkManager) {
         self.balanceNetworkManager = balanceNetworkManager
     }
     
-    public func getBalance() {
+    func getBalance() {
         self.balanceNetworkManager.getBalance { (data, error) in
             if let dataBalance = data {
                 self.interactorOutput?.getBalance(balance: dataBalance.balance)
             }
         }
     }
+    
+    
 }

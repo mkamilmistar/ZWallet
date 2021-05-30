@@ -12,5 +12,5 @@ import Core
 protocol TransactionConfirmationPresenter {
     func navigateToCheckPIN(viewController: UIViewController, passDataTransaction: ReceiverEntity, amount: Int, notes: String)
     func backToTransaction(viewController: UIViewController)
-
+    func getUserBalance()
 }

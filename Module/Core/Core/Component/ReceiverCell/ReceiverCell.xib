@@ -26,7 +26,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ea8-36-gVB">
-                        <rect key="frame" x="0.0" y="10" width="404" height="88"/>
+                        <rect key="frame" x="1" y="10" width="402" height="88"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pvm-j2-eaH">
                                 <rect key="frame" x="16" y="20" width="48" height="48"/>
@@ -68,13 +68,18 @@
                             <constraint firstItem="pvm-j2-eaH" firstAttribute="leading" secondItem="ea8-36-gVB" secondAttribute="leading" constant="16" id="HRV-kt-ypa"/>
                             <constraint firstAttribute="bottom" secondItem="pvm-j2-eaH" secondAttribute="bottom" constant="20" id="rVL-WG-2CF"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <color key="backgroundColor" red="0.98039215686274506" green="0.9882352941176471" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="ea8-36-gVB" firstAttribute="top" secondItem="fw9-w4-hae" secondAttribute="top" constant="10" id="4dt-c4-GJZ"/>
-                    <constraint firstAttribute="trailing" secondItem="ea8-36-gVB" secondAttribute="trailing" id="XOS-U3-qP6"/>
-                    <constraint firstItem="ea8-36-gVB" firstAttribute="leading" secondItem="fw9-w4-hae" secondAttribute="leading" id="ehx-iE-8GH"/>
+                    <constraint firstAttribute="trailing" secondItem="ea8-36-gVB" secondAttribute="trailing" constant="1" id="XOS-U3-qP6"/>
+                    <constraint firstItem="ea8-36-gVB" firstAttribute="leading" secondItem="fw9-w4-hae" secondAttribute="leading" constant="1" id="ehx-iE-8GH"/>
                     <constraint firstAttribute="bottom" secondItem="ea8-36-gVB" secondAttribute="bottom" constant="10" id="g3F-ls-t5p"/>
                 </constraints>
             </tableViewCellContentView>

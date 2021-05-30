@@ -11,4 +11,5 @@ import Core
 
 protocol TransactionDetailsPresenter {
     func navigateToHome()
+    func getBalance()
 }

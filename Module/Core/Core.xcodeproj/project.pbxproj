@@ -64,6 +64,7 @@
 		FAA257F02660F193002F9A1E /* StrokeColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA257EF2660F193002F9A1E /* StrokeColorAnimation.swift */; };
 		FAA257F32660F20A002F9A1E /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA257F22660F20A002F9A1E /* UIViewControllerExtension.swift */; };
 		FAA2580A2661580D002F9A1E /* OTPViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA258092661580D002F9A1E /* OTPViewStyle.swift */; };
+		FAA2582126625B22002F9A1E /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2582026625B22002F9A1E /* UserEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +143,7 @@
 		FAA257EF2660F193002F9A1E /* StrokeColorAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeColorAnimation.swift; sourceTree = "<group>"; };
 		FAA257F22660F20A002F9A1E /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		FAA258092661580D002F9A1E /* OTPViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewStyle.swift; sourceTree = "<group>"; };
+		FAA2582026625B22002F9A1E /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +285,7 @@
 			children = (
 				FA6F7C82265B7B1700CF5DA5 /* TransactionEntity.swift */,
 				FAA255C7265E5508002F9A1E /* ReceiverEntity.swift */,
+				FAA2582026625B22002F9A1E /* UserEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 				FAA2579D26609FB3002F9A1E /* MoyaExtension.swift in Sources */,
 				FA053166265E3E72009A0DAB /* GetContactDataResponse.swift in Sources */,
 				FA2ABED8265B66CB0079F738 /* GetBalanceResponse.swift in Sources */,
+				FAA2582126625B22002F9A1E /* UserEntity.swift in Sources */,
 				FAA2564C265F1F36002F9A1E /* TransactionResponse.swift in Sources */,
 				FAA25646265F1D77002F9A1E /* TransactioinNetworkManager.swift in Sources */,
 				FAA257E42660F135002F9A1E /* ProgressView.swift in Sources */,

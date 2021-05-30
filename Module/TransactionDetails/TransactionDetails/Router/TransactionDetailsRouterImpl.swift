@@ -15,10 +15,14 @@ public class TransactionDetailsRouterImpl {
         let bundle = Bundle(identifier: "com.casestudy.TransactionDetails")
         let vc = TransactionDetailsViewController(nibName: "TransactionDetailsViewController", bundle: bundle)
         
+        let networkManager = BalanceNetworkManagerImpl()
+        
         let router = TransactionDetailsRouterImpl()
-        let presenter = TransactionDetailsPresenterImpl(view: vc, router: router)
+        let interactor = TransactionDetailsInteractorImpl(balanceNetworkManager: networkManager)
+        let presenter = TransactionDetailsPresenterImpl(view: vc, interactor: interactor, router: router)
 
         vc.presenter = presenter
+        interactor.interactorOutput = presenter
         
         // passing data
         vc.isSuccess = isSuccess

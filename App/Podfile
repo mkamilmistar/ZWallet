@@ -6,6 +6,7 @@ workspace 'ZWallet'
 
 def common_dependency
 	pod 'Kingfisher'
+	pod 'ActivityIndicatorView'
 end
 
 target 'App' do
@@ -24,22 +25,30 @@ end
 
 target 'Login' do
 	project '../Module/Login/Login'
+
+	common_dependency
 end
 
 target 'Register' do
 	project '../Module/Register/Register'
+
+	common_dependency
 end
 
 target 'PINActivation' do
 	project '../Module/PINActivation/PINActivation'
 
 	pod 'OTPFieldView'
+
+	common_dependency
 end
 
 target 'ConfirmOTP' do
 	project '../Module/ConfirmOTP/ConfirmOTP'
 
 	pod 'OTPFieldView'
+
+	common_dependency
 end
 
 target 'Home' do
@@ -87,5 +96,7 @@ end
 
 target 'TopUp' do
 	project '../Module/TopUp/TopUp'
+
+	common_dependency
 end
 

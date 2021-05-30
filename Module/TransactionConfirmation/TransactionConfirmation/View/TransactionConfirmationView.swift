@@ -8,5 +8,5 @@
 import Foundation
 
 protocol TransactionConfirmationView {
-//    func showError()
+    func getDataBalance(balance: Int)
 }

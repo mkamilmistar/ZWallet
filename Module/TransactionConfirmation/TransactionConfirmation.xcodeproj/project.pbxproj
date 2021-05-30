@@ -18,6 +18,9 @@
 		FAA256B6265F7AF0002F9A1E /* TransactionConfirmationRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA256B5265F7AF0002F9A1E /* TransactionConfirmationRouterImpl.swift */; };
 		FAA256B9265F7BF2002F9A1E /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA256B8265F7BF2002F9A1E /* Core.framework */; };
 		FAA256BA265F7BF2002F9A1E /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAA256B8265F7BF2002F9A1E /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FAA258262662828D002F9A1E /* TransactionConfirmationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA258252662828D002F9A1E /* TransactionConfirmationInteractor.swift */; };
+		FAA2582826628295002F9A1E /* TransactionConfirmationInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2582726628295002F9A1E /* TransactionConfirmationInteractorOutput.swift */; };
+		FAA2582A2662829D002F9A1E /* TransactionConfirmationInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA258292662829D002F9A1E /* TransactionConfirmationInteractorImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +54,9 @@
 		FAA256B2265F7AE9002F9A1E /* TransactionConfirmationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionConfirmationRouter.swift; sourceTree = "<group>"; };
 		FAA256B5265F7AF0002F9A1E /* TransactionConfirmationRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionConfirmationRouterImpl.swift; sourceTree = "<group>"; };
 		FAA256B8265F7BF2002F9A1E /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA258252662828D002F9A1E /* TransactionConfirmationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionConfirmationInteractor.swift; sourceTree = "<group>"; };
+		FAA2582726628295002F9A1E /* TransactionConfirmationInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionConfirmationInteractorOutput.swift; sourceTree = "<group>"; };
+		FAA258292662829D002F9A1E /* TransactionConfirmationInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionConfirmationInteractorImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,7 @@
 		FA73C4EE265CDB13004AFAF4 /* TransactionConfirmation */ = {
 			isa = PBXGroup;
 			children = (
+				FAA258242662826E002F9A1E /* Interactor */,
 				FAA25698265F7A87002F9A1E /* Router */,
 				FAA25696265F7A7E002F9A1E /* Presenter */,
 				FAA25695265F7A7A002F9A1E /* View */,
@@ -143,6 +150,16 @@
 				FAA256B5265F7AF0002F9A1E /* TransactionConfirmationRouterImpl.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		FAA258242662826E002F9A1E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FAA258252662828D002F9A1E /* TransactionConfirmationInteractor.swift */,
+				FAA2582726628295002F9A1E /* TransactionConfirmationInteractorOutput.swift */,
+				FAA258292662829D002F9A1E /* TransactionConfirmationInteractorImpl.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,10 +269,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA2582A2662829D002F9A1E /* TransactionConfirmationInteractorImpl.swift in Sources */,
 				FAA256A0265F7AB3002F9A1E /* TransactionConfirmationViewController.swift in Sources */,
 				FAA256B3265F7AE9002F9A1E /* TransactionConfirmationRouter.swift in Sources */,
 				FAA256A4265F7ABD002F9A1E /* TransactionConfirmationPresenter.swift in Sources */,
+				FAA2582826628295002F9A1E /* TransactionConfirmationInteractorOutput.swift in Sources */,
 				FAA256A7265F7AC7002F9A1E /* TransactionConfirmationPresenterImpl.swift in Sources */,
+				FAA258262662828D002F9A1E /* TransactionConfirmationInteractor.swift in Sources */,
 				FAA256B6265F7AF0002F9A1E /* TransactionConfirmationRouterImpl.swift in Sources */,
 				FAA2569A265F7A9B002F9A1E /* TransactionConfirmationView.swift in Sources */,
 			);

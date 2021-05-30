@@ -36,6 +36,7 @@ class TransactionConfirmationViewController: UIViewController {
 
         self.setupBackgroundView()
         self.setupDataView()
+        self.presenter?.getUserBalance()
     }
     
     @IBAction func backTapAction(_ sender: UITapGestureRecognizer) {
@@ -57,7 +58,7 @@ class TransactionConfirmationViewController: UIViewController {
         let url = URL(string: passDataReceiver.image)
         self.imagesReceiver.kf.setImage(with: url)
         
-        let dateNow: String  = "MMM dd, yyyy - HH:mm"
+        let dateNow: String  = "MMM dd, yyyy - HH.mm"
         
         self.dateLabel.text = dateNow.dateFormat()
     }
@@ -73,5 +74,7 @@ class TransactionConfirmationViewController: UIViewController {
 }
 
 extension TransactionConfirmationViewController: TransactionConfirmationView {
-    
+    func getDataBalance(balance: Int) {
+        self.balanceLabel.text = balance.formatToIdr()
+    }
 }

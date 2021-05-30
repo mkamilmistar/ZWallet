@@ -10,8 +10,8 @@ import UIKit
 import Core
 
 public protocol TransactionPresenter {
-//    func createTransaction(viewController: UIViewController, pin: String, receiver: Int, amount: Int, notes: String)
     func navigateToDetailTransaction(viewController: UIViewController, passDataTransaction: ReceiverEntity, amount: Int, notes: String)
     func backToReceiver(viewController: UIViewController)
     func backToHome(viewController: UIViewController)
+    func getUserBalance()
 }

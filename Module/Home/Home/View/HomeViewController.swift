@@ -20,6 +20,9 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         self.setupTableView()
+        
+        setupLoadingView()
+        
     }
     
     func setupTableView() {
@@ -32,7 +35,6 @@ class HomeViewController: UIViewController {
         self.presenter?.loadProfile()
         self.presenter?.loadTransaction()
     }
-    
 }
 
 extension HomeViewController: DashboardCellDelegate {

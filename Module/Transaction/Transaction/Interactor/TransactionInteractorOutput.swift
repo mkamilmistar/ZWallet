@@ -8,5 +8,6 @@
 import Foundation
 import UIKit
 
-protocol TransactionInteractorOutput {
+public protocol TransactionInteractorOutput {
+    func getBalance(balance: Int)
 }

@@ -20,6 +20,7 @@ class TransactionDetailsViewController: UIViewController {
     @IBOutlet var receiverLabel: UILabel!
     @IBOutlet var phoneLabel: UILabel!
     @IBOutlet var photoReceiver: UIImageView!
+    @IBOutlet var balanceLabel: UILabel!
     
     
     @IBOutlet var amountBG: UIView!
@@ -39,7 +40,23 @@ class TransactionDetailsViewController: UIViewController {
 
         viewStatus()
         
-        let dateNow: String  = "MMM dd, yyyy - HH:mm"
+        setupViewStyle()
+        
+        setupBackgroundView()
+        
+        self.presenter?.getBalance()
+    }
+
+    @IBAction func backToHomeAction(_ sender: Any) {
+        if isSuccess {
+            self.presenter?.navigateToHome()
+        } else {
+            AppRouter.shared.navigateToConfirmationTransaction(self, passingData, amount, notes)
+        }
+    }
+    
+    func setupViewStyle() {
+        let dateNow: String  = "MMM dd, yyyy - HH.mm"
         let url: String = passingData.image
 
         self.dateLabel.text = dateNow.dateFormat()
@@ -49,16 +66,6 @@ class TransactionDetailsViewController: UIViewController {
         
         self.receiverLabel.text = passingData.name
         self.phoneLabel.text = passingData.phone
-        
-        setupBackgroundView()
-    }
-
-    @IBAction func backToHomeAction(_ sender: Any) {
-        if isSuccess {
-            self.presenter?.navigateToHome()
-        } else {
-            AppRouter.shared.navigateToConfirmationTransaction(self, passingData, amount, notes)
-        }
     }
     
     func viewStatus() {
@@ -87,5 +94,7 @@ class TransactionDetailsViewController: UIViewController {
 }
 
 extension TransactionDetailsViewController: TransactionDetailsView {
-    
+    func getDataBalance(balance: Int) {
+        self.balanceLabel.text = balance.formatToIdr()
+    }
 }
