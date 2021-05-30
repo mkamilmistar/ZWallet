@@ -65,7 +65,7 @@
                     </connections>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aik-tV-iY5">
-                    <rect key="frame" x="16" y="490.5" width="343" height="57"/>
+                    <rect key="frame" x="16" y="565" width="343" height="57"/>
                     <color key="backgroundColor" red="0.38823529410000002" green="0.47450980390000003" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="57" id="c3E-rC-YfF"/>
@@ -195,7 +195,7 @@
                 <constraint firstItem="4up-km-zN3" firstAttribute="top" secondItem="qOS-7t-u2b" secondAttribute="bottom" constant="40" id="6cT-tL-2uK"/>
                 <constraint firstItem="KPX-gR-TVu" firstAttribute="top" secondItem="c4S-xY-pSo" secondAttribute="bottom" constant="35" id="8RK-UE-JXr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Aik-tV-iY5" secondAttribute="trailing" constant="16" id="97d-gb-0DB"/>
-                <constraint firstItem="Aik-tV-iY5" firstAttribute="top" secondItem="wkw-dr-sMH" secondAttribute="bottom" constant="80" id="FbQ-3K-vDO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Aik-tV-iY5" secondAttribute="bottom" constant="45" id="BKI-ex-f8l"/>
                 <constraint firstItem="cIQ-Wb-wdG" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="KAW-hG-xgn"/>
                 <constraint firstItem="KPX-gR-TVu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="67" id="NL8-OS-tGz"/>
                 <constraint firstItem="qOS-7t-u2b" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="ZWy-uy-2t2"/>

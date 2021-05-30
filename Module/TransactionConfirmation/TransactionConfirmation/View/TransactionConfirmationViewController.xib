@@ -316,7 +316,7 @@
                 </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="W8q-29-WaS"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" red="0.98039215686274506" green="0.9882352941176471" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="cEU-Bl-TlZ" firstAttribute="leading" secondItem="W8q-29-WaS" secondAttribute="leading" id="AeH-aa-Lsx"/>
                 <constraint firstItem="cEU-Bl-TlZ" firstAttribute="top" secondItem="W8q-29-WaS" secondAttribute="top" id="VMN-N7-E3M"/>

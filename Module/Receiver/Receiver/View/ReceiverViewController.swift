@@ -70,14 +70,12 @@ extension ReceiverViewController: ReceiverCellDelegate {
 
 extension ReceiverViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        print("searchText \(searchText)")
-        self.dataSource.filteredData = self.dataSource.allDataReceiver.filter({$0.name.hasPrefix(searchText)})
-        
+        let text = searchText.lowercased()
+        self.dataSource.filteredData = self.dataSource.allDataReceiver.filter({$0.name.lowercased().hasPrefix(text)})
         self.receiverTableView.reloadData()
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        
         searchBar.text = nil
         self.dataSource.filteredData = self.dataSource.allDataReceiver
         self.receiverTableView.reloadData()

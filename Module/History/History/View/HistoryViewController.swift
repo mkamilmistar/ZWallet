@@ -40,6 +40,7 @@ class HistoryViewController: UIViewController {
         
         self.tableView.dataSource = self.dataSource
         self.tableView.sectionIndexBackgroundColor = .none
+        self.tableView.delegate = self.dataSource
     }
     
     @IBAction func backToHomeAction(_ sender: UITapGestureRecognizer) {
@@ -51,6 +52,7 @@ extension HistoryViewController: HistoryView {
     func showHistoryThisWeek(historiesThisWeek: [TransactionEntity]) {
         DispatchQueue.main.async {
             self.dataSource.historyThisWeek = historiesThisWeek
+            self.dataSource.sectionData = [0: historiesThisWeek]
             self.tableView.reloadData()
             self.loadingView.stopAnimating()
         }
@@ -58,6 +60,7 @@ extension HistoryViewController: HistoryView {
     func showHistoryThisMonth(historiesThisMonth: [TransactionEntity]) {
         DispatchQueue.main.async {
             self.dataSource.historyThisMonth = historiesThisMonth
+            self.dataSource.sectionData = [1: historiesThisMonth]
             self.tableView.reloadData()
             self.loadingView.stopAnimating()
         }
