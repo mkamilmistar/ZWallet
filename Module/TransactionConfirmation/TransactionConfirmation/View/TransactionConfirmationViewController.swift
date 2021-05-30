@@ -8,9 +8,11 @@
 import UIKit
 import Core
 import Kingfisher
+import NVActivityIndicatorView
 
 class TransactionConfirmationViewController: UIViewController {
 
+    @IBOutlet var loadingView: NVActivityIndicatorView!
     @IBOutlet var nameReceiver: UILabel!
     @IBOutlet var phoneReceiver: UILabel!
     @IBOutlet var imagesReceiver: UIImageView!
@@ -37,6 +39,9 @@ class TransactionConfirmationViewController: UIViewController {
         self.setupBackgroundView()
         self.setupDataView()
         self.presenter?.getUserBalance()
+        self.loadingView.color = #colorLiteral(red: 0.4625302553, green: 0.5670406818, blue: 0.9667261243, alpha: 1)
+        self.loadingView.type = .ballRotateChase
+        self.loadingView.startAnimating()
     }
     
     @IBAction func backTapAction(_ sender: UITapGestureRecognizer) {
@@ -75,6 +80,9 @@ class TransactionConfirmationViewController: UIViewController {
 
 extension TransactionConfirmationViewController: TransactionConfirmationView {
     func getDataBalance(balance: Int) {
-        self.balanceLabel.text = balance.formatToIdr()
+        DispatchQueue.main.async {
+            self.balanceLabel.text = balance.formatToIdr()
+            self.loadingView.stopAnimating()
+        }
     }
 }

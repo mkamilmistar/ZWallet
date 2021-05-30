@@ -8,12 +8,14 @@
 import UIKit
 import Core
 import Kingfisher
+import NVActivityIndicatorView
 
 public class TransactionViewController: UIViewController {
     
     var presenter: TransactionPresenter?
     var balance: Int = 0
     
+    @IBOutlet var loadingView: NVActivityIndicatorView!
     @IBOutlet var amountField: UITextField!
     @IBOutlet var notesField: UITextField!
     @IBOutlet var notesIcon: UIImageView!
@@ -25,6 +27,7 @@ public class TransactionViewController: UIViewController {
     @IBOutlet var background: UIView!
     @IBOutlet var receiverBG: UIView!
     @IBOutlet var userBalanceLabel: UILabel!
+    @IBOutlet var backIcon: UIImageView!
     
     public var passDataReceiver: ReceiverEntity = ReceiverEntity(id: 0, name: "", phone: "", image: "")
     
@@ -33,6 +36,10 @@ public class TransactionViewController: UIViewController {
         setupViewData()
         
         self.presenter?.getUserBalance()
+        self.loadingView.color = #colorLiteral(red: 0.4625302553, green: 0.5670406818, blue: 0.9667261243, alpha: 1)
+        self.loadingView.type = .ballRotateChase
+        self.loadingView.startAnimating()
+        self.backIcon.image = UIImage(named: "arrow-left", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
     }
 
     @IBAction func backAction(_ sender: UITapGestureRecognizer) {
@@ -59,7 +66,10 @@ public class TransactionViewController: UIViewController {
 
 extension TransactionViewController: TransactionView {
     func getUserBalance(balance: Int) {
-        self.userBalanceLabel.text = "\(balance.formatToIdr()) Available"
+        DispatchQueue.main.async {
+            self.userBalanceLabel.text = "\(balance.formatToIdr()) Available"
+            self.loadingView.stopAnimating()
+        }
     }
     
     func showError() {

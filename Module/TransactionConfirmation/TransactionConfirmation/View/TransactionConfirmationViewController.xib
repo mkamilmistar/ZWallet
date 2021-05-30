@@ -30,6 +30,7 @@
                 <outlet property="dateBG" destination="4pg-dS-9bI" id="BXp-pN-jRJ"/>
                 <outlet property="dateLabel" destination="srn-n1-lyF" id="CeR-hH-CmY"/>
                 <outlet property="imagesReceiver" destination="d11-L7-OCe" id="4n6-w3-CJF"/>
+                <outlet property="loadingView" destination="m1q-xL-WPX" id="LuB-rn-4C7"/>
                 <outlet property="nameReceiver" destination="AcF-8b-DVb" id="zia-ca-IGQ"/>
                 <outlet property="notesBG" destination="ZPK-61-OS1" id="4LT-JD-bbL"/>
                 <outlet property="notesLabel" destination="Zs3-FU-hBn" id="K24-Lr-QN9"/>
@@ -263,6 +264,14 @@
                                         <outletCollection property="gestureRecognizers" destination="fAD-8K-moc" appends="YES" id="pZT-fh-taF"/>
                                     </connections>
                                 </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m1q-xL-WPX" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                    <rect key="frame" x="192" y="392.5" width="50" height="50"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="SDd-vC-wT2"/>
+                                        <constraint firstAttribute="width" constant="50" id="bOv-N5-ySX"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" red="0.98039215690000003" green="0.98823529409999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
@@ -276,6 +285,7 @@
                                 <constraint firstItem="ZPK-61-OS1" firstAttribute="top" secondItem="4pg-dS-9bI" secondAttribute="bottom" constant="20" id="GVZ-ta-lIg"/>
                                 <constraint firstItem="ZPK-61-OS1" firstAttribute="leading" secondItem="4pg-dS-9bI" secondAttribute="leading" id="GWx-bv-6vk"/>
                                 <constraint firstItem="sQE-2Y-UdG" firstAttribute="top" secondItem="wK0-b3-GYI" secondAttribute="bottom" constant="20" id="Gff-ya-0pu"/>
+                                <constraint firstItem="m1q-xL-WPX" firstAttribute="centerY" secondItem="Z0a-rl-Cis" secondAttribute="centerY" id="N28-Ok-PvU"/>
                                 <constraint firstItem="PZi-pS-nNn" firstAttribute="top" secondItem="ljU-1J-GRX" secondAttribute="bottom" constant="8" symbolic="YES" id="NRe-0j-JKZ"/>
                                 <constraint firstItem="wK0-b3-GYI" firstAttribute="leading" secondItem="Z0a-rl-Cis" secondAttribute="leading" constant="16" id="SDW-J4-Gkl"/>
                                 <constraint firstItem="8hb-rh-EU0" firstAttribute="trailing" secondItem="PZi-pS-nNn" secondAttribute="trailing" id="Sa7-S3-eIs"/>
@@ -283,6 +293,7 @@
                                 <constraint firstItem="wK0-b3-GYI" firstAttribute="top" secondItem="Yce-8q-GAU" secondAttribute="bottom" constant="40" id="aVU-Wn-icb"/>
                                 <constraint firstItem="tp7-3M-05f" firstAttribute="top" secondItem="ZPK-61-OS1" secondAttribute="bottom" constant="35" id="dZI-VA-Jzr"/>
                                 <constraint firstItem="Yce-8q-GAU" firstAttribute="top" secondItem="Z0a-rl-Cis" secondAttribute="top" constant="20" id="frd-zh-0Gi"/>
+                                <constraint firstItem="m1q-xL-WPX" firstAttribute="centerX" secondItem="Z0a-rl-Cis" secondAttribute="centerX" id="fuZ-lr-aYl"/>
                                 <constraint firstItem="8hb-rh-EU0" firstAttribute="leading" secondItem="PZi-pS-nNn" secondAttribute="leading" id="iXL-8D-zzj"/>
                                 <constraint firstAttribute="trailing" secondItem="sQE-2Y-UdG" secondAttribute="trailing" constant="16" id="itt-ya-gJU"/>
                                 <constraint firstItem="Yce-8q-GAU" firstAttribute="leading" secondItem="Z0a-rl-Cis" secondAttribute="leading" constant="16" id="jaV-5U-fOz"/>

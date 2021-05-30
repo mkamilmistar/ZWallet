@@ -22,11 +22,15 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="Register" customModuleProvider="target">
             <connections>
                 <outlet property="emailField" destination="dYs-dR-7SR" id="x7R-e6-zJK"/>
+                <outlet property="emailIcon" destination="d0W-11-fOV" id="qfb-w7-Q6M"/>
                 <outlet property="emailStack" destination="xDP-Er-46k" id="Bbt-8q-mQx"/>
                 <outlet property="passwordField" destination="h2R-eQ-d1c" id="NQg-6V-ZQo"/>
+                <outlet property="passwordIcon" destination="EbE-PU-xmg" id="vmL-zn-On7"/>
                 <outlet property="passwordStack" destination="6ob-O9-iRU" id="4j3-GT-1kw"/>
+                <outlet property="showPasswordIcon" destination="CNp-Kq-GoU" id="PoE-rR-lTB"/>
                 <outlet property="signUpBG" destination="xJd-ue-25w" id="eu5-Nx-k6A"/>
                 <outlet property="usernameField" destination="hnN-1Y-fCa" id="L4p-Mu-9PN"/>
+                <outlet property="usernameIcon" destination="pUb-aB-V1X" id="6o5-mG-8W0"/>
                 <outlet property="usernameStack" destination="MmK-vl-Lw0" id="WdN-Ff-u5j"/>
                 <outlet property="view" destination="imn-UJ-Wno" id="JpJ-RU-Ags"/>
             </connections>

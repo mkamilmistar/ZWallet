@@ -22,7 +22,6 @@
 		FA6F7CAD265B8E1F00CF5DA5 /* LoginPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F7CAC265B8E1F00CF5DA5 /* LoginPresenterImpl.swift */; };
 		FA6F7CD5265B9A6700CF5DA5 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6F7CD4265B9A6700CF5DA5 /* Home.framework */; };
 		FA6F7CD6265B9A6700CF5DA5 /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA6F7CD4265B9A6700CF5DA5 /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FA73C473265CB9DA004AFAF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA73C472265CB9DA004AFAF4 /* Assets.xcassets */; };
 		FA8F423B265B4E0A00380300 /* Login.h in Headers */ = {isa = PBXBuildFile; fileRef = FA8F4239265B4E0A00380300 /* Login.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -56,7 +55,6 @@
 		FA6F7CAA265B8E1700CF5DA5 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		FA6F7CAC265B8E1F00CF5DA5 /* LoginPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterImpl.swift; sourceTree = "<group>"; };
 		FA6F7CD4265B9A6700CF5DA5 /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA73C472265CB9DA004AFAF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA8F4236265B4E0A00380300 /* Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8F4239265B4E0A00380300 /* Login.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
 		FA8F423A265B4E0A00380300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 				FA8F4239265B4E0A00380300 /* Login.h */,
 				FA6F7C9D265B8C1800CF5DA5 /* Router */,
 				FA6F7C96265B815A00CF5DA5 /* View */,
-				FA73C472265CB9DA004AFAF4 /* Assets.xcassets */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -238,7 +235,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA73C473265CB9DA004AFAF4 /* Assets.xcassets in Resources */,
 				FA6F7C9A265B817100CF5DA5 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

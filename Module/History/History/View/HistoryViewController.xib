@@ -8,9 +8,16 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NunitoSans-SemiBold.ttf">
+            <string>NunitoSans-SemiBold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoryViewController" customModule="History" customModuleProvider="target">
             <connections>
+                <outlet property="backIcon" destination="wtS-WP-WqC" id="Dyb-tJ-1GD"/>
+                <outlet property="loadingView" destination="eOh-Jt-JR7" id="qL6-4P-w2H"/>
                 <outlet property="tableView" destination="BKI-sd-jd3" id="tbt-5n-3Pg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -25,7 +32,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="osS-Iw-8YU" userLabel="BackButton">
-                    <rect key="frame" x="16" y="20" width="90.5" height="28"/>
+                    <rect key="frame" x="16" y="20" width="96" height="28"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-left" translatesAutoresizingMaskIntoConstraints="NO" id="wtS-WP-WqC">
                             <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
@@ -36,9 +43,9 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xJ-AI-4zB">
-                            <rect key="frame" x="36" y="0.0" width="54.5" height="28"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
+                            <rect key="frame" x="36" y="0.0" width="60" height="28"/>
+                            <fontDescription key="fontDescription" name="NunitoSans-SemiBold" family="Nunito Sans" pointSize="18"/>
+                            <color key="textColor" red="0.30196078431372547" green="0.29411764705882354" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -47,12 +54,22 @@
                         <outletCollection property="gestureRecognizers" destination="9bb-L3-U0h" appends="YES" id="x8o-mc-8P1"/>
                     </connections>
                 </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOh-Jt-JR7" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                    <rect key="frame" x="162.5" y="308.5" width="50" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="AJL-s0-OBU"/>
+                        <constraint firstAttribute="width" constant="50" id="Xlv-we-v0B"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="osS-Iw-8YU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="34e-12-1dZ"/>
+                <constraint firstItem="eOh-Jt-JR7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4rQ-pe-WPq"/>
                 <constraint firstItem="BKI-sd-jd3" firstAttribute="top" secondItem="8xJ-AI-4zB" secondAttribute="bottom" constant="23.5" id="PEa-EJ-PzU"/>
+                <constraint firstItem="eOh-Jt-JR7" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Tqt-MV-pwI"/>
                 <constraint firstItem="BKI-sd-jd3" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="ZJG-nV-bLf"/>
                 <constraint firstItem="osS-Iw-8YU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Zhi-bi-zyh"/>
                 <constraint firstItem="BKI-sd-jd3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="krd-jj-dUY"/>

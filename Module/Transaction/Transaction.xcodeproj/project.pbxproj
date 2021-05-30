@@ -21,7 +21,6 @@
 		FAA25653265F20F6002F9A1E /* TransactionInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25652265F20F6002F9A1E /* TransactionInteractorImpl.swift */; };
 		FAA25656265F2180002F9A1E /* TransactionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25655265F2180002F9A1E /* TransactionPresenter.swift */; };
 		FAA25658265F2187002F9A1E /* TransactionPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25657265F2187002F9A1E /* TransactionPresenterImpl.swift */; };
-		FAA25660265F3C28002F9A1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2565F265F3C28002F9A1E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,7 +55,6 @@
 		FAA25652265F20F6002F9A1E /* TransactionInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionInteractorImpl.swift; sourceTree = "<group>"; };
 		FAA25655265F2180002F9A1E /* TransactionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionPresenter.swift; sourceTree = "<group>"; };
 		FAA25657265F2187002F9A1E /* TransactionPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionPresenterImpl.swift; sourceTree = "<group>"; };
-		FAA2565F265F3C28002F9A1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +116,6 @@
 				FAA2562B265F1A7F002F9A1E /* View */,
 				FA73C4AD265CDA53004AFAF4 /* Transaction.h */,
 				FA73C4AE265CDA53004AFAF4 /* Info.plist */,
-				FAA2565F265F3C28002F9A1E /* Assets.xcassets */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -232,7 +229,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAA25660265F3C28002F9A1E /* Assets.xcassets in Resources */,
 				FAA25632265F1A9D002F9A1E /* TransactionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

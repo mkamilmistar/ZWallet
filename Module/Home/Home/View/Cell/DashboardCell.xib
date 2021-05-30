@@ -249,6 +249,8 @@
                 <outlet property="nameLabel" destination="huB-ST-btj" id="xzA-qx-7b9"/>
                 <outlet property="phoneNumberLabel" destination="mdW-tj-HRc" id="I9J-50-poR"/>
                 <outlet property="profileImage" destination="oV6-kk-933" id="TBp-Nm-Njy"/>
+                <outlet property="topUpButton" destination="w7n-Y1-l3Q" id="m9U-aT-Zgr"/>
+                <outlet property="transferButton" destination="sdT-Zn-0Yg" id="3Jt-ME-PeY"/>
             </connections>
             <point key="canvasLocation" x="110.86956521739131" y="216.29464285714286"/>
         </tableViewCell>

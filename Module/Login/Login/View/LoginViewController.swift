@@ -28,6 +28,7 @@ class LoginViewController: UIViewController {
         
         self.mailIcon.image = UIImage(named: "mail", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
         self.passwordIcon.image = UIImage(named: "lock", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
+        self.eyeIcon.image = UIImage(named: "eye-crossed", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
         
         setupLoadingView()
     }

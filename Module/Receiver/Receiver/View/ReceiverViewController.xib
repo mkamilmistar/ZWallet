@@ -24,6 +24,7 @@
             <connections>
                 <outlet property="backIcon" destination="pRi-go-bSl" id="Ap5-Jl-GnQ"/>
                 <outlet property="contactFoundLabel" destination="Y6I-Xc-X8L" id="7fj-fA-l5Z"/>
+                <outlet property="loadingView" destination="Ck0-I5-Dnx" id="ugg-ld-v7E"/>
                 <outlet property="receiverTableView" destination="uQ8-X0-k41" id="RaI-ZL-0uw"/>
                 <outlet property="searchBar" destination="s88-e2-er6" id="uCA-1i-ysT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -77,6 +78,14 @@
                     <rect key="frame" x="16" y="88" width="343" height="56"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ck0-I5-Dnx" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                    <rect key="frame" x="162.5" y="308.5" width="50" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="6oF-GJ-n1c"/>
+                        <constraint firstAttribute="width" constant="50" id="pYB-9s-V1i"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.98039215686274506" green="0.9882352941176471" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -85,9 +94,11 @@
                 <constraint firstItem="uQ8-X0-k41" firstAttribute="firstBaseline" secondItem="Y6I-Xc-X8L" secondAttribute="baseline" constant="25" id="A4a-OA-a42"/>
                 <constraint firstItem="9dV-4r-psf" firstAttribute="top" secondItem="s88-e2-er6" secondAttribute="bottom" constant="40" id="Flf-wA-4uM"/>
                 <constraint firstItem="s88-e2-er6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="KFZ-AU-p8N"/>
+                <constraint firstItem="Ck0-I5-Dnx" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="MkM-0m-OjG"/>
                 <constraint firstItem="NBy-Th-o3e" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="QkF-ll-DZx"/>
                 <constraint firstItem="9dV-4r-psf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="SZv-5j-dGJ"/>
                 <constraint firstItem="Y6I-Xc-X8L" firstAttribute="leading" secondItem="9dV-4r-psf" secondAttribute="leading" id="Ue5-Pm-iCt"/>
+                <constraint firstItem="Ck0-I5-Dnx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YhY-nW-DfS"/>
                 <constraint firstItem="NBy-Th-o3e" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="dOR-bV-w46"/>
                 <constraint firstItem="uQ8-X0-k41" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eBS-MR-QyO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="s88-e2-er6" secondAttribute="trailing" constant="16" id="gyR-TJ-IgX"/>

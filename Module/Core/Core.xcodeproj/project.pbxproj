@@ -65,6 +65,7 @@
 		FAA257F32660F20A002F9A1E /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA257F22660F20A002F9A1E /* UIViewControllerExtension.swift */; };
 		FAA2580A2661580D002F9A1E /* OTPViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA258092661580D002F9A1E /* OTPViewStyle.swift */; };
 		FAA2582126625B22002F9A1E /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2582026625B22002F9A1E /* UserEntity.swift */; };
+		FAA25848266312F9002F9A1E /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25847266312F9002F9A1E /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +145,7 @@
 		FAA257F22660F20A002F9A1E /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		FAA258092661580D002F9A1E /* OTPViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewStyle.swift; sourceTree = "<group>"; };
 		FAA2582026625B22002F9A1E /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		FAA25847266312F9002F9A1E /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 				FAA2579926609BE8002F9A1E /* StringExtension.swift */,
 				FAA2579C26609FB3002F9A1E /* MoyaExtension.swift */,
 				FAA257F22660F20A002F9A1E /* UIViewControllerExtension.swift */,
+				FAA25847266312F9002F9A1E /* ColorExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 				FA2ABEDB265B66D80079F738 /* GetBalanceDataResponse.swift in Sources */,
 				FAA25666265F5AB2002F9A1E /* CommonResponse.swift in Sources */,
 				FA2ABEC8265B5ECA0079F738 /* LoginResponse.swift in Sources */,
+				FAA25848266312F9002F9A1E /* ColorExtension.swift in Sources */,
 				FA05313F265E07EA009A0DAB /* PINConfirmationResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

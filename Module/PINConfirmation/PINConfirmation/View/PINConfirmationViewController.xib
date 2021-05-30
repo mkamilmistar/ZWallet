@@ -23,6 +23,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PINConfirmationViewController" customModule="PINConfirmation" customModuleProvider="target">
             <connections>
                 <outlet property="backIcon" destination="uSd-HB-186" id="O40-is-IoL"/>
+                <outlet property="loadingView" destination="03z-Cj-m2W" id="ZDu-nc-wBg"/>
                 <outlet property="pinField" destination="Sdm-eX-Uxo" id="fCU-eE-b7P"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -93,6 +94,14 @@
                         <constraint firstAttribute="height" constant="58" id="4no-L3-j6z"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="03z-Cj-m2W" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                    <rect key="frame" x="162.5" y="308.5" width="50" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Amr-7A-wdE"/>
+                        <constraint firstAttribute="width" constant="50" id="b4C-De-GwJ"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -104,8 +113,10 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9AH-5B-dQd" secondAttribute="trailing" constant="16" id="KHa-z3-u7K"/>
                 <constraint firstItem="27K-yk-xYY" firstAttribute="top" secondItem="Sdm-eX-Uxo" secondAttribute="bottom" constant="180" id="KTf-cI-OwS"/>
                 <constraint firstItem="e2X-L7-A45" firstAttribute="top" secondItem="yXE-AR-xSO" secondAttribute="bottom" constant="40" id="WZ1-5O-JhW"/>
+                <constraint firstItem="03z-Cj-m2W" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZNK-K2-WRn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="e2X-L7-A45" secondAttribute="trailing" constant="81.5" id="ajp-cm-Ye1"/>
                 <constraint firstItem="27K-yk-xYY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="c8r-nl-h8U"/>
+                <constraint firstItem="03z-Cj-m2W" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="du0-gy-JLd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="27K-yk-xYY" secondAttribute="trailing" constant="16" id="gv1-QV-U2y"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Sdm-eX-Uxo" secondAttribute="trailing" constant="16" id="qrY-KT-awk"/>
                 <constraint firstItem="Sdm-eX-Uxo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="w6e-P6-Z3x"/>

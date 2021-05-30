@@ -8,6 +8,7 @@
 import UIKit
 import Core
 import Kingfisher
+import NVActivityIndicatorView
 
 class TransactionDetailsViewController: UIViewController {
     @IBOutlet var imageStatus: UIImageView!
@@ -21,7 +22,6 @@ class TransactionDetailsViewController: UIViewController {
     @IBOutlet var phoneLabel: UILabel!
     @IBOutlet var photoReceiver: UIImageView!
     @IBOutlet var balanceLabel: UILabel!
-    
     
     @IBOutlet var amountBG: UIView!
     @IBOutlet var balanceBG: UIView!

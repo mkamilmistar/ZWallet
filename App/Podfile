@@ -6,7 +6,7 @@ workspace 'ZWallet'
 
 def common_dependency
 	pod 'Kingfisher'
-	pod 'ActivityIndicatorView'
+	pod 'NVActivityIndicatorView'
 end
 
 target 'App' do

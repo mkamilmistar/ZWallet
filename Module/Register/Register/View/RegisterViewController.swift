@@ -16,19 +16,32 @@ class RegisterViewController: UIViewController {
     @IBOutlet var passwordStack: UIStackView!
     @IBOutlet var emailStack: UIStackView!
     @IBOutlet var signUpBG: UIView!
+    @IBOutlet var usernameIcon: UIImageView!
+    @IBOutlet var emailIcon: UIImageView!
+    @IBOutlet var passwordIcon: UIImageView!
+    @IBOutlet var showPasswordIcon: UIImageView!
     
     var presenter: RegisterPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         signUpBG.setShadow(color: UIColor.black.cgColor, opacity: 0.1)
+        
+        setupView()
+    }
+    
+    func setupView() {
+        usernameIcon.image = UIImage(named: "person", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
+        passwordIcon.image = UIImage(named: "lock", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
+        emailIcon.image = UIImage(named: "mail", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
+        showPasswordIcon.image = UIImage(named: "eye-crossed", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
     }
 
     @IBAction func registerAction(_ sender: UIButton) {
         let username: String = usernameField.text ?? ""
         let email: String = emailField.text ?? ""
         let password: String = passwordField.text ?? ""
-        
+       
         self.presenter?.register(usernmae: username, email: email, password: password)
     }
     

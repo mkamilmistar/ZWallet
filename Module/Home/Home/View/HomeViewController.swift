@@ -7,10 +7,12 @@
 
 import UIKit
 import Core
+import NVActivityIndicatorView
 
 class HomeViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var loading: NVActivityIndicatorView!
     
     var dataSource = HomeDataSource()
     
@@ -21,8 +23,9 @@ class HomeViewController: UIViewController {
         
         self.setupTableView()
         
-        setupLoadingView()
-        
+        self.loading.color = #colorLiteral(red: 0.4625302553, green: 0.5670406818, blue: 0.9667261243, alpha: 1)
+        self.loading.type = .ballRotateChase
+        loading.startAnimating()
     }
     
     func setupTableView() {
@@ -53,12 +56,19 @@ extension HomeViewController: DashboardCellDelegate {
 
 extension HomeViewController: HomeView {
     func showUserProfileData(userProfile: UserProfileEntity) {
-        self.dataSource.userProfile = userProfile
-        self.tableView.reloadData()
+        DispatchQueue.main.async {
+            self.dataSource.userProfile = userProfile
+            self.tableView.reloadData()
+            self.loading.stopAnimating()
+        }
     }
     
     func showTransactionData(transactions: [TransactionEntity]) {
-        self.dataSource.transactions = transactions
-        self.tableView.reloadData()
+        DispatchQueue.main.async {
+            self.loading.stopAnimating()
+            self.dataSource.transactions = transactions
+            self.tableView.reloadData()
+            self.loading.stopAnimating()
+        }
     }
 }

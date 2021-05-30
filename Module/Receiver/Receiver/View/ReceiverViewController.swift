@@ -7,6 +7,7 @@
 
 import UIKit
 import Core
+import NVActivityIndicatorView
 
 class ReceiverViewController: UIViewController, UITableViewDelegate {
     
@@ -14,6 +15,7 @@ class ReceiverViewController: UIViewController, UITableViewDelegate {
     @IBOutlet var contactFoundLabel: UILabel!
     @IBOutlet var backIcon: UIImageView!
     @IBOutlet var searchBar: UISearchBar!
+    @IBOutlet var loadingView: NVActivityIndicatorView!
     
     var dataSource = ReceiverDataSource()
     
@@ -27,6 +29,9 @@ class ReceiverViewController: UIViewController, UITableViewDelegate {
         
         self.backIcon.image = UIImage(named: "arrow-left", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
         
+        self.loadingView.color = #colorLiteral(red: 0.4625302553, green: 0.5670406818, blue: 0.9667261243, alpha: 1)
+        self.loadingView.type = .ballRotateChase
+        loadingView.startAnimating()
     }
 
     func setupTableReceiver() {
@@ -47,10 +52,13 @@ class ReceiverViewController: UIViewController, UITableViewDelegate {
 
 extension ReceiverViewController: ReceiverView {
     func showAllReceiver(receiverData: [ReceiverEntity]) {
-        self.dataSource.allDataReceiver = receiverData
-        self.dataSource.filteredData = receiverData
-        self.receiverTableView.reloadData()
-        self.contactFoundLabel.text = "\(receiverData.count) Contact found"
+        DispatchQueue.main.async {
+            self.dataSource.allDataReceiver = receiverData
+            self.dataSource.filteredData = receiverData
+            self.receiverTableView.reloadData()
+            self.contactFoundLabel.text = "\(receiverData.count) Contact found"
+            self.loadingView.stopAnimating()
+        }
     }
 }
 

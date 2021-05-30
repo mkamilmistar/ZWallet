@@ -8,9 +8,11 @@
 import UIKit
 import Core
 import OTPFieldView
+import NVActivityIndicatorView
 
 class PINConfirmationViewController: UIViewController {
    
+    @IBOutlet var loadingView: NVActivityIndicatorView!
     @IBOutlet var pinField: OTPFieldView!
     @IBOutlet var backIcon: UIImageView!
     
@@ -26,6 +28,8 @@ class PINConfirmationViewController: UIViewController {
         self.backIcon.image = UIImage(named: "arrow-left", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
         
         self.setupOtpView()
+        self.loadingView.color = #colorLiteral(red: 0.4625302553, green: 0.5670406818, blue: 0.9667261243, alpha: 1)
+        self.loadingView.type = .ballRotateChase
     }
 
     @IBAction func backAction(_ sender: UITapGestureRecognizer) {
@@ -33,7 +37,7 @@ class PINConfirmationViewController: UIViewController {
     }
     
     @IBAction func confirmTransactionAction(_ sender: UIButton) {
-        
+        self.loadingView.startAnimating()
         self.presenter?.createTransaction(pin: pinValue, receiver: passDataReceiver.id, amount: amount, notes: notes)
     }
     
@@ -41,7 +45,10 @@ class PINConfirmationViewController: UIViewController {
 
 extension PINConfirmationViewController: PINConfirmationView {
     func showTransactionDetails(isSuccess: Bool) {
-        self.presenter?.navigateToTransactionDetails(viewController: self, isSuccess: isSuccess, passDataTransaction: passDataReceiver, amount: amount, notes: notes)
+        DispatchQueue.main.async {
+            self.presenter?.navigateToTransactionDetails(viewController: self, isSuccess: isSuccess, passDataTransaction: self.passDataReceiver, amount: self.amount, notes: self.notes)
+            self.loadingView.stopAnimating()
+        }
     }
     
     func showError() {
