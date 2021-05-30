@@ -15,7 +15,6 @@ class HomeViewController: UIViewController {
     @IBOutlet var loading: NVActivityIndicatorView!
     
     var dataSource = HomeDataSource()
-    
     var presenter: HomePresenter?
     
     override func viewDidLoad() {

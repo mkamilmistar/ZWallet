@@ -41,23 +41,23 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ufY-L4-kF9">
-                                <rect key="frame" x="79" y="17.5" width="63.5" height="53.5"/>
+                                <rect key="frame" x="79" y="17.5" width="186.5" height="53.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M. Kamil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZ3-9L-nwF">
-                                        <rect key="frame" x="0.0" y="0.0" width="63.5" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="186.5" height="22"/>
                                         <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="16"/>
                                         <color key="textColor" red="0.30196078431372547" green="0.29411764705882354" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVJ-DN-NvZ">
-                                        <rect key="frame" x="0.0" y="34" width="63.5" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="34" width="186.5" height="19.5"/>
                                         <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="14"/>
                                         <color key="textColor" red="0.47843137254901957" green="0.47058823529411764" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-Rp149.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glL-O8-8hj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="-Rp149.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glL-O8-8hj">
                                 <rect key="frame" x="285.5" y="31.5" width="100.5" height="25"/>
                                 <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="18"/>
                                 <color key="textColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
@@ -67,13 +67,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="trI-S4-mes" firstAttribute="centerY" secondItem="HV8-G8-0Gp" secondAttribute="centerY" id="73j-t9-gzH"/>
-                            <constraint firstItem="ufY-L4-kF9" firstAttribute="centerY" secondItem="trI-S4-mes" secondAttribute="centerY" id="HzW-gv-fBd"/>
                             <constraint firstAttribute="height" constant="88" id="QIj-iq-LK0"/>
                             <constraint firstAttribute="trailing" secondItem="glL-O8-8hj" secondAttribute="trailing" constant="16" id="Qpb-F5-czp"/>
                             <constraint firstItem="trI-S4-mes" firstAttribute="leading" secondItem="HV8-G8-0Gp" secondAttribute="leading" constant="16" id="RBx-T8-gQf"/>
+                            <constraint firstItem="glL-O8-8hj" firstAttribute="centerY" secondItem="ufY-L4-kF9" secondAttribute="centerY" id="Vsz-xV-rf0"/>
                             <constraint firstItem="trI-S4-mes" firstAttribute="top" secondItem="HV8-G8-0Gp" secondAttribute="top" constant="20" id="XGm-sY-4Rv"/>
+                            <constraint firstItem="glL-O8-8hj" firstAttribute="leading" secondItem="ufY-L4-kF9" secondAttribute="trailing" constant="20" id="ZeY-aj-nfo"/>
                             <constraint firstAttribute="bottom" secondItem="trI-S4-mes" secondAttribute="bottom" constant="20" id="nYP-mF-sAt"/>
-                            <constraint firstItem="glL-O8-8hj" firstAttribute="centerY" secondItem="trI-S4-mes" secondAttribute="centerY" id="sc4-ZJ-NYk"/>
+                            <constraint firstItem="ufY-L4-kF9" firstAttribute="centerY" secondItem="trI-S4-mes" secondAttribute="centerY" id="slf-u9-8PF"/>
                             <constraint firstItem="ufY-L4-kF9" firstAttribute="leading" secondItem="trI-S4-mes" secondAttribute="trailing" constant="15" id="zxK-De-z3O"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>

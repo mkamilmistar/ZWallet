@@ -42,7 +42,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qOS-7t-u2b" userLabel="BackButton">
-                    <rect key="frame" x="16" y="20" width="125.5" height="28"/>
+                    <rect key="frame" x="16" y="20" width="141" height="28"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-left-1" translatesAutoresizingMaskIntoConstraints="NO" id="ioy-Ox-VCe">
                             <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
@@ -53,8 +53,8 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5f-te-TKr">
-                            <rect key="frame" x="36" y="0.0" width="89.5" height="28"/>
-                            <fontDescription key="fontDescription" name="NunitoSans-SemiBold" family="Nunito Sans" pointSize="17"/>
+                            <rect key="frame" x="36" y="0.0" width="105" height="28"/>
+                            <fontDescription key="fontDescription" name="NunitoSans-SemiBold" family="Nunito Sans" pointSize="20"/>
                             <color key="textColor" red="0.22745098039215686" green="0.23921568627450979" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>

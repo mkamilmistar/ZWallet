@@ -8,11 +8,11 @@
 import Foundation
 
 public struct TransactionEntity {
-    var name: String
-    var type: String
-    var imageUrl: String
-    var amount: Int
-    var notes: String
+    public var name: String
+    public var type: String
+    public var imageUrl: String
+    public var amount: Int
+    public var notes: String
     
     public init(name: String, type: String, imageUrl: String, amount: Int, notes: String){
         self.name = name

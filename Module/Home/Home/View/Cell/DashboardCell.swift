@@ -16,6 +16,7 @@ class DashboardCell: UITableViewCell {
     @IBOutlet var profileImage: UIImageView!
     @IBOutlet var topUpButton: UIButton!
     @IBOutlet var transferButton: UIButton!
+    @IBOutlet var notificationBtn: UIButton!
     
     var delegate: DashboardCellDelegate?
     
@@ -34,9 +35,11 @@ class DashboardCell: UITableViewCell {
         
         let topUpIcon = UIImage(named: "plus", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
         let transferIcon = UIImage(named: "arrow-up (1)", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
+        let notifBtn = UIImage(named: "bell-1", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
         
         self.topUpButton.setImage(topUpIcon, for: .normal)
         self.transferButton.setImage(transferIcon, for: .normal)
+        self.notificationBtn.setImage(notifBtn, for: .normal)
     }
     
     @IBAction func showTransactionAction(_ sender: Any) {

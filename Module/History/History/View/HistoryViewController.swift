@@ -14,6 +14,11 @@ class HistoryViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var loadingView: NVActivityIndicatorView!
     @IBOutlet var backIcon: UIImageView!
+    @IBOutlet var ascendBG: UIView!
+    @IBOutlet var descendBG: UIView!
+    @IBOutlet var filterBG: UIView!
+    @IBOutlet var ascendIcon: UIImageView!
+    @IBOutlet var descenIcon: UIImageView!
     
     var dataSource = HistoryDataSource()
     var presenter: HistoryPresenter?
@@ -30,6 +35,14 @@ class HistoryViewController: UIViewController {
         self.loadingView.type = .ballRotateChase
         self.loadingView.startAnimating()
         self.backIcon.image = UIImage(named: "arrow-left", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
+        
+        
+        self.ascendBG.setShadow(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), opacity: 0.1)
+        self.descendBG.setShadow(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), opacity: 0.1)
+        self.filterBG.setShadow(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), opacity: 0.1)
+        
+        self.ascendIcon.image = UIImage(named: "arrow-up-red", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
+        self.descenIcon.image = UIImage(named: "arrow-down", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
     }
     
     func setupTabView() {
@@ -46,13 +59,24 @@ class HistoryViewController: UIViewController {
     @IBAction func backToHomeAction(_ sender: UITapGestureRecognizer) {
         self.presenter?.backToHome(viewController: self)
     }
+    
+    @IBAction func ascendAction(_ sender: UITapGestureRecognizer) {
+        self.dataSource.filteredDataWeek = self.dataSource.historyThisWeek
+        self.dataSource.filteredDataWeek.sort(by: {$0.name.lowercased() < $1.name.lowercased() })
+        self.tableView.reloadData()
+    }
+    
+    @IBAction func descendAction(_ sender: UITapGestureRecognizer) {
+        self.dataSource.filteredDataWeek = self.dataSource.historyThisWeek
+        self.dataSource.filteredDataWeek.sort(by: {$0.name.lowercased() > $1.name.lowercased() })
+        self.tableView.reloadData()
+    }
 }
 
 extension HistoryViewController: HistoryView {
     func showHistoryThisWeek(historiesThisWeek: [TransactionEntity]) {
         DispatchQueue.main.async {
             self.dataSource.historyThisWeek = historiesThisWeek
-            self.dataSource.sectionData = [0: historiesThisWeek]
             self.tableView.reloadData()
             self.loadingView.stopAnimating()
         }
@@ -60,7 +84,6 @@ extension HistoryViewController: HistoryView {
     func showHistoryThisMonth(historiesThisMonth: [TransactionEntity]) {
         DispatchQueue.main.async {
             self.dataSource.historyThisMonth = historiesThisMonth
-            self.dataSource.sectionData = [1: historiesThisMonth]
             self.tableView.reloadData()
             self.loadingView.stopAnimating()
         }

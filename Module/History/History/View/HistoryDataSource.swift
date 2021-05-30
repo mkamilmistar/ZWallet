@@ -16,7 +16,7 @@ class HistoryDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     var historyThisWeek: [TransactionEntity] = []
     var historyThisMonth: [TransactionEntity] = []
     var sectionTitles = ["This Week", "This Month"]
-    var sectionData: [Int: [TransactionEntity]] = [:]
+    public lazy var filteredDataWeek = self.historyThisWeek
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
@@ -34,7 +34,7 @@ class HistoryDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
         label.text = sectionTitles[section]
         label.font = UIFont(name: "NunitoSans", size: 16)
         label.textColor = #colorLiteral(red: 0.4784313725, green: 0.4705882353, blue: 0.5254901961, alpha: 1)
-        label.frame = CGRect(x: 16, y: 5, width: 100, height: 20)
+        label.frame = CGRect(x: 16, y: 0, width: 100, height: 25)
         view.addSubview(label)
         
         return view
@@ -47,7 +47,7 @@ class HistoryDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
-            cell.showData(transaction: self.historyThisWeek[indexPath.row])
+            cell.showData(transaction: self.filteredDataWeek[indexPath.row])
             cell.selectionStyle = .none
             return cell
         } else {

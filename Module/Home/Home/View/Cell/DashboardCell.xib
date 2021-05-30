@@ -52,20 +52,24 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmu-gF-LWL">
                                                 <rect key="frame" x="0.0" y="0.0" width="45.5" height="25"/>
                                                 <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="18"/>
-                                                <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.47843137254901957" green="0.47058823529411764" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M. Kamil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huB-ST-btj">
                                                 <rect key="frame" x="0.0" y="33" width="71" height="25"/>
                                                 <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="18"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.31764705882352939" green="0.30980392156862746" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhn-zD-dmI">
-                                        <rect key="frame" x="335" y="22.5" width="48" height="30"/>
-                                        <state key="normal" title="Logout">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhn-zD-dmI">
+                                        <rect key="frame" x="355" y="23.5" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="28" id="Dn6-QV-Baa"/>
+                                            <constraint firstAttribute="height" constant="28" id="k6S-HC-i1E"/>
+                                        </constraints>
+                                        <state key="normal" image="bell-1">
                                             <color key="titleColor" red="0.38823529410000002" green="0.47450980390000003" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -247,6 +251,7 @@
             <connections>
                 <outlet property="balanceLabel" destination="suD-ju-AE6" id="7hF-hE-zwn"/>
                 <outlet property="nameLabel" destination="huB-ST-btj" id="xzA-qx-7b9"/>
+                <outlet property="notificationBtn" destination="vhn-zD-dmI" id="UyI-gh-cwC"/>
                 <outlet property="phoneNumberLabel" destination="mdW-tj-HRc" id="I9J-50-poR"/>
                 <outlet property="profileImage" destination="oV6-kk-933" id="TBp-Nm-Njy"/>
                 <outlet property="topUpButton" destination="w7n-Y1-l3Q" id="m9U-aT-Zgr"/>
@@ -257,6 +262,7 @@
     </objects>
     <resources>
         <image name="arrow-up (1)" width="28" height="28"/>
+        <image name="bell-1" width="84" height="84"/>
         <image name="plus-1" width="28" height="28"/>
     </resources>
 </document>
