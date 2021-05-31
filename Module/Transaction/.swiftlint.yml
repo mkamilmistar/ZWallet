@@ -1,0 +1,18 @@
+disabled_rules:
+  - comma
+  - force_cast
+  - force_try
+  - large_tuple
+  - nesting
+  - function_parameter_count
+  - trailing_whitespace
+  - weak_delegate
+  - identifier_name
+  - class_delegate_protocol
+
+line_length:
+  warning: 240
+  ignores_function_declarations: true
+  ignores_comments: true
+  ignores_interpolated_strings: true
+  ignores_urls: true

@@ -9,14 +9,12 @@ import Foundation
 import UIKit
 import Core
 
-
 class HomePresenterImpl: HomePresenter {
     let view: HomeView
     let interactor: HomeInteractor
     let router: HomeRouter
     
-    
-    init(view: HomeView, interactor: HomeInteractor, router: HomeRouter){
+    init(view: HomeView, interactor: HomeInteractor, router: HomeRouter) {
         self.view = view
         self.interactor = interactor
         self.router = router

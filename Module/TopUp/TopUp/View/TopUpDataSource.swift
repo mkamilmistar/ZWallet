@@ -15,7 +15,6 @@ class TopUpDataSource: NSObject, UITableViewDataSource {
     
     var topUpData: [TopUpEntity] = topUp
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
@@ -43,5 +42,4 @@ class TopUpDataSource: NSObject, UITableViewDataSource {
         }
     }
     
-  
 }

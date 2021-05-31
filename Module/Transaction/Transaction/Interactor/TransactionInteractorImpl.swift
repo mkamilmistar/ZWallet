@@ -18,7 +18,7 @@ public class TransactionInteractorImpl: TransactionInteractor {
     }
     
     public func getBalance() {
-        self.balanceNetworkManager.getBalance { (data, error) in
+        self.balanceNetworkManager.getBalance { (data, _) in
             if let dataBalance = data {
                 self.interactorOutput?.getBalance(balance: dataBalance.balance)
             }

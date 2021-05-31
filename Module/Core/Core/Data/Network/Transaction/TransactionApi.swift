@@ -45,7 +45,7 @@ extension TransactionApi: TargetType {
         }
     }
     
-    public var headers: [String : String]? {
+    public var headers: [String: String]? {
         let token: String = UserDefaultHelper.shared.get(key: .userToken) ?? ""
         switch self {
         case .createTransfer(let pin, _, _, _):
@@ -56,6 +56,4 @@ extension TransactionApi: TargetType {
             ]
         }
     }
-    
-    
 }

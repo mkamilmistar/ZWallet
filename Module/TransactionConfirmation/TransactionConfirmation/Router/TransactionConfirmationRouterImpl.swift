@@ -45,5 +45,3 @@ extension TransactionConfirmationRouterImpl: TransactionConfirmationRouter {
         viewController.navigationController?.popViewController(animated: true)
     }
 }
-
-

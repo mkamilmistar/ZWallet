@@ -14,7 +14,7 @@ public class LoginPresenterImpl: LoginPresenter {
     let interactor: LoginInteractor
     let router: LoginRouter
     
-    init(view: LoginView, interactor: LoginInteractor, router: LoginRouter){
+    init(view: LoginView, interactor: LoginInteractor, router: LoginRouter) {
         self.view = view
         self.interactor = interactor
         self.router = router

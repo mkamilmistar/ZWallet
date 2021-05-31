@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     @IBOutlet var loading: NVActivityIndicatorView!
-    
+
     var dataSource = HomeDataSource()
     var presenter: HomePresenter?
     
@@ -25,6 +25,7 @@ class HomeViewController: UIViewController {
         self.loading.color = #colorLiteral(red: 0.4625302553, green: 0.5670406818, blue: 0.9667261243, alpha: 1)
         self.loading.type = .ballRotateChase
         loading.startAnimating()
+        
     }
     
     func setupTableView() {
@@ -32,6 +33,7 @@ class HomeViewController: UIViewController {
         
         self.tableView.register(UINib(nibName: "DashboardCell", bundle: Bundle(identifier: "com.casestudy.Home")), forCellReuseIdentifier: "DashboardCell")
         self.tableView.register(UINib(nibName: "TransactionCell", bundle: Bundle(identifier: "com.casestudy.Core")), forCellReuseIdentifier: "TransactionCell")
+        self.tableView.register(UINib(nibName: "NotFoundCell", bundle: Bundle(identifier: "com.casestudy.Core")), forCellReuseIdentifier: "NotFoundCell")
         
         self.tableView.dataSource = self.dataSource
         self.presenter?.loadProfile()

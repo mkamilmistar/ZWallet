@@ -19,7 +19,7 @@ class ReceiverInteractorImpl: ReceiverInteractor {
     }
     
     func getReceiverData() {
-        self.contactNetworkManager.getContact { (data, error) in
+        self.contactNetworkManager.getContact { (data, _) in
             var getAllContact: [ReceiverEntity] = []
             data?.forEach({ (contactData) in
                 getAllContact.append(ReceiverEntity(id: contactData.id, name: contactData.name, phone: contactData.phone, image: "\(AppConstant.baseUrl)\(contactData.image)"))

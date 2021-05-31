@@ -34,7 +34,9 @@ class DashboardCell: UITableViewCell {
         self.profileImage.kf.setImage(with: url)
         
         let topUpIcon = UIImage(named: "plus", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
-        let transferIcon = UIImage(named: "arrow-up (1)", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
+        let transferIcon = UIImage(named: "arrow-up (1)",
+                                   in: Bundle(identifier: "com.casestudy.Core"),
+                                   compatibleWith: nil)
         let notifBtn = UIImage(named: "bell-1", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
         
         self.topUpButton.setImage(topUpIcon, for: .normal)

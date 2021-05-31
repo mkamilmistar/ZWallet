@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A5FCA84BF762B5627005EDE /* Pods_TopUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5931276C21DC8C54CFC8B1CD /* Pods_TopUp.framework */; };
+		FA1CBD3C26648E7A004F6C05 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = FA1CBD3B26648E7A004F6C05 /* .swiftlint.yml */; };
 		FAA257B62660D839002F9A1E /* TopUp.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA257B42660D839002F9A1E /* TopUp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAA257D42660D8DE002F9A1E /* TopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA257D22660D8DE002F9A1E /* TopUpViewController.swift */; };
 		FAA257D52660D8DE002F9A1E /* TopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA257D32660D8DE002F9A1E /* TopUpViewController.xib */; };
@@ -44,6 +45,7 @@
 		5931276C21DC8C54CFC8B1CD /* Pods_TopUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5A37993E28824B274069CE /* Pods-TopUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopUp.debug.xcconfig"; path = "Target Support Files/Pods-TopUp/Pods-TopUp.debug.xcconfig"; sourceTree = "<group>"; };
 		BC6274D9832A0EA7EBDABC76 /* Pods-TopUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopUp.release.xcconfig"; path = "Target Support Files/Pods-TopUp/Pods-TopUp.release.xcconfig"; sourceTree = "<group>"; };
+		FA1CBD3B26648E7A004F6C05 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		FAA257B12660D839002F9A1E /* TopUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TopUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA257B42660D839002F9A1E /* TopUp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopUp.h; sourceTree = "<group>"; };
 		FAA257B52660D839002F9A1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		FAA257A72660D838002F9A1E = {
 			isa = PBXGroup;
 			children = (
+				FA1CBD3B26648E7A004F6C05 /* .swiftlint.yml */,
 				FAA257B32660D839002F9A1E /* TopUp */,
 				FAA257B22660D839002F9A1E /* Products */,
 				7CDD907D74A56E5C1E6568FD /* Pods */,
@@ -199,6 +202,7 @@
 				FAA257AE2660D839002F9A1E /* Frameworks */,
 				FAA257AF2660D839002F9A1E /* Resources */,
 				FAA257DD2660D9E0002F9A1E /* Embed Frameworks */,
+				FA1CBD3D26648E8B004F6C05 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -246,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1CBD3C26648E7A004F6C05 /* .swiftlint.yml in Resources */,
 				FAA258CC2663728F002F9A1E /* HeaderViewCell.xib in Resources */,
 				FAA258C3266371DB002F9A1E /* TopUpViewCell.xib in Resources */,
 				FAA257D52660D8DE002F9A1E /* TopUpViewController.xib in Resources */,
@@ -276,6 +281,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		FA1CBD3D26648E8B004F6C05 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

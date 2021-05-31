@@ -34,5 +34,6 @@ public class PINActivationRouterImpl {
 extension PINActivationRouterImpl: PINActivationRouter {
     func navigateToHome() {
         AppRouter.shared.navigateToHome()
+        NotificationCenter.default.post(name: Notification.Name("reloadRootView"), object: nil)
     }
 }

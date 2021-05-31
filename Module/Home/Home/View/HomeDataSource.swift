@@ -20,7 +20,11 @@ class HomeDataSource: NSObject, UITableViewDataSource {
         if section == 0 {
             return 1
         } else {
-            return transactions.count
+            if transactions.count == 0 {
+                return 1
+            } else {
+                return transactions.count
+            }
         }
     }
     
@@ -36,12 +40,17 @@ class HomeDataSource: NSObject, UITableViewDataSource {
             cell.selectionStyle = .none
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
-            cell.showData(transaction: self.transactions[indexPath.row])
-            cell.selectionStyle = .none
-            return cell
+            if transactions.count == 0 {
+                let notFoundCell = tableView.dequeueReusableCell(withIdentifier: "NotFoundCell", for: indexPath) as! NotFoundCell
+                notFoundCell.selectionStyle = .none
+                return notFoundCell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
+                cell.showData(transaction: self.transactions[indexPath.row])
+                cell.selectionStyle = .none
+                return cell
+            }
         }
     }
-    
     
 }

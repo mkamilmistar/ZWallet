@@ -14,7 +14,7 @@ public struct TransactionEntity {
     public var amount: Int
     public var notes: String
     
-    public init(name: String, type: String, imageUrl: String, amount: Int, notes: String){
+    public init(name: String, type: String, imageUrl: String, amount: Int, notes: String) {
         self.name = name
         self.type = type
         self.imageUrl = imageUrl

@@ -13,12 +13,12 @@ class HistoryInteractorImpl: HistoryInteractor {
     
     let invoiceNetworkManager: InvoiceNetworkManager
     
-    init(invoiceNetworkManager: InvoiceNetworkManager){
+    init(invoiceNetworkManager: InvoiceNetworkManager) {
         self.invoiceNetworkManager = invoiceNetworkManager
     }
     
     func getHistoryThisWeek() {
-        self.invoiceNetworkManager.getThisWeekInvoice { (data, error) in
+        self.invoiceNetworkManager.getThisWeekInvoice { (data, _) in
             var historyThisWeek: [TransactionEntity] = []
             
             data?.forEach({ (invoiceData) in
@@ -30,7 +30,7 @@ class HistoryInteractorImpl: HistoryInteractor {
     }
     
     func getHistoryThisMonth() {
-        self.invoiceNetworkManager.getAllInvoice { (data, error) in
+        self.invoiceNetworkManager.getAllInvoice { (data, _) in
             var historyThisMonth: [TransactionEntity] = []
             
             data?.forEach({ (invoiceData) in

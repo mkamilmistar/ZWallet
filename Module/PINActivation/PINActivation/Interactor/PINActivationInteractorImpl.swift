@@ -18,7 +18,7 @@ public class PINActivationInteractorImpl: PINActivationInteractor {
     }
     
     func postPinActivation(pin: String) {
-        self.authNetworkManager.pinActivate(pin: pin) { (data, error) in
+        self.authNetworkManager.pinActivate(pin: pin) { (data, _) in
             if let pinActivateData = data {
                 if pinActivateData.status == 200 {
                     self.interactorOutput?.pinActivateResult(isSuccess: true)

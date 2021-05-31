@@ -14,16 +14,16 @@ class HistoryViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var loadingView: NVActivityIndicatorView!
     @IBOutlet var backIcon: UIImageView!
-    @IBOutlet var ascendBG: UIView!
-    @IBOutlet var descendBG: UIView!
+    @IBOutlet var outBG: UIView!
+    @IBOutlet var inBG: UIView!
     @IBOutlet var filterBG: UIView!
     @IBOutlet var ascendIcon: UIImageView!
     @IBOutlet var descenIcon: UIImageView!
     
     var dataSource = HistoryDataSource()
     var presenter: HistoryPresenter?
-    var ascendSelect: Bool = true
-    var descendSelect: Bool = true
+    var outSelect: Bool = true
+    var inSelect: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,9 +38,8 @@ class HistoryViewController: UIViewController {
         self.loadingView.startAnimating()
         self.backIcon.image = UIImage(named: "arrow-left", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
         
-        
-        self.ascendBG.setShadow(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), opacity: 0.1)
-        self.descendBG.setShadow(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), opacity: 0.1)
+        self.outBG.setShadow(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), opacity: 0.1)
+        self.inBG.setShadow(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), opacity: 0.1)
         self.filterBG.setShadow(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), opacity: 0.1)
         
         self.ascendIcon.image = UIImage(named: "arrow-up-red", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
@@ -57,49 +56,46 @@ class HistoryViewController: UIViewController {
         self.tableView.dataSource = self.dataSource
         self.tableView.sectionIndexBackgroundColor = .none
         self.tableView.delegate = self.dataSource
+       
     }
     
     @IBAction func backToHomeAction(_ sender: UITapGestureRecognizer) {
         self.presenter?.backToHome(viewController: self)
     }
     
-    @IBAction func ascendAction(_ sender: UITapGestureRecognizer) {
-        self.dataSource.filteredDataWeek = self.dataSource.historyThisWeek
-        self.dataSource.filteredDataMonth = self.dataSource.historyThisMonth
-        self.descendBG.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    @IBAction func outTransactionAction(_ sender: UITapGestureRecognizer) {
+        self.inBG.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
 
-        if ascendSelect == true {
-            self.ascendBG.backgroundColor = #colorLiteral(red: 0.3882352941, green: 0.4745098039, blue: 0.9568627451, alpha: 1)
-            self.dataSource.filteredDataWeek.sort(by: { $0.name.lowercased() < $1.name.lowercased() })
-            self.dataSource.filteredDataMonth.sort(by: { $0.name.lowercased() < $1.name.lowercased() })
+        if outSelect == true {
+            self.outBG.backgroundColor = #colorLiteral(red: 0.3882352941, green: 0.4745098039, blue: 0.9568627451, alpha: 1)
+            self.dataSource.filteredDataWeek = self.dataSource.historyThisWeek.filter({$0.type == "out" })
+            self.dataSource.filteredDataMonth = self.dataSource.historyThisMonth.filter({$0.type == "out" })
             self.tableView.reloadData()
         } else {
-            self.ascendBG.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            self.outBG.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             self.dataSource.filteredDataWeek = self.dataSource.historyThisWeek
             self.dataSource.filteredDataMonth = self.dataSource.historyThisMonth
             self.tableView.reloadData()
         }
-        ascendSelect = !ascendSelect
+        outSelect = !outSelect
     }
     
-    @IBAction func descendAction(_ sender: UITapGestureRecognizer) {
-        self.dataSource.filteredDataWeek = self.dataSource.historyThisWeek
-        self.dataSource.filteredDataMonth = self.dataSource.historyThisMonth
-        self.ascendBG.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    @IBAction func outDescendAction(_ sender: UITapGestureRecognizer) {
+        self.outBG.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
 
-        if descendSelect == true {
+        if inSelect == true {
 
-            self.descendBG.backgroundColor = #colorLiteral(red: 0.3882352941, green: 0.4745098039, blue: 0.9568627451, alpha: 1)
-            self.dataSource.filteredDataWeek.sort(by: { $0.name.lowercased() > $1.name.lowercased() })
-            self.dataSource.filteredDataMonth.sort(by: { $0.name.lowercased() > $1.name.lowercased() })
+            self.inBG.backgroundColor = #colorLiteral(red: 0.3882352941, green: 0.4745098039, blue: 0.9568627451, alpha: 1)
+            self.dataSource.filteredDataWeek = self.dataSource.historyThisWeek.filter({$0.type == "in" })
+            self.dataSource.filteredDataMonth = self.dataSource.historyThisMonth.filter({$0.type == "in" })
             self.tableView.reloadData()
         } else {
-            self.descendBG.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            self.inBG.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             self.dataSource.filteredDataWeek = self.dataSource.historyThisWeek
             self.dataSource.filteredDataMonth = self.dataSource.historyThisMonth
             self.tableView.reloadData()
         }
-        descendSelect = !descendSelect
+        inSelect = !inSelect
     }
 }
 
@@ -107,6 +103,7 @@ extension HistoryViewController: HistoryView {
     func showHistoryThisWeek(historiesThisWeek: [TransactionEntity]) {
         DispatchQueue.main.async {
             self.dataSource.historyThisWeek = historiesThisWeek
+            self.dataSource.filteredDataWeek = historiesThisWeek
             self.tableView.reloadData()
             self.loadingView.stopAnimating()
         }
@@ -114,6 +111,7 @@ extension HistoryViewController: HistoryView {
     func showHistoryThisMonth(historiesThisMonth: [TransactionEntity]) {
         DispatchQueue.main.async {
             self.dataSource.historyThisMonth = historiesThisMonth
+            self.dataSource.filteredDataMonth = historiesThisMonth
             self.tableView.reloadData()
             self.loadingView.stopAnimating()
         }

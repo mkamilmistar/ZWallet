@@ -42,7 +42,7 @@ extension ContactApi: TargetType {
         }
     }
     
-    public var headers: [String : String]? {
+    public var headers: [String: String]? {
         let token: String = UserDefaultHelper.shared.get(key: .userToken) ?? ""
         switch self {
         case .getContact:

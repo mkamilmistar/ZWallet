@@ -39,7 +39,7 @@ extension BalanceApi: TargetType {
         }
     }
     
-    public var headers: [String : String]? {
+    public var headers: [String: String]? {
         let token: String = UserDefaultHelper.shared.get(key: .userToken) ?? ""
         return [
             "Content-Type": "application/json",

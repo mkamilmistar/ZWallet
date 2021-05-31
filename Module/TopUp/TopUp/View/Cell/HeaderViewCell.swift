@@ -11,7 +11,6 @@ class HeaderViewCell: UITableViewCell {
     @IBOutlet var headerBG: UIView!
     @IBOutlet var buttonAdd: UIButton!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BF152F997C79590F4772C35A /* Pods_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB087CF0F4124D3AA1EBFE21 /* Pods_Login.framework */; };
+		FA1CBD1826648A64004F6C05 /* .swiflint.yml in Resources */ = {isa = PBXBuildFile; fileRef = FA1CBD1726648A64004F6C05 /* .swiflint.yml */; };
+		FA1CBD1B26648B4E004F6C05 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = FA1CBD1A26648B4E004F6C05 /* .swiftlint.yml */; };
 		FA6F7C93265B813100CF5DA5 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6F7C92265B813100CF5DA5 /* Core.framework */; };
 		FA6F7C94265B813100CF5DA5 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA6F7C92265B813100CF5DA5 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA6F7C99265B817100CF5DA5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F7C97265B817100CF5DA5 /* LoginViewController.swift */; };
@@ -43,6 +45,8 @@
 /* Begin PBXFileReference section */
 		90641D68FAD08FA8DBC6D3B6 /* Pods-Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.release.xcconfig"; path = "Target Support Files/Pods-Login/Pods-Login.release.xcconfig"; sourceTree = "<group>"; };
 		E2F40BB3AED26F788D62F190 /* Pods-Login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.debug.xcconfig"; path = "Target Support Files/Pods-Login/Pods-Login.debug.xcconfig"; sourceTree = "<group>"; };
+		FA1CBD1726648A64004F6C05 /* .swiflint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiflint.yml; sourceTree = "<group>"; };
+		FA1CBD1A26648B4E004F6C05 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		FA6F7C92265B813100CF5DA5 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6F7C97265B817100CF5DA5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FA6F7C98265B817100CF5DA5 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 		FA8F422C265B4E0A00380300 = {
 			isa = PBXGroup;
 			children = (
+				FA1CBD1A26648B4E004F6C05 /* .swiftlint.yml */,
+				FA1CBD1726648A64004F6C05 /* .swiflint.yml */,
 				7DD774629335CA8725DEBE5E /* Frameworks */,
 				FA8F4238265B4E0A00380300 /* Login */,
 				80AAECD6064CD7E843278D85 /* Pods */,
@@ -188,6 +194,7 @@
 				FA8F4233265B4E0A00380300 /* Frameworks */,
 				FA8F4234265B4E0A00380300 /* Resources */,
 				FA6F7C95265B813100CF5DA5 /* Embed Frameworks */,
+				FA1CBD1926648A7E004F6C05 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -235,7 +242,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1CBD1B26648B4E004F6C05 /* .swiftlint.yml in Resources */,
 				FA6F7C9A265B817100CF5DA5 /* LoginViewController.xib in Resources */,
+				FA1CBD1826648A64004F6C05 /* .swiflint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +272,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		FA1CBD1926648A7E004F6C05 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -19,13 +17,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoryViewController" customModule="History" customModuleProvider="target">
             <connections>
-                <outlet property="ascendBG" destination="aMo-XK-nZL" id="Xen-wQ-Pyr"/>
                 <outlet property="ascendIcon" destination="Z68-wu-s3J" id="mkD-gm-vnG"/>
                 <outlet property="backIcon" destination="wtS-WP-WqC" id="Dyb-tJ-1GD"/>
                 <outlet property="descenIcon" destination="oh1-Zo-OVh" id="AOw-ne-Ph7"/>
-                <outlet property="descendBG" destination="KYk-pZ-tcT" id="K0J-MF-DHS"/>
                 <outlet property="filterBG" destination="5fa-Zs-W6Z" id="xq3-QT-YKq"/>
+                <outlet property="inBG" destination="KYk-pZ-tcT" id="K0J-MF-DHS"/>
                 <outlet property="loadingView" destination="eOh-Jt-JR7" id="qL6-4P-w2H"/>
+                <outlet property="outBG" destination="aMo-XK-nZL" id="Xen-wQ-Pyr"/>
                 <outlet property="tableView" destination="BKI-sd-jd3" id="tbt-5n-3Pg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -88,7 +86,7 @@
                             <rect key="frame" x="144" y="0.0" width="199" height="57"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter by Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvK-sl-NHB">
-                                    <rect key="frame" x="43.5" y="16" width="112" height="25"/>
+                                    <rect key="frame" x="46" y="18" width="107.5" height="21"/>
                                     <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="18"/>
                                     <color key="textColor" red="0.38823529410000002" green="0.47450980390000003" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -116,7 +114,7 @@
                     <color key="backgroundColor" red="0.98039215686274506" green="0.9882352941176471" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="osS-Iw-8YU" userLabel="BackButton">
-                    <rect key="frame" x="16" y="20" width="102.5" height="28"/>
+                    <rect key="frame" x="16" y="20" width="99.5" height="28"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-left" translatesAutoresizingMaskIntoConstraints="NO" id="wtS-WP-WqC">
                             <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
@@ -127,7 +125,7 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xJ-AI-4zB">
-                            <rect key="frame" x="36" y="0.0" width="66.5" height="28"/>
+                            <rect key="frame" x="36" y="0.0" width="63.5" height="28"/>
                             <fontDescription key="fontDescription" name="NunitoSans-SemiBold" family="Nunito Sans" pointSize="20"/>
                             <color key="textColor" red="0.30196078431372547" green="0.29411764705882354" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -171,12 +169,12 @@
         </tapGestureRecognizer>
         <tapGestureRecognizer id="jqi-gR-wte" userLabel="Acend Tap">
             <connections>
-                <action selector="ascendAction:" destination="-1" id="6yj-ez-7Co"/>
+                <action selector="outTransactionAction:" destination="-1" id="6yj-ez-7Co"/>
             </connections>
         </tapGestureRecognizer>
         <tapGestureRecognizer id="BUj-fw-tdE" userLabel="Descen Tap">
             <connections>
-                <action selector="descendAction:" destination="-1" id="Xff-3a-0Ua"/>
+                <action selector="outDescendAction:" destination="-1" id="Xff-3a-0Ua"/>
             </connections>
         </tapGestureRecognizer>
     </objects>

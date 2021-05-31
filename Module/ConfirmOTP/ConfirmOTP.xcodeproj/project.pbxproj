@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7C664A9FF7D035D3263AB0BB /* Pods_ConfirmOTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6088FEEDAA67CCAAE28E9B31 /* Pods_ConfirmOTP.framework */; };
+		FA1CBD3326648DD0004F6C05 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = FA1CBD3226648DD0004F6C05 /* .swiftlint.yml */; };
 		FAA255DE265E6F9C002F9A1E /* ConfirmOTP.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA255DC265E6F9C002F9A1E /* ConfirmOTP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAA25604265E7053002F9A1E /* ConfirmOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25603265E7053002F9A1E /* ConfirmOTPView.swift */; };
 		FAA25608265E7062002F9A1E /* ConfirmOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25606265E7062002F9A1E /* ConfirmOTPViewController.swift */; };
@@ -41,6 +42,7 @@
 		6088FEEDAA67CCAAE28E9B31 /* Pods_ConfirmOTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConfirmOTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		684F9BA4063FBAC84733D786 /* Pods-ConfirmOTP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfirmOTP.release.xcconfig"; path = "Target Support Files/Pods-ConfirmOTP/Pods-ConfirmOTP.release.xcconfig"; sourceTree = "<group>"; };
 		74EB239077D255128D930F9E /* Pods-ConfirmOTP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfirmOTP.debug.xcconfig"; path = "Target Support Files/Pods-ConfirmOTP/Pods-ConfirmOTP.debug.xcconfig"; sourceTree = "<group>"; };
+		FA1CBD3226648DD0004F6C05 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		FAA255D9265E6F9C002F9A1E /* ConfirmOTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ConfirmOTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA255DC265E6F9C002F9A1E /* ConfirmOTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfirmOTP.h; sourceTree = "<group>"; };
 		FAA255DD265E6F9C002F9A1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		FAA255CF265E6F9C002F9A1E = {
 			isa = PBXGroup;
 			children = (
+				FA1CBD3226648DD0004F6C05 /* .swiftlint.yml */,
 				FAA255DB265E6F9C002F9A1E /* ConfirmOTP */,
 				FAA255DA265E6F9C002F9A1E /* Products */,
 				7A55B706B9250A1622A52EBB /* Pods */,
@@ -182,6 +185,7 @@
 				FAA255D6265E6F9C002F9A1E /* Frameworks */,
 				FAA255D7265E6F9C002F9A1E /* Resources */,
 				FAA25623265E70EB002F9A1E /* Embed Frameworks */,
+				FA1CBD3426648DE0004F6C05 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -229,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1CBD3326648DD0004F6C05 /* .swiftlint.yml in Resources */,
 				FAA25609265E7062002F9A1E /* ConfirmOTPViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +262,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		FA1CBD3426648DE0004F6C05 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

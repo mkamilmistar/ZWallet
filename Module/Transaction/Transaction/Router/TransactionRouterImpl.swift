@@ -42,6 +42,8 @@ extension TransactionRouterImpl: TransactionRouter {
     
     public func backToHome() {
         NotificationCenter.default.post(name: Notification.Name("reloadRootView"), object: nil)
+
+//        NotificationCenter.default.post(name: Notification.Name("reloadRootView"), object: nil)
     }
     
     public func backToReceiver(viewController: UIViewController) {

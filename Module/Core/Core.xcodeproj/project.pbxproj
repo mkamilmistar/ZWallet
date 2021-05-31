@@ -18,6 +18,9 @@
 		FA053160265E3E5D009A0DAB /* ContactNetworkManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA05315F265E3E5D009A0DAB /* ContactNetworkManagerImpl.swift */; };
 		FA053163265E3E69009A0DAB /* GetContactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA053162265E3E69009A0DAB /* GetContactResponse.swift */; };
 		FA053166265E3E72009A0DAB /* GetContactDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA053165265E3E72009A0DAB /* GetContactDataResponse.swift */; };
+		FA1CBD4426648EEE004F6C05 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = FA1CBD4326648EEE004F6C05 /* .swiftlint.yml */; };
+		FA1CBD4A26648F9F004F6C05 /* NotFoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CBD4826648F9F004F6C05 /* NotFoundCell.swift */; };
+		FA1CBD4B26648F9F004F6C05 /* NotFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1CBD4926648F9F004F6C05 /* NotFoundCell.xib */; };
 		FA2ABEAF265B5ABF0079F738 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2ABEAE265B5ABF0079F738 /* UIViewExtension.swift */; };
 		FA2ABEB2265B5B220079F738 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2ABEB1265B5B220079F738 /* IntExtension.swift */; };
 		FA2ABEB6265B5C0E0079F738 /* UserDefaultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2ABEB5265B5C0E0079F738 /* UserDefaultHelper.swift */; };
@@ -76,6 +79,9 @@
 		FA05315F265E3E5D009A0DAB /* ContactNetworkManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactNetworkManagerImpl.swift; sourceTree = "<group>"; };
 		FA053162265E3E69009A0DAB /* GetContactResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetContactResponse.swift; sourceTree = "<group>"; };
 		FA053165265E3E72009A0DAB /* GetContactDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetContactDataResponse.swift; sourceTree = "<group>"; };
+		FA1CBD4326648EEE004F6C05 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		FA1CBD4826648F9F004F6C05 /* NotFoundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotFoundCell.swift; sourceTree = "<group>"; };
+		FA1CBD4926648F9F004F6C05 /* NotFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotFoundCell.xib; sourceTree = "<group>"; };
 		FA2ABEAE265B5ABF0079F738 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		FA2ABEB1265B5B220079F738 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		FA2ABEB5265B5C0E0079F738 /* UserDefaultHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultHelper.swift; sourceTree = "<group>"; };
@@ -213,6 +219,15 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
+		FA1CBD0D2664857C004F6C05 /* NotFoundView */ = {
+			isa = PBXGroup;
+			children = (
+				FA1CBD4826648F9F004F6C05 /* NotFoundCell.swift */,
+				FA1CBD4926648F9F004F6C05 /* NotFoundCell.xib */,
+			);
+			path = NotFoundView;
+			sourceTree = "<group>";
+		};
 		FA2ABEAD265B5AA50079F738 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +352,7 @@
 		FA6F7C86265B7B7200CF5DA5 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				FA1CBD0D2664857C004F6C05 /* NotFoundView */,
 				FA05314F265E3BFF009A0DAB /* ReceiverCell */,
 				FA6F7C87265B7B9B00CF5DA5 /* TransactionCell */,
 			);
@@ -376,6 +392,7 @@
 		FA8E3418265B495B005C1AFF = {
 			isa = PBXGroup;
 			children = (
+				FA1CBD4326648EEE004F6C05 /* .swiftlint.yml */,
 				FA8E3424265B495B005C1AFF /* Core */,
 				FA8E3423265B495B005C1AFF /* Products */,
 				49025261F8833070FE104BF0 /* Pods */,
@@ -465,6 +482,7 @@
 				FA8E341E265B495B005C1AFF /* Sources */,
 				FA8E341F265B495B005C1AFF /* Frameworks */,
 				FA8E3420265B495B005C1AFF /* Resources */,
+				FA1CBD4626648F03004F6C05 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -512,9 +530,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1CBD4426648EEE004F6C05 /* .swiftlint.yml in Resources */,
 				FA053153265E3C27009A0DAB /* ReceiverCell.xib in Resources */,
 				FAA25662265F4A93002F9A1E /* Assets.xcassets in Resources */,
 				FA6F7C8B265B7BBC00CF5DA5 /* TransactionCell.xib in Resources */,
+				FA1CBD4B26648F9F004F6C05 /* NotFoundCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +563,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FA1CBD4626648F03004F6C05 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -562,6 +599,7 @@
 				FAA258DA26640267002F9A1E /* ButtonStyle.swift in Sources */,
 				FA0530DC265DCF35009A0DAB /* RegisterResponse.swift in Sources */,
 				FAA2579A26609BE8002F9A1E /* StringExtension.swift in Sources */,
+				FA1CBD4A26648F9F004F6C05 /* NotFoundCell.swift in Sources */,
 				FA6F7C69265B69C600CF5DA5 /* BalanceApi.swift in Sources */,
 				FA2ABEB6265B5C0E0079F738 /* UserDefaultHelper.swift in Sources */,
 				FA05315D265E3E51009A0DAB /* ContactNetworkManager.swift in Sources */,

@@ -48,6 +48,4 @@ public class InvoiceNetworkManagerImpl: InvoiceNetworkManager {
             }
         }
     }
-    
-    
 }

@@ -13,7 +13,6 @@ public class TopUpViewCell: UITableViewCell {
     @IBOutlet var numberLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     
-    
     public override func awakeFromNib() {
         super.awakeFromNib()
         

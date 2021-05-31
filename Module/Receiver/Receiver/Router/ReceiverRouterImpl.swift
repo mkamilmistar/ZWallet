@@ -30,12 +30,12 @@ public class ReceiverRouterImpl {
         viewController.navigationController?.pushViewController(vc, animated: true)
     }
  
-    
 }
 
 extension ReceiverRouterImpl: ReceiverRouter {
     public func navigateToHome(viewController: UIViewController) {
-        viewController.navigationController?.popToRootViewController(animated: true)
+//        viewController.navigationController?.popToRootViewController(animated: true)
+        NotificationCenter.default.post(name: Notification.Name("reloadRootView"), object: nil)
     }
 
     public func navigateToTransaction(viewController: UIViewController, passingData: ReceiverEntity) {

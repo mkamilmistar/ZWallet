@@ -33,6 +33,7 @@ public class HistoryRouterImpl {
 
 extension HistoryRouterImpl: HistoryRouter {
     func navigateToHome(viewController: UIViewController) {
-        viewController.navigationController?.popToRootViewController(animated: true)
+        NotificationCenter.default.post(name: Notification.Name("reloadRootView"), object: nil)
+//        viewController.navigationController?.popToRootViewController(animated: true)
     }
 }

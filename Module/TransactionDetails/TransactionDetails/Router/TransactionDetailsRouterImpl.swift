@@ -43,6 +43,8 @@ extension TransactionDetailsRouterImpl: TransactionDetailsRouter {
     }
     
     public func navigateToHome() {
-        AppRouter.shared.navigateToHome()
+//        AppRouter.shared.navigateToHome()
+        NotificationCenter.default.post(name: Notification.Name("reloadRootView"), object: nil)
+
     }
 }

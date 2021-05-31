@@ -24,7 +24,7 @@ extension MoyaProvider {
             let email: String = UserDefaultHelper.shared.get(key: .userEmail) ?? ""
             let refreshToken: String = UserDefaultHelper.shared.get(key: .refreshToken) ?? ""
             let authManager = AuthNetworkManagerImpl()
-            authManager.refreshToken(email: email, refreshToken: refreshToken) { (result, error) in
+            authManager.refreshToken(email: email, refreshToken: refreshToken) { (result, _) in
                 if let refreshTokenResult = result {
                     UserDefaultHelper.shared.set(key: .userToken, value: refreshTokenResult.token)
                     

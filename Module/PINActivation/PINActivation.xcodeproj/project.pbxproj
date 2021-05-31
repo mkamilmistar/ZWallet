@@ -21,6 +21,7 @@
 		FA05314A265E15A9009A0DAB /* PINActivationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA053149265E15A9009A0DAB /* PINActivationPresenter.swift */; };
 		FA05314C265E15B0009A0DAB /* PINActivationPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA05314B265E15B0009A0DAB /* PINActivationPresenterImpl.swift */; };
 		FA05314E265E163C009A0DAB /* PINActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA05314D265E163C009A0DAB /* PINActivationView.swift */; };
+		FA1CBD3026648D9A004F6C05 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = FA1CBD2F26648D9A004F6C05 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +56,7 @@
 		FA053149265E15A9009A0DAB /* PINActivationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINActivationPresenter.swift; sourceTree = "<group>"; };
 		FA05314B265E15B0009A0DAB /* PINActivationPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINActivationPresenterImpl.swift; sourceTree = "<group>"; };
 		FA05314D265E163C009A0DAB /* PINActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINActivationView.swift; sourceTree = "<group>"; };
+		FA1CBD2F26648D9A004F6C05 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		FA0530FC265DF977009A0DAB = {
 			isa = PBXGroup;
 			children = (
+				FA1CBD2F26648D9A004F6C05 /* .swiftlint.yml */,
 				FA053108265DF977009A0DAB /* PINActivation */,
 				FA053107265DF977009A0DAB /* Products */,
 				EAFCB1D846BDE12AE4EDD28D /* Pods */,
@@ -182,6 +185,7 @@
 				FA053103265DF977009A0DAB /* Frameworks */,
 				FA053104265DF977009A0DAB /* Resources */,
 				FA053132265DFCEC009A0DAB /* Embed Frameworks */,
+				FA1CBD3126648DAF004F6C05 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -229,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1CBD3026648D9A004F6C05 /* .swiftlint.yml in Resources */,
 				FA05312D265DFA42009A0DAB /* PINActivationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +262,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		FA1CBD3126648DAF004F6C05 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

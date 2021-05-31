@@ -19,11 +19,13 @@ public class LoginInteractorImpl: LoginInteractor {
     
     public func postLoginData(email: String, password: String) {
         // Hit API login with sending email and password
-        self.authNetworkManager.login(email: email, password: password) { data, error in
+        self.authNetworkManager.login(email: email, password: password) { data, _ in
             if data?.status == 200 {
                 
                 // set refresh token expired
-                let tokenExpired: Date = Calendar.current.date(byAdding: .second, value: data?.data.expiredIn ?? 0, to: Date()) ?? Date()
+            let tokenExpired: Date = Calendar.current.date(
+                byAdding: .second, value: data?.data.expiredIn ?? 0,
+                to: Date()) ?? Date()
                 
                 UserDefaultHelper.shared.set(key: .userToken, value: data?.data.token)
                 UserDefaultHelper.shared.set(key: .refreshToken, value: data?.data.refreshToken)
@@ -45,5 +47,4 @@ public class LoginInteractorImpl: LoginInteractor {
             }
         }
     }
-    
 }

@@ -24,7 +24,7 @@ public class ConfirmOTPRouterImpl {
 
         vc.presenter = presenter
         
-        //parsing data email to OTP
+        // parsing data email to OTP
         let emailDefault: String? = UserDefaultHelper.shared.get(key: .userEmail)
         vc.email = emailDefault ?? ""
         

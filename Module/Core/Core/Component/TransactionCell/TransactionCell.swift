@@ -26,7 +26,6 @@ public class TransactionCell: UITableViewCell {
         self.nameLabel.text = transaction.name
         self.noteLabel.text = transaction.notes
         
-        
         if transaction.type == "in" {
             self.amountLabel.text = "+\(transaction.amount.formatToIdr())"
             self.amountLabel.textColor = #colorLiteral(red: 0.1176470588, green: 0.7568627451, blue: 0.3725490196, alpha: 1)

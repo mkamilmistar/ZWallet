@@ -8,7 +8,7 @@
 import Foundation
 import Core
 
-public class TransactionDetailsInteractorImpl : TransactionDetailsInteractor {
+public class TransactionDetailsInteractorImpl: TransactionDetailsInteractor {
     
     var interactorOutput: TransactionDetailsInteractorOutput?
     var networkManager: BalanceNetworkManager
@@ -18,7 +18,7 @@ public class TransactionDetailsInteractorImpl : TransactionDetailsInteractor {
     }
     
     func getBalance() {
-        self.networkManager.getBalance { (data, error) in
+        self.networkManager.getBalance { (data, _) in
             if let dataBalance = data {
                 self.interactorOutput?.getBalance(balance: dataBalance.balance)
             }

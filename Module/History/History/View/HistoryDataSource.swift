@@ -21,9 +21,9 @@ class HistoryDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return self.historyThisWeek.count
+            return self.filteredDataWeek.count
         } else {
-            return self.historyThisMonth.count
+            return self.filteredDataMonth.count
         }
     }
     

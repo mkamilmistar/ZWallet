@@ -8,7 +8,7 @@
 import Foundation
 import Core
 
-public class TransactionConfirmationInteractorImpl : TransactionConfirmationInteractor {
+public class TransactionConfirmationInteractorImpl: TransactionConfirmationInteractor {
     
     var interactorOutput: TransactionConfirmationInteractorOutput?
     let balanceNetworkManager: BalanceNetworkManager
@@ -18,12 +18,10 @@ public class TransactionConfirmationInteractorImpl : TransactionConfirmationInte
     }
     
     func getBalance() {
-        self.balanceNetworkManager.getBalance { (data, error) in
+        self.balanceNetworkManager.getBalance { (data, _) in
             if let dataBalance = data {
                 self.interactorOutput?.getBalance(balance: dataBalance.balance)
             }
         }
     }
-    
-    
 }

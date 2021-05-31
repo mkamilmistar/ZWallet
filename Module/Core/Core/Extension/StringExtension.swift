@@ -39,6 +39,5 @@ public extension String {
     }
 }
 
-
 public let dateNow: String  = "dd MMM yyyy"
 public let hourNow: String = "HH.mm"

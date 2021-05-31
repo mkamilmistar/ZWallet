@@ -12,4 +12,3 @@ public class AppConstant {
         return Bundle.main.infoDictionary?["BASE_URL"] as? String ?? ""
     }
 }
-

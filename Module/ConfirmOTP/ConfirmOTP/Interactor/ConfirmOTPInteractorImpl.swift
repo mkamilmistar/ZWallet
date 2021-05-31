@@ -18,7 +18,7 @@ public class ConfirmOTPInteractorImpl: ConfirmOTPInteractor {
     }
     
     public func postOTPConfirm(email: String, otp: String) {
-        self.authNetworkManager.otpConfirm(email: email, otp: otp) { (data, error) in
+        self.authNetworkManager.otpConfirm(email: email, otp: otp) { (data, _) in
             if let otpData = data {
                 if otpData.status == 200 {
                     self.interactorOutput?.confirmOTPResult(isSuccess: true)

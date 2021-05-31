@@ -11,7 +11,6 @@ import OTPFieldView
 
 class PINActivationViewController: UIViewController {
 
-
     @IBOutlet var confirmButton: UIButton!
     @IBOutlet var pinField: OTPFieldView!
     
@@ -76,4 +75,3 @@ extension PINActivationViewController: OTPFieldViewDelegate {
         self.pinField.initializeUI()
     }
 }
-
