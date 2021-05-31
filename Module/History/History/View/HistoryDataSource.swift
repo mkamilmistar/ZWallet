@@ -17,6 +17,7 @@ class HistoryDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     var historyThisMonth: [TransactionEntity] = []
     var sectionTitles = ["This Week", "This Month"]
     public lazy var filteredDataWeek = self.historyThisWeek
+    public lazy var filteredDataMonth = self.historyThisMonth
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
@@ -52,7 +53,7 @@ class HistoryDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
-            cell.showData(transaction: self.historyThisMonth[indexPath.row])
+            cell.showData(transaction: filteredDataMonth[indexPath.row])
             cell.selectionStyle = .none
             return cell
         }

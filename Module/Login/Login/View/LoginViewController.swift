@@ -55,8 +55,6 @@ class LoginViewController: UIViewController {
         let email: String = emailText.text ?? ""
         let password: String = passwordText.text ?? ""
         
-        
-        
         self.presenter?.login(email: email, password: password)
     }
     
