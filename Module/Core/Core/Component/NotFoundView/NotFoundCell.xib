@@ -18,18 +18,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="130" id="6YX-9D-b8W" customClass="NotFoundCell" customModule="Core" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="404" height="130"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="312" id="6YX-9D-b8W" customClass="NotFoundCell" customModule="Core" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="404" height="312"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="6YX-9D-b8W" id="YaS-MM-pGn">
-                <rect key="frame" x="0.0" y="0.0" width="404" height="130"/>
+                <rect key="frame" x="0.0" y="0.0" width="404" height="312"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qRX-gN-CaC">
-                        <rect key="frame" x="1" y="10" width="402" height="88"/>
+                        <rect key="frame" x="1" y="0.0" width="402" height="200"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="tcJ-Vj-qen">
-                                <rect key="frame" x="109" y="17.5" width="184.5" height="53.5"/>
+                                <rect key="frame" x="109" y="74" width="184.5" height="53.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATA NOT FOUND" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykb-35-Hc9">
                                         <rect key="frame" x="21" y="0.0" width="142" height="22"/>
@@ -49,12 +49,11 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="tcJ-Vj-qen" secondAttribute="bottom" constant="17" id="PKR-L4-jAH"/>
+                            <constraint firstAttribute="bottom" secondItem="tcJ-Vj-qen" secondAttribute="bottom" constant="72.5" id="1Uc-FC-NC8"/>
+                            <constraint firstItem="tcJ-Vj-qen" firstAttribute="top" secondItem="qRX-gN-CaC" secondAttribute="top" constant="74" id="6v1-xc-ro1"/>
                             <constraint firstItem="tcJ-Vj-qen" firstAttribute="centerX" secondItem="qRX-gN-CaC" secondAttribute="centerX" id="Sih-Qt-EzT"/>
-                            <constraint firstItem="tcJ-Vj-qen" firstAttribute="top" secondItem="qRX-gN-CaC" secondAttribute="top" constant="17.5" id="YCM-55-t84"/>
-                            <constraint firstAttribute="height" constant="88" id="gTS-MF-vD3"/>
+                            <constraint firstAttribute="height" constant="200" id="gTS-MF-vD3"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -68,7 +67,7 @@
                     <constraint firstAttribute="bottom" secondItem="qRX-gN-CaC" secondAttribute="bottom" constant="10" id="FKG-pB-jkK"/>
                     <constraint firstAttribute="trailing" secondItem="qRX-gN-CaC" secondAttribute="trailing" constant="1" id="N8Z-70-574"/>
                     <constraint firstItem="qRX-gN-CaC" firstAttribute="leading" secondItem="YaS-MM-pGn" secondAttribute="leading" constant="1" id="d80-YS-Ave"/>
-                    <constraint firstItem="qRX-gN-CaC" firstAttribute="top" secondItem="YaS-MM-pGn" secondAttribute="top" constant="10" id="ntu-Zs-er0"/>
+                    <constraint firstItem="qRX-gN-CaC" firstAttribute="top" secondItem="YaS-MM-pGn" secondAttribute="top" id="ntu-Zs-er0"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="wMD-LI-9kx"/>
@@ -76,7 +75,7 @@
             <connections>
                 <outlet property="nofFoundBG" destination="qRX-gN-CaC" id="BAQ-fd-eiC"/>
             </connections>
-            <point key="canvasLocation" x="169.56521739130437" y="148.66071428571428"/>
+            <point key="canvasLocation" x="169.56521739130437" y="209.59821428571428"/>
         </tableViewCell>
     </objects>
 </document>

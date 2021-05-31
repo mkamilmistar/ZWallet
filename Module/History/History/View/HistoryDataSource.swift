@@ -21,9 +21,18 @@ class HistoryDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return self.filteredDataWeek.count
+            if self.filteredDataWeek.count == 0 {
+                return 1
+            } else {
+                return self.filteredDataWeek.count
+            }
         } else {
-            return self.filteredDataMonth.count
+            if self.filteredDataMonth.count == 0 {
+                return 1
+            } else {
+                return self.filteredDataMonth.count
+
+            }
         }
     }
     
@@ -47,15 +56,27 @@ class HistoryDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
-            cell.showData(transaction: self.filteredDataWeek[indexPath.row])
-            cell.selectionStyle = .none
-            return cell
+            if filteredDataWeek.count == 0 {
+                let notFoundCell = tableView.dequeueReusableCell(withIdentifier: "NotFoundCell", for: indexPath) as! NotFoundCell
+                notFoundCell.selectionStyle = .none
+                return notFoundCell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
+                cell.showData(transaction: self.filteredDataWeek[indexPath.row])
+                cell.selectionStyle = .none
+                return cell
+            }
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
-            cell.showData(transaction: filteredDataMonth[indexPath.row])
-            cell.selectionStyle = .none
-            return cell
+            if filteredDataMonth.count == 0 {
+                let notFoundCell = tableView.dequeueReusableCell(withIdentifier: "NotFoundCell", for: indexPath) as! NotFoundCell
+                notFoundCell.selectionStyle = .none
+                return notFoundCell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
+                cell.showData(transaction: filteredDataMonth[indexPath.row])
+                cell.selectionStyle = .none
+                return cell
+            }
         }
     }
 }

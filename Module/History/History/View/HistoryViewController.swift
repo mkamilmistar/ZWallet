@@ -35,7 +35,12 @@ class HistoryViewController: UIViewController {
         
         self.loadingView.color = #colorLiteral(red: 0.4625302553, green: 0.5670406818, blue: 0.9667261243, alpha: 1)
         self.loadingView.type = .ballRotateChase
+        
         self.loadingView.startAnimating()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.loadingView.stopAnimating()
+        }
+        
         self.backIcon.image = UIImage(named: "arrow-left", in: Bundle(identifier: "com.casestudy.Core"), compatibleWith: nil)
         
         self.outBG.setShadow(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), opacity: 0.1)
@@ -52,11 +57,11 @@ class HistoryViewController: UIViewController {
         
         self.tableView.register(UINib(nibName: "TransactionCell", bundle: Bundle(identifier: "com.casestudy.Core")), forCellReuseIdentifier: "TransactionCell")
         self.tableView.register(UINib(nibName: "TransactionCell", bundle: Bundle(identifier: "com.casestudy.Core")), forCellReuseIdentifier: "TransactionCell")
+        self.tableView.register(UINib(nibName: "NotFoundCell", bundle: Bundle(identifier: "com.casestudy.Core")), forCellReuseIdentifier: "NotFoundCell")
         
         self.tableView.dataSource = self.dataSource
         self.tableView.sectionIndexBackgroundColor = .none
         self.tableView.delegate = self.dataSource
-       
     }
     
     @IBAction func backToHomeAction(_ sender: UITapGestureRecognizer) {
@@ -101,6 +106,7 @@ class HistoryViewController: UIViewController {
 
 extension HistoryViewController: HistoryView {
     func showHistoryThisWeek(historiesThisWeek: [TransactionEntity]) {
+        self.loadingView.startAnimating()
         DispatchQueue.main.async {
             self.dataSource.historyThisWeek = historiesThisWeek
             self.dataSource.filteredDataWeek = historiesThisWeek
@@ -109,6 +115,7 @@ extension HistoryViewController: HistoryView {
         }
     }
     func showHistoryThisMonth(historiesThisMonth: [TransactionEntity]) {
+        self.loadingView.startAnimating()
         DispatchQueue.main.async {
             self.dataSource.historyThisMonth = historiesThisMonth
             self.dataSource.filteredDataMonth = historiesThisMonth
