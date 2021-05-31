@@ -89,7 +89,6 @@ class HistoryViewController: UIViewController {
         self.outBG.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
 
         if inSelect == true {
-
             self.inBG.backgroundColor = #colorLiteral(red: 0.3882352941, green: 0.4745098039, blue: 0.9568627451, alpha: 1)
             self.dataSource.filteredDataWeek = self.dataSource.historyThisWeek.filter({$0.type == "in" })
             self.dataSource.filteredDataMonth = self.dataSource.historyThisMonth.filter({$0.type == "in" })
