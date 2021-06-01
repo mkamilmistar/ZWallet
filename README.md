@@ -27,7 +27,7 @@ ZWallet is a mobile banking application designed for transactional activities. T
 ## How To Install
 1. Clone the repository using this command line in terminal
 ```$ git clone https://github.com/mkamilmistar/ZWallet-Viper.git```
-2. Dependencies manager in this project using ```Cocoapods```, so you should install cocoapods first and run in terminal in the folder cloned 
+2. Dependencies manager in this project using [Cocoapods](https://cocoapods.org), so you should install cocoapods first and run in the terminal at the folder where cloned 
   ```
   $ cd App
   $ pod install 
