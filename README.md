@@ -28,9 +28,19 @@ ZWallet is a mobile banking application designed for transactional activities. T
 1. Clone the repository using this command line in terminal
 ```$ git clone https://github.com/mkamilmistar/ZWallet-Viper.git```
 2. Dependencies manager in this project using ```Cocoapods```, so you should install cocoapods first and run in terminal in the folder cloned 
-```
-$ cd App
-$ pod install 
-```
+  ```
+  $ cd App
+  $ pod install 
+  ```
 4. Last but not least, open ZWallet.xcworkspace using XCODE
 5. RUN the project and you finally can use the project
+
+## Usage
+* **View**
+
+  View is a user interface display that contains object components that can be seen or interacted with by the user
+* **Protocol**
+
+  A protocol defines a blueprint of methods, properties, and other requirements that suit a particular task or piece of functionality. The protocol can then be adopted by a class, structure, or enumeration to provide an actual implementation of those requirements. Any type that satisfies the requirements of a protocol is said to conform to that protocol.
+  
+## VIPER
