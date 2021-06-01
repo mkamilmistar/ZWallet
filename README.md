@@ -44,3 +44,26 @@ ZWallet is a mobile banking application designed for transactional activities. T
   A protocol defines a blueprint of methods, properties, and other requirements that suit a particular task or piece of functionality. The protocol can then be adopted by a class, structure, or enumeration to provide an actual implementation of those requirements. Any type that satisfies the requirements of a protocol is said to conform to that protocol.
   
 ## VIPER
+<p align="center">
+  <img src="https://koenig-media.raywenderlich.com/uploads/2020/02/viper.png" height"100px">  
+</p>
+
+* **View**
+
+  The View is the user interface. This corresponds to a SwiftUI 
+
+* **Interactor**
+
+  The Interactor is a class that mediates between the presenter and the data. It takes direction from the presenter.
+
+* **Presenter**
+
+  The Presenter is the “traffic cop” of the architecture, directing data between the view and interactor, taking user actions and calling to router to move the user between views.
+
+* **Entity**
+
+  An Entity represents application data.
+
+* **Router**
+
+  The Router handles navigation between screens. That’s different than it is in SwiftUI, where the view shows any new views.
