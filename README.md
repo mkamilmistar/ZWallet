@@ -50,20 +50,20 @@ ZWallet is a mobile banking application designed for transactional activities. T
 
 * **View**
 
-  The View is the user interface. This corresponds to a SwiftUI 
+  The __View__ is the user interface. This corresponds to a Swift ```View```
 
 * **Interactor**
 
-  The Interactor is a class that mediates between the presenter and the data. It takes direction from the presenter.
+  The __Interactor__ is a class that mediates between the presenter and the data. It takes direction from the presenter.
 
 * **Presenter**
 
-  The Presenter is the “traffic cop” of the architecture, directing data between the view and interactor, taking user actions and calling to router to move the user between views.
+  The __Presenter__ is the “traffic cop” of the architecture, directing data between the view and interactor, taking user actions and calling to router to move the user between views.
 
 * **Entity**
 
-  An Entity represents application data.
+  An __Entity__ represents application data.
 
 * **Router**
 
-  The Router handles navigation between screens. That’s different than it is in SwiftUI, where the view shows any new views.
+  The __Router__ handles navigation between screens. That’s different than it is in SwiftUI, where the view shows any new views.
